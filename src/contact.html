@@ -1,0 +1,1843 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+05/12/2024 09:57:34 -->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://animaproject.s3.amazonaws.com/home/favicon.png"
+    />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <script id="anima-load-script" src="load.js"></script>
+    <script id="anima-hotspots-script" src="hotspots.js"></script>
+    <script id="anima-overrides-script" src="overrides.js"></script>
+    <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+      @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,200,600,500,700|Lato:500|Manjari:700|Open+Sans:700,600|Lexend:400,600|Over+the+Rainbow:400");
+
+      @font-face {
+        font-family: "Pecita-Book";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://anima-uploads.s3.amazonaws.com/projects/621a3157392ee0263ac2c7ea/fonts/pecita.otf")
+          format("opentype");
+      }
+
+      /* The following line is used to measure usage of this code. You can remove it if you want. */
+      @import url("https://px.animaapp.com/674f032ec7a9d0c0f6e857a2.674f032fc7a9d0c0f6e857a5.4F8kzxD.hch.png");
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .component-wrapper a {
+        display: contents;
+        pointer-events: auto;
+        text-decoration: none;
+      }
+
+      .component-wrapper * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe {
+        pointer-events: auto;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .screen a {
+        display: contents;
+        text-decoration: none;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .container-center-vertical > * {
+        flex-shrink: 0;
+        pointer-events: auto;
+      }
+
+      .container-center-horizontal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        pointer-events: none;
+        width: 100%;
+      }
+
+      .container-center-horizontal > * {
+        flex-shrink: 0;
+        pointer-events: auto;
+      }
+
+      .auto-animated div {
+        --z-index: -1;
+        opacity: 0;
+        position: absolute;
+      }
+
+      .auto-animated input {
+        --z-index: -1;
+        opacity: 0;
+        position: absolute;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay-base {
+        display: none;
+        height: 100%;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .overlay-base.animate-appear {
+        align-items: center;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+      }
+
+      .overlay-base.animate-disappear {
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+        display: block;
+        opacity: 1;
+        pointer-events: none;
+      }
+
+      .overlay-base.animate-disappear * {
+        pointer-events: none;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+
+      .align-self-flex-center {
+        align-self: flex-center;
+      }
+
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --black: #000000;
+        --black-pearl: #051625;
+        --blue-jeans: #4dacf724;
+        --blumine: #165781;
+        --blumine-2: #175882;
+        --coconut: #fdfdfd;
+        --cultured-pearl: #f5f5f5;
+        --dodger-blue: #19a5ff;
+        --eerie-black: #1e1e1e;
+        --red-ribbon: #ed0131;
+        --regent-st-blue: #acd6f7;
+        --white: #ffffff;
+
+        --font-size-l: 13px;
+        --font-size-m: 12px;
+        --font-size-s: 11px;
+        --font-size-xl: 14px;
+        --font-size-xs: 10px;
+        --font-size-xxl: 15px;
+        --font-size-xxxl: 16px;
+
+        --font-family-dm_sans: "DM Sans", Helvetica;
+        --font-family-lato: "Lato", Helvetica;
+        --font-family-lexend: "Lexend", Helvetica;
+        --font-family-manjari: "Manjari", Helvetica;
+        --font-family-open_sans: "Open Sans", Helvetica;
+        --font-family-over_the_rainbow: "Over the Rainbow", Helvetica;
+        --font-family-pecita-book: "Pecita-Book", Helvetica;
+      }
+
+      .dmsans-bold-white-12px {
+        color: var(--white);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .lato-medium-white-11px {
+        color: var(--white);
+        font-family: var(--font-family-lato);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .dmsans-bold-white-14px {
+        color: var(--white);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .dmsans-normal-white-14px {
+        color: var(--white);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .dmsans-normal-white-10px {
+        color: var(--white);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xs);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .dmsans-semi-bold-white-10px {
+        color: var(--white);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xs);
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .dmsans-medium-black-12px {
+        color: var(--black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .opensans-bold-black-pearl-15px {
+        color: var(--black-pearl);
+        font-family: var(--font-family-open_sans);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .dmsans-extra-light-white-10px {
+        color: var(--white);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xs);
+        font-style: normal;
+        font-weight: 200;
+      }
+
+      .dmsans-semi-bold-black-13px {
+        color: var(--black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-l);
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      .lato-medium-white-10px {
+        color: var(--white);
+        font-family: var(--font-family-lato);
+        font-size: var(--font-size-xs);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .manjari-bold-white-13px {
+        color: var(--white);
+        font-family: var(--font-family-manjari);
+        font-size: var(--font-size-l);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .lexend-normal-white-14px {
+        color: var(--white);
+        font-family: var(--font-family-lexend);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .dmsans-bold-black-12px {
+        color: var(--black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .dmsans-medium-black-16px {
+        color: var(--black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .dmsans-bold-blumine-16px {
+        color: var(--blumine);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .dmsans-bold-white-16px {
+        color: var(--white);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .dmsans-bold-black-14px {
+        color: var(--black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .dmsans-bold-eerie-black-18px {
+        color: var(--eerie-black);
+        font-family: var(--font-family-dm_sans);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .dmsans-normal-eerie-black-11px {
+        color: var(--eerie-black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .dmsans-normal-coconut-14px {
+        color: var(--coconut);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .dmsans-normal-eerie-black-14px {
+        color: var(--eerie-black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      .opensans-bold-white-15px {
+        font-family: var(--font-family-open_sans);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .opensans-bold-red-ribbon-15px {
+        color: var(--red-ribbon);
+        font-family: var(--font-family-open_sans);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .dmsans-medium-blumine-24px {
+        color: var(--blumine);
+        font-family: var(--font-family-dm_sans);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .dmsans-medium-black-pearl-14px {
+        color: var(--black-pearl);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      :root {
+      }
+
+      .rock-qr8e7q {
+        height: 56px;
+        left: 293px;
+        top: 0px;
+        width: 100px;
+      }
+
+      .rock {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .group {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .group-47777-C61RwL {
+        background-color: transparent;
+        height: 493px;
+        left: 0px;
+        position: absolute;
+        top: 848px;
+        width: 422px;
+      }
+
+      .rectangle-2661-CXpwDY {
+        background-color: var(--blumine);
+        height: 493px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 420px;
+      }
+
+      .line-2-CXpwDY {
+        background-color: transparent;
+        height: 1px;
+        left: 0px;
+        position: absolute;
+        top: 401px;
+        width: 393px;
+      }
+
+      .group-47687-CXpwDY {
+        background-color: transparent;
+        height: 44px;
+        left: 23px;
+        position: absolute;
+        top: 79px;
+        width: 258px;
+      }
+
+      .lorem-ipsum-dolor-si-QXPe94 {
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: 13.8px;
+        top: 0px;
+        width: 256px;
+      }
+
+      .group-36771-QXPe94 {
+        background-color: transparent;
+        height: 9px;
+        left: 0px;
+        position: absolute;
+        top: 35px;
+        width: 95px;
+      }
+
+      .group-194-vLUzMS {
+        background-color: transparent;
+        height: 9px;
+        left: 0px;
+        position: relative;
+        top: 0px;
+        width: 95px;
+      }
+
+      .google-negative-LNOAOX {
+        background-color: transparent;
+        height: 9px;
+        left: 86px;
+        position: absolute;
+        top: 0px;
+        width: 9px;
+      }
+
+      .linked-in-negative-LNOAOX {
+        background-color: transparent;
+        height: 9px;
+        left: 64px;
+        position: absolute;
+        top: -0px;
+        width: 9px;
+      }
+
+      .instagram-negative-LNOAOX {
+        background-color: transparent;
+        height: 9px;
+        left: 43px;
+        position: absolute;
+        top: -0px;
+        width: 8px;
+      }
+
+      .twitter-negative-LNOAOX {
+        background-color: transparent;
+        height: 9px;
+        left: 22px;
+        position: absolute;
+        top: 0px;
+        width: 9px;
+      }
+
+      .facebook-negative-LNOAOX {
+        background-color: transparent;
+        height: 9px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 9px;
+      }
+
+      .logo-cleanify_20241004_201648_0000-3-CXpwDY {
+        background-color: transparent;
+        height: 25px;
+        left: 19px;
+        object-fit: cover;
+        position: absolute;
+        top: 39px;
+        width: 26px;
+      }
+
+      .cleanify-CXpwDY {
+        background-color: transparent;
+        height: auto;
+        left: 51px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 46px;
+        width: 111px;
+      }
+
+      .group-16709-CXpwDY {
+        background-color: transparent;
+        height: 195px;
+        left: 25px;
+        position: absolute;
+        top: 149px;
+        width: 94px;
+      }
+
+      .company-iIxctO {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: 90px;
+      }
+
+      .beranda-layanan-about-us-contact-us-iIxctO {
+        background-color: transparent;
+        height: auto;
+        left: 1px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 32px;
+        width: 81px;
+      }
+
+      .group-16708-CXpwDY {
+        background-color: transparent;
+        height: 195px;
+        left: 139px;
+        position: absolute;
+        top: 149px;
+        width: 89px;
+      }
+
+      .support-hUWaSz {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: 75px;
+      }
+
+      .help-center-tweet-us-webians-feedback-hUWaSz {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 32px;
+        width: 85px;
+      }
+
+      .group-16707-CXpwDY {
+        background-color: transparent;
+        height: 195px;
+        left: 256px;
+        position: absolute;
+        top: 149px;
+        width: 119px;
+      }
+
+      .links-cynegb {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: 48px;
+      }
+
+      .courses-become-teach-cynegb {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 32px;
+        width: 115px;
+      }
+
+      .group-36774-CXpwDY {
+        background-color: transparent;
+        height: 64px;
+        left: 23px;
+        position: absolute;
+        top: 303px;
+        width: 138px;
+      }
+
+      .contact-us-WZXAUy {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: auto;
+      }
+
+      .group-36772-WZXAUy {
+        background-color: transparent;
+        height: 13px;
+        left: 2px;
+        position: absolute;
+        top: 51px;
+        width: 136px;
+      }
+
+      .cleanifyofcgmailcom-G5jJVo {
+        background-color: transparent;
+        height: auto;
+        left: 23px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        white-space: nowrap;
+        width: auto;
+      }
+
+      .vector-G5jJVo {
+        height: 13px;
+        width: 13px;
+      }
+
+      .vector-XrUWmi {
+        height: 15px;
+        width: 15px;
+      }
+
+      .lorem-ipsum-dolor-si {
+        background-color: transparent;
+        height: auto;
+        position: absolute;
+        text-align: left;
+      }
+
+      .rp-100000 {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0.12px;
+        line-height: 18.9px;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        white-space: nowrap;
+        width: auto;
+      }
+
+      .hari-ini-C61RwL {
+        background-color: transparent;
+        height: auto;
+        left: 23px;
+        letter-spacing: 0.12px;
+        line-height: 18.9px;
+        position: absolute;
+        text-align: center;
+        top: 277px;
+        white-space: nowrap;
+        width: auto;
+      }
+
+      .rectangle-2663-ef0c9D {
+        height: 141px;
+        width: 357px;
+      }
+
+      .group-47780-ef0c9D {
+        height: 115px;
+        top: 13px;
+        width: 106px;
+      }
+
+      .rectangle-2664-SATyeM {
+        height: 115px;
+        position: relative;
+        width: 106px;
+      }
+
+      .group-FZznCY {
+        height: 18px;
+        left: 0px;
+        top: 44px;
+        width: 85px;
+      }
+
+      .tab {
+        background-color: transparent;
+        border-bottom-style: solid;
+        border-color: var(--black);
+        border-left-style: none;
+        border-right-style: none;
+        border-top-style: none;
+        height: 28px;
+        overflow: hidden;
+        position: absolute;
+        top: 235px;
+        width: 131px;
+      }
+
+      .tab-label {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: -0.26px;
+        line-height: 22px;
+        position: absolute;
+        text-align: center;
+        width: 131px;
+      }
+
+      /* screen - contact-us */
+
+      .contact-us {
+        background-color: var(--coconut);
+        height: 1067px;
+        overflow: hidden;
+        overflow-x: hidden;
+        position: relative;
+        width: 393px;
+      }
+
+      .contact-us .gradient-blur-C61RwL {
+        left: -16px;
+        top: 86px;
+      }
+
+      .contact-us .rock-C61RwL {
+        height: 100px;
+        left: 216px;
+        top: 263px;
+        width: 114px;
+      }
+
+      .contact-us .rock-VMr6Om {
+        height: 100px;
+        left: 128px;
+        top: 774px;
+        width: 114px;
+      }
+
+      .contact-us .rock-mzXdH9 {
+        height: 100px;
+        left: 319px;
+        top: 81px;
+        width: 74px;
+      }
+
+      .contact-us .rock-QxM5SU {
+        height: 114px;
+        left: 242px;
+        top: 537px;
+        width: 100px;
+      }
+
+      .contact-us .vector-C61RwL {
+        height: 157px;
+        left: 38px;
+        top: 500px;
+        width: 115px;
+      }
+
+      .contact-us .rock-2P4qUJ {
+        height: 114px;
+        left: 27px;
+        top: 17px;
+        width: 100px;
+      }
+
+      .contact-us .gradient-blur-VMr6Om {
+        left: -48px;
+        top: 513px;
+      }
+
+      .contact-us .vector-2-C61RwL {
+        background-color: transparent;
+        height: 1px;
+        left: -1545px;
+        position: absolute;
+        top: 650px;
+        width: 105px;
+      }
+
+      .contact-us .gradient-blur-mzXdH9 {
+        left: -128px;
+        top: 858px;
+      }
+
+      .contact-us .rectangle-2662-C61RwL {
+        background-color: var(--white);
+        border: 0.5px solid;
+        border-color: var(--blue-jeans);
+        height: 64px;
+        left: -1px;
+        position: absolute;
+        top: 0px;
+        width: 396px;
+      }
+
+      .contact-us .frame-C61RwL {
+        background-color: transparent;
+        height: 34px;
+        left: 327px;
+        position: absolute;
+        top: 15px;
+        width: 45px;
+      }
+
+      .contact-us .title-C61RwL {
+        background-color: transparent;
+        color: var(--blumine);
+        font-family: var(--font-family-dm_sans);
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        height: auto;
+        left: 65px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 108px;
+        white-space: nowrap;
+        width: 240px;
+      }
+
+      .contact-us .hubungi-kami-untuk-m-C61RwL {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 500;
+        height: auto;
+        left: 37px;
+        letter-spacing: 0px;
+        line-height: 20px;
+        position: absolute;
+        text-align: left;
+        top: 182px;
+        width: 321px;
+      }
+
+      .contact-us .jl-angkrek-situ-no19-C61RwL {
+        background-color: transparent;
+        height: auto;
+        left: 68px;
+        letter-spacing: 0px;
+        line-height: 20px;
+        position: absolute;
+        text-align: left;
+        top: 304px;
+        width: 321px;
+      }
+
+      .contact-us .addres-C61RwL {
+        background-color: transparent;
+        height: auto;
+        left: 68px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 279px;
+        width: 75px;
+      }
+
+      .contact-us .email-C61RwL {
+        background-color: transparent;
+        height: auto;
+        left: 68px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 364px;
+        width: 75px;
+      }
+
+      .contact-us .phone-C61RwL {
+        background-color: transparent;
+        height: auto;
+        left: 68px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 426px;
+        width: 75px;
+      }
+
+      .contact-us .instagram-C61RwL {
+        background-color: transparent;
+        height: auto;
+        left: 70px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 492px;
+        width: 96px;
+      }
+
+      .contact-us .ellipse-11-C61RwL {
+        background-color: var(--blumine);
+        border-radius: 12.5px/12px;
+        height: 24px;
+        left: 36px;
+        position: absolute;
+        top: 278px;
+        width: 25px;
+      }
+
+      .contact-us .ellipse-12-C61RwL {
+        background-color: var(--blumine);
+        border-radius: 12.5px/12px;
+        height: 24px;
+        left: 36px;
+        position: absolute;
+        top: 363px;
+        width: 25px;
+      }
+
+      .contact-us .ellipse-14-C61RwL {
+        background-color: var(--blumine);
+        border-radius: 12.5px/12px;
+        height: 24px;
+        left: 36px;
+        position: absolute;
+        top: 425px;
+        width: 25px;
+      }
+
+      .contact-us .ellipse-16-C61RwL {
+        background-color: var(--blumine);
+        border-radius: 12.5px/12px;
+        height: 24px;
+        left: 38px;
+        position: absolute;
+        top: 491px;
+        width: 25px;
+      }
+
+      .contact-us .ellipse-13-C61RwL {
+        background-color: var(--blumine);
+        border-radius: 12.5px/12px;
+        height: 24px;
+        left: 36px;
+        position: absolute;
+        top: 363px;
+        width: 25px;
+      }
+
+      .contact-us .ellipse-15-C61RwL {
+        background-color: var(--blumine);
+        border-radius: 12.5px/12px;
+        height: 24px;
+        left: 36px;
+        position: absolute;
+        top: 425px;
+        width: 25px;
+      }
+
+      .contact-us .ellipse-17-C61RwL {
+        background-color: var(--blumine);
+        border-radius: 12.5px/12px;
+        height: 24px;
+        left: 38px;
+        position: absolute;
+        top: 491px;
+        width: 25px;
+      }
+
+      .contact-us .location-C61RwL {
+        background-color: transparent;
+        height: 17px;
+        left: 40px;
+        position: absolute;
+        top: 282px;
+        width: 17px;
+      }
+
+      .contact-us .vector-VMr6Om {
+        height: 12px;
+        left: 42px;
+        top: 369px;
+        width: 13px;
+      }
+
+      .contact-us .vector-mzXdH9 {
+        height: 14px;
+        left: 41px;
+        top: 430px;
+        width: 15px;
+      }
+
+      .contact-us .cleanifyofcgmailcom-C61RwL {
+        color: var(--black);
+        font-family: var(--font-family-dm_sans);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 500;
+        left: 68px;
+        top: 392px;
+      }
+
+      .contact-us .x62-838-9760-6671-C61RwL {
+        color: var(--black);
+        font-family: var(--font-family-lato);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 500;
+        left: 68px;
+        top: 454px;
+      }
+
+      .contact-us .cleanifyofc-C61RwL {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-lato);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 500;
+        height: auto;
+        left: 70px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 520px;
+        white-space: nowrap;
+        width: auto;
+      }
+
+      .contact-us .instagram-negative-C61RwL {
+        height: 12px;
+        left: 44px;
+        top: 497px;
+        width: 13px;
+      }
+
+      .contact-us .group-47780-C61RwL {
+        background-color: transparent;
+        height: 493px;
+        left: 0px;
+        position: absolute;
+        top: 621px;
+        width: 422px;
+      }
+
+      .contact-us .rectangle-2661-2Gfbpf {
+        background-color: var(--blumine-2);
+        height: 493px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 420px;
+      }
+
+      .contact-us .line-2-2Gfbpf {
+        background-color: transparent;
+        height: 1px;
+        left: 0px;
+        position: absolute;
+        top: 401px;
+        width: 393px;
+      }
+
+      .contact-us .group-47687-2Gfbpf {
+        background-color: transparent;
+        height: 44px;
+        left: 23px;
+        position: absolute;
+        top: 80px;
+        width: 258px;
+      }
+
+      .contact-us .lorem-ipsum-dolor-si-mzDC0p {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: 13.8px;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: 256px;
+      }
+
+      .contact-us .group-36771-mzDC0p {
+        background-color: transparent;
+        height: 9px;
+        left: 0px;
+        position: absolute;
+        top: 35px;
+        width: 95px;
+      }
+
+      .contact-us .group-194-0NAW3z {
+        background-color: transparent;
+        height: 9px;
+        left: 0px;
+        position: relative;
+        top: 0px;
+        width: 95px;
+      }
+
+      .contact-us .google-negative-eBeVRx {
+        background-color: transparent;
+        height: 9px;
+        left: 86px;
+        position: absolute;
+        top: 0px;
+        width: 9px;
+      }
+
+      .contact-us .linked-in-negative-eBeVRx {
+        background-color: transparent;
+        height: 9px;
+        left: 64px;
+        position: absolute;
+        top: -0px;
+        width: 9px;
+      }
+
+      .contact-us .instagram-negative-eBeVRx {
+        height: 9px;
+        left: 43px;
+        top: -0px;
+        width: 8px;
+      }
+
+      .contact-us .twitter-negative-eBeVRx {
+        background-color: transparent;
+        height: 9px;
+        left: 22px;
+        position: absolute;
+        top: 0px;
+        width: 9px;
+      }
+
+      .contact-us .facebook-negative-eBeVRx {
+        background-color: transparent;
+        height: 9px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 9px;
+      }
+
+      .contact-us .logo-cleanify_20241004_201648_0000-3-2Gfbpf {
+        height: 25px;
+        left: 19px;
+        top: 39px;
+        width: 26px;
+      }
+
+      .contact-us .cleanify-2Gfbpf {
+        background-color: transparent;
+        height: auto;
+        left: 51px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 46px;
+        width: 111px;
+      }
+
+      .contact-us .group-16709-2Gfbpf {
+        background-color: transparent;
+        height: 195px;
+        left: 25px;
+        position: absolute;
+        top: 149px;
+        width: 94px;
+      }
+
+      .contact-us .company-iXMDju {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: 90px;
+      }
+
+      .contact-us .beranda-layanan-about-us-contact-us-iXMDju {
+        background-color: transparent;
+        height: auto;
+        left: 1px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 32px;
+        width: 81px;
+      }
+
+      .contact-us .group-16708-2Gfbpf {
+        background-color: transparent;
+        height: 195px;
+        left: 139px;
+        position: absolute;
+        top: 149px;
+        width: 89px;
+      }
+
+      .contact-us .support-Cbx5U2 {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: 75px;
+      }
+
+      .contact-us .help-center-tweet-us-webians-feedback-Cbx5U2 {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 32px;
+        width: 85px;
+      }
+
+      .contact-us .group-16707-2Gfbpf {
+        background-color: transparent;
+        height: 195px;
+        left: 256px;
+        position: absolute;
+        top: 149px;
+        width: 119px;
+      }
+
+      .contact-us .links-7aYRGu {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: 48px;
+      }
+
+      .contact-us .courses-become-teach-7aYRGu {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 32px;
+        width: 115px;
+      }
+
+      .contact-us .group-36774-2Gfbpf {
+        background-color: transparent;
+        height: 64px;
+        left: 23px;
+        position: absolute;
+        top: 303px;
+        width: 138px;
+      }
+
+      .contact-us .contact-us-fGzQAh {
+        background-color: transparent;
+        height: auto;
+        left: 0px;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: auto;
+      }
+
+      .contact-us .group-36772-fGzQAh {
+        background-color: transparent;
+        height: 13px;
+        left: 2px;
+        position: absolute;
+        top: 51px;
+        width: 136px;
+      }
+
+      .contact-us .cleanifyofcgmailcom-RNw90K {
+        left: 23px;
+        top: 0px;
+        white-space: nowrap;
+      }
+
+      .contact-us .vector-RNw90K {
+        height: 13px;
+        left: 0px;
+        top: 0px;
+        width: 13px;
+      }
+
+      .contact-us .group-36773-fGzQAh {
+        background-color: transparent;
+        height: 15px;
+        left: 0px;
+        position: absolute;
+        top: 26px;
+        width: 132px;
+      }
+
+      .contact-us .x62-838-9760-6671-wS2Wxx {
+        left: 23px;
+        top: 0px;
+      }
+
+      .contact-us .vector-wS2Wxx {
+        height: 15px;
+        left: 0px;
+        top: 0px;
+        width: 15px;
+      }
+
+      .contact-us .logo-cleanify_20241004_201648_0000-3-C61RwL {
+        cursor: pointer;
+        height: 49px;
+        left: 25px;
+        top: 6px;
+        width: 49px;
+      }
+
+      .contact-us .vector-QxM5SU {
+        height: 115px;
+        left: 0px;
+        top: 916px;
+        width: 37px;
+      }
+
+      .contact-us .cleanifyofcgmailcom {
+        background-color: transparent;
+        height: auto;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        width: auto;
+      }
+
+      .contact-us .gradient-blur {
+        background: linear-gradient(
+          180deg,
+          rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%,
+          rgb(77.78301939368248, 172.99998968839645, 247.13238537311554)
+            20.666655898094177%,
+          rgb(70.00000342726707, 248.0000004172325, 245.03333240747452)
+            70.66665887832642%,
+          rgb(70.00000342726707, 248.0000004172325, 245.03333240747452)
+            79.1666567325592%
+        );
+        background-color: transparent;
+        border-radius: 137px;
+        filter: blur(198px);
+        height: 192px;
+        opacity: 0.56;
+        position: absolute;
+        width: 511px;
+      }
+
+      .contact-us .instagram-negative {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .contact-us .logo-cleanify_20241004_201648_0000-3 {
+        background-color: transparent;
+        object-fit: cover;
+        position: absolute;
+      }
+
+      .contact-us .vector {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .contact-us .x62-838-9760-6671 {
+        background-color: transparent;
+        height: auto;
+        letter-spacing: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        white-space: nowrap;
+        width: auto;
+      }
+    </style>
+  </head>
+
+  <body style="margin: 0; background: #fdfdfd">
+    <input type="hidden" id="anPageName" name="page" value="contact-us" />
+    <div class="container-center-horizontal">
+      <div class="contact-us screen" data-id="2:741">
+        <div class="gradient-blur-C61RwL gradient-blur" data-id="2:742"></div>
+        <img
+          class="rock-C61RwL rock"
+          data-id="2:743"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock.svg"
+          alt="Rock"
+        /><img
+          class="rock-VMr6Om rock"
+          data-id="2:744"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock.svg"
+          alt="Rock"
+        /><img
+          class="rock-mzXdH9 rock"
+          data-id="2:745"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-24.svg"
+          alt="Rock"
+        /><img
+          class="rock-QxM5SU rock"
+          data-id="2:746"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-42.svg"
+          alt="Rock"
+        /><img
+          class="vector-C61RwL vector"
+          data-id="2:747"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-25.svg"
+          alt="Vector"
+        /><img
+          class="rock-2P4qUJ rock"
+          data-id="2:748"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-43.svg"
+          alt="Rock"
+        />
+        <div class="gradient-blur-VMr6Om gradient-blur" data-id="2:749"></div>
+        <img
+          class="vector-2-C61RwL"
+          data-id="2:751"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-2@2x.png"
+          alt="Vector 2"
+        />
+        <div class="gradient-blur-mzXdH9 gradient-blur" data-id="2:752"></div>
+        <img
+          class="rock-qr8e7q rock"
+          data-id="2:753"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-1.svg"
+          alt="Rock"
+        />
+        <div class="rectangle-2662-C61RwL" data-id="2:754"></div>
+        <img
+          class="frame-C61RwL"
+          data-id="2:755"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/frame.svg"
+          alt="Frame"
+        />
+        <h1 class="title-C61RwL" data-id="2:759">CONTACT US</h1>
+        <p class="hubungi-kami-untuk-m-C61RwL" data-id="2:760">
+          Hubungi Kami untuk mendapatkan layanan berkualitas dan berbagai
+          kebutuhan melalui kontak di bawah.
+        </p>
+        <p
+          class="jl-angkrek-situ-no19-C61RwL dmsans-medium-black-12px"
+          data-id="2:761"
+        >
+          Jl. Angkrek Situ No.19, Situ, Kec. Sumedang Utara, Kabupaten Sumedang,
+          Jawa Barat 45323
+        </p>
+        <div class="addres-C61RwL dmsans-bold-blumine-16px" data-id="2:762">
+          Addres
+        </div>
+        <div class="email-C61RwL dmsans-bold-blumine-16px" data-id="2:763">
+          Email
+        </div>
+        <div class="phone-C61RwL dmsans-bold-blumine-16px" data-id="2:764">
+          Phone
+        </div>
+        <div class="instagram-C61RwL dmsans-bold-blumine-16px" data-id="2:765">
+          Instagram
+        </div>
+        <div class="ellipse-11-C61RwL" data-id="2:766"></div>
+        <div class="ellipse-12-C61RwL" data-id="2:767"></div>
+        <div class="ellipse-14-C61RwL" data-id="2:768"></div>
+        <div class="ellipse-16-C61RwL" data-id="2:769"></div>
+        <div class="ellipse-13-C61RwL" data-id="2:770"></div>
+        <div class="ellipse-15-C61RwL" data-id="2:771"></div>
+        <div class="ellipse-17-C61RwL" data-id="2:772"></div>
+        <img
+          class="location-C61RwL"
+          data-id="2:773"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/location.svg"
+          alt="Location"
+        /><img
+          class="vector-VMr6Om vector"
+          data-id="2:774"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-26.svg"
+          alt="Vector"
+        /><img
+          class="vector-mzXdH9 vector"
+          data-id="2:775"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-27.svg"
+          alt="Vector"
+        />
+        <div
+          class="cleanifyofcgmailcom-C61RwL cleanifyofcgmailcom"
+          data-id="2:776"
+        >
+          cleanifyofc@gmail.com
+        </div>
+        <div class="x62-838-9760-6671-C61RwL x62-838-9760-6671" data-id="2:777">
+          (+62) 838-9760-6671
+        </div>
+        <div class="cleanifyofc-C61RwL" data-id="2:778">@cleanify.ofc</div>
+        <img
+          class="instagram-negative-C61RwL instagram-negative"
+          data-id="2:779"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/instagram---negative-6.svg"
+          alt="Instagram - Negative"
+        />
+        <div class="group-47780-C61RwL" data-id="2:780">
+          <div class="rectangle-2661-2Gfbpf" data-id="2:781"></div>
+          <img
+            class="line-2-2Gfbpf"
+            data-id="2:782"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/line-2.svg"
+            alt="Line 2"
+          />
+          <div class="group-47687-2Gfbpf" data-id="2:783">
+            <p
+              class="lorem-ipsum-dolor-si-mzDC0p lato-medium-white-10px"
+              data-id="2:784"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+              aliquam, purus sit amet luctus venenatis.
+            </p>
+            <div class="group-36771-mzDC0p" data-id="2:785">
+              <div class="group-194-0NAW3z" data-id="2:786">
+                <img
+                  class="google-negative-eBeVRx"
+                  data-id="2:787"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/google---negative-6.svg"
+                  alt="Google - Negative"
+                /><img
+                  class="linked-in-negative-eBeVRx"
+                  data-id="2:788"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/linkedin---negative-6.svg"
+                  alt="LinkedIn - Negative"
+                /><img
+                  class="instagram-negative-eBeVRx instagram-negative"
+                  data-id="2:789"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/instagram---negative-7.svg"
+                  alt="Instagram - Negative"
+                /><img
+                  class="twitter-negative-eBeVRx"
+                  data-id="2:790"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/twitter---negative-6.svg"
+                  alt="Twitter - Negative"
+                /><img
+                  class="facebook-negative-eBeVRx"
+                  data-id="2:791"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/facebook---negative-6.svg"
+                  alt="Facebook - Negative"
+                />
+              </div>
+            </div>
+          </div>
+          <img
+            class="logo-cleanify_20241004_201648_0000-3-2Gfbpf logo-cleanify_20241004_201648_0000-3"
+            data-id="2:792"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logo-cleanify-20241004-201648-0000-1.png"
+            alt="LOGO CLEANIFY_20241004_201648_0000 3"
+          />
+          <div class="cleanify-2Gfbpf manjari-bold-white-13px" data-id="2:793">
+            CLEANIFY
+          </div>
+          <div class="group-16709-2Gfbpf" data-id="2:794">
+            <div class="company-iXMDju dmsans-bold-white-12px" data-id="2:795">
+              Company
+            </div>
+            <div
+              class="beranda-layanan-about-us-contact-us-iXMDju lato-medium-white-11px"
+              data-id="2:796"
+            >
+            <a href="home_page.html" style="color: white">Beranda</a
+              ><br /><br /><a href="layanan.html" style="color: white;"> Layanan</a><br /><br /><a href="about_us.html" style="color: white;"> About Us</a><br /><br /><a href="contact.html" style="color: white;">Contact Us</a>
+            
+            </div>
+          </div>
+          <div class="group-16708-2Gfbpf" data-id="2:797">
+            <div class="support-Cbx5U2 dmsans-bold-white-12px" data-id="2:798">
+              Support
+            </div>
+            <div
+              class="help-center-tweet-us-webians-feedback-Cbx5U2 lato-medium-white-11px"
+              data-id="2:799"
+            >
+            <a href="contact.html" style="color: white;">Help Center</a><br /><br /><a href="contact.html" style="color: white;">Tweet @ Us</a><br /><br /><a href="home_page.html" style="color: white;">Webians</a><br /><br /><a href="penilaian.html" style="color: white;">Feedback</a>
+            
+            </div>
+          </div>
+          <div class="group-16707-2Gfbpf" data-id="2:800">
+            <div class="links-7aYRGu dmsans-bold-white-12px" data-id="2:801">
+              Links
+            </div>
+            <div
+              class="courses-become-teach-7aYRGu lato-medium-white-11px"
+              data-id="2:802"
+            >
+            <a href="about_us.html" style="color: white;">Courses</a><br /><br /><a href="contact.html" style="color: white;">Become Teacher</a><br /><br /><a href="pilihan_jasa.html" style="color: white;">Service</a><br /><br /><a href="layanan.html" style="color: white;">All in One</a>
+              
+            </div>
+          </div>
+          <div class="group-36774-2Gfbpf" data-id="2:803">
+            <div
+              class="contact-us-fGzQAh dmsans-bold-white-12px"
+              data-id="2:804"
+            >
+              Contact Us
+            </div>
+            <div class="group-36772-fGzQAh" data-id="2:805">
+              <div
+                class="cleanifyofcgmailcom-RNw90K cleanifyofcgmailcom lato-medium-white-11px"
+                data-id="2:806"
+              >
+                cleanifyofc@gmail.com
+              </div>
+              <img
+                class="vector-RNw90K vector"
+                data-id="2:807"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-8.svg"
+                alt="Vector"
+              />
+            </div>
+            <div class="group-36773-fGzQAh" data-id="2:808">
+              <div
+                class="x62-838-9760-6671-wS2Wxx x62-838-9760-6671 lato-medium-white-11px"
+                data-id="2:809"
+              >
+                (+62) 838-9760-6671
+              </div>
+              <img
+                class="vector-wS2Wxx vector"
+                data-id="2:810"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-9.svg"
+                alt="Vector"
+              />
+            </div>
+          </div>
+        </div>
+        <a href="home-page"
+          ><img
+            class="logo-cleanify_20241004_201648_0000-3-C61RwL logo-cleanify_20241004_201648_0000-3"
+            data-id="2:811"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logo-cleanify-20241004-201648-0000-1.png"
+            alt="LOGO CLEANIFY_20241004_201648_0000 3" /></a
+        ><img
+          class="vector-QxM5SU vector"
+          data-id="2:812"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-28.svg"
+          alt="Vector"
+        />
+      </div>
+    </div>
+    <script src="launchpad-js/launchpad-banner.js" async></script>
+    <script
+      defer
+      src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"
+    ></script>
+  </body>
+</html>
