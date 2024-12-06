@@ -5,1870 +5,2161 @@ This code is a high-fidelity prototype.
 Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
 05/12/2024 09:38:44 -->
 
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-
-@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,200,600,500,700|Open+Sans:700,600|Lato:500|Manjari:700|Lexend:400,600|Over+the+Rainbow:400");
-
-
-@font-face {
-  font-family: "Pecita-Book";
-  font-style: normal;
-  font-weight: 400;
-  src: url('https://anima-uploads.s3.amazonaws.com/projects/621a3157392ee0263ac2c7ea/fonts/pecita.otf') format("opentype");
-}
-/* The following line is used to measure usage of this code. You can remove it if you want. */
-@import url("https://px.animaapp.com/674f032ec7a9d0c0f6e857a2.674f032fc7a9d0c0f6e857a5.4F8kzxD.hch.png");
-
-
-.screen textarea:focus,
-.screen input:focus {
-  outline: none;
-}
-
-.screen * {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-.screen div {
-  -webkit-text-size-adjust: none;
-}
-
-.component-wrapper a {
-  display: contents;
-  pointer-events: auto;
-  text-decoration: none;
-}
-
-.component-wrapper * {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-  pointer-events: none;
-}
-
-.component-wrapper a *,
-.component-wrapper input,
-.component-wrapper video,
-.component-wrapper iframe {
-  pointer-events: auto;
-}
-
-.component-wrapper.not-ready,
-.component-wrapper.not-ready * {
-  visibility: hidden !important;
-}
-
-.screen a {
-  display: contents;
-  text-decoration: none;
-}
-
-.full-width-a {
-  width: 100%;
-}
-
-.full-height-a {
-  height: 100%;
-}
-
-.container-center-vertical {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  pointer-events: none;
-}
-
-.container-center-vertical > * {
-  flex-shrink: 0;
-  pointer-events: auto;
-}
-
-.container-center-horizontal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  pointer-events: none;
-  width: 100%;
-}
-
-.container-center-horizontal > * {
-  flex-shrink: 0;
-  pointer-events: auto;
-}
-
-.auto-animated div {
-  --z-index: -1;
-  opacity: 0;
-  position: absolute;
-}
-
-.auto-animated input {
-  --z-index: -1;
-  opacity: 0;
-  position: absolute;
-}
-
-.auto-animated .container-center-vertical,
-.auto-animated .container-center-horizontal {
-  opacity: 1;
-}
-
-.overlay-base {
-  display: none;
-  height: 100%;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.overlay-base.animate-appear {
-  align-items: center;
-  animation: reveal 0.3s ease-in-out 1 normal forwards;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0;
-}
-
-.overlay-base.animate-disappear {
-  animation: reveal 0.3s ease-in-out 1 reverse forwards;
-  display: block;
-  opacity: 1;
-  pointer-events: none;
-}
-
-.overlay-base.animate-disappear * {
-  pointer-events: none;
-}
-
-@keyframes reveal {
-  from { opacity: 0 }
- to { opacity: 1 }
-}
-
-.animate-nodelay {
-  animation-delay: 0s;
-}
-
-.align-self-flex-start {
-  align-self: flex-start;
-}
-
-.align-self-flex-end {
-  align-self: flex-end;
-}
-
-.align-self-flex-center {
-  align-self: flex-center;
-}
-
-.valign-text-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.valign-text-bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-input:focus {
-  outline: none;
-}
-
-.listeners-active,
-.listeners-active * {
-  pointer-events: auto;
-}
-
-.hidden,
-.hidden * {
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.smart-layers-pointers,
-.smart-layers-pointers * {
-  pointer-events: auto;
-  visibility: visible;
-}
-
-.listeners-active-click,
-.listeners-active-click * {
-  cursor: pointer;
-}
-
-* {
-  box-sizing: border-box;
-}
-:root { 
-  --black: #000000;
-  --black-pearl: #051625;
-  --blue-jeans: #4dacf724;
-  --blumine: #165781;
-  --blumine-2: #175882;
-  --coconut: #fdfdfd;
-  --cultured-pearl: #f5f5f5;
-  --dodger-blue: #19a5ff;
-  --eerie-black: #1e1e1e;
-  --red-ribbon: #ed0131;
-  --regent-st-blue: #acd6f7;
-  --white: #ffffff;
- 
-  --font-size-l: 13px;
-  --font-size-m: 12px;
-  --font-size-s: 11px;
-  --font-size-xl: 14px;
-  --font-size-xs: 10px;
-  --font-size-xxl: 15px;
-  --font-size-xxxl: 16px;
- 
-  --font-family-dm_sans: "DM Sans", Helvetica;
-  --font-family-lato: "Lato", Helvetica;
-  --font-family-lexend: "Lexend", Helvetica;
-  --font-family-manjari: "Manjari", Helvetica;
-  --font-family-open_sans: "Open Sans", Helvetica;
-  --font-family-over_the_rainbow: "Over the Rainbow", Helvetica;
-  --font-family-pecita-book: "Pecita-Book", Helvetica;
-}
-.dmsans-bold-white-12px {
-  color: var(--white);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-m);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.lato-medium-white-11px {
-  color: var(--white);
-  font-family: var(--font-family-lato);
-  font-size: var(--font-size-s);
-  font-style: normal;
-  font-weight: 500;
-}
-
-.dmsans-bold-white-14px {
-  color: var(--white);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.dmsans-normal-white-14px {
-  color: var(--white);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.dmsans-normal-white-10px {
-  color: var(--white);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xs);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.dmsans-semi-bold-white-10px {
-  color: var(--white);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xs);
-  font-style: normal;
-  font-weight: 600;
-}
-
-.dmsans-medium-black-12px {
-  color: var(--black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-m);
-  font-style: normal;
-  font-weight: 500;
-}
-
-.opensans-bold-black-pearl-15px {
-  color: var(--black-pearl);
-  font-family: var(--font-family-open_sans);
-  font-size: var(--font-size-xxl);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.dmsans-semi-bold-black-13px {
-  color: var(--black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-l);
-  font-style: normal;
-  font-weight: 600;
-}
-
-.dmsans-extra-light-white-10px {
-  color: var(--white);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xs);
-  font-style: normal;
-  font-weight: 200;
-}
-
-.dmsans-medium-black-16px {
-  color: var(--black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xxxl);
-  font-style: normal;
-  font-weight: 500;
-}
-
-.lato-medium-white-10px {
-  color: var(--white);
-  font-family: var(--font-family-lato);
-  font-size: var(--font-size-xs);
-  font-style: normal;
-  font-weight: 500;
-}
-
-.manjari-bold-white-13px {
-  color: var(--white);
-  font-family: var(--font-family-manjari);
-  font-size: var(--font-size-l);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.lexend-normal-white-14px {
-  color: var(--white);
-  font-family: var(--font-family-lexend);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.dmsans-bold-black-12px {
-  color: var(--black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-m);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.dmsans-bold-black-14px {
-  color: var(--black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.dmsans-bold-eerie-black-18px {
-  color: var(--eerie-black);
-  font-family: var(--font-family-dm_sans);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-}
-
-.dmsans-bold-blumine-16px {
-  color: var(--blumine);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xxxl);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.dmsans-bold-white-16px {
-  color: var(--white);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xxxl);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.dmsans-normal-eerie-black-11px {
-  color: var(--eerie-black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-s);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.opensans-bold-white-15px {
-  font-family: var(--font-family-open_sans);
-  font-size: var(--font-size-xxl);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.opensans-bold-red-ribbon-15px {
-  color: var(--red-ribbon);
-  font-family: var(--font-family-open_sans);
-  font-size: var(--font-size-xxl);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.dmsans-normal-coconut-14px {
-  color: var(--coconut);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.dmsans-normal-eerie-black-14px {
-  color: var(--eerie-black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 400;
-}
-
-.dmsans-medium-black-pearl-14px {
-  color: var(--black-pearl);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 500;
-}
-
-.dmsans-medium-blumine-24px {
-  color: var(--blumine);
-  font-family: var(--font-family-dm_sans);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-}
-
-:root {
-}
-
-
-.group {
-  background-color: transparent;
-  position: absolute;
-}
-
-.rock {
-  background-color: transparent;
-  position: absolute;
-}
-
-.hari-ini-C61RwL {
-  background-color: transparent;
-  height: auto;
-  left: 23px;
-  letter-spacing: 0.12px;
-  line-height: 18.9px;
-  position: absolute;
-  text-align: center;
-  top: 277px;
-  white-space: nowrap;
-  width: auto;
-}
-
-.rectangle-2663-ef0c9D {
-  height: 141px;
-  width: 357px;
-}
-
-.group-47780-ef0c9D {
-  height: 115px;
-  top: 13px;
-  width: 106px;
-}
-
-.rectangle-2664-SATyeM {
-  height: 115px;
-  position: relative;
-  width: 106px;
-}
-
-.group-FZznCY {
-  height: 18px;
-  left: 0px;
-  top: 44px;
-  width: 85px;
-}
-
-.tab {
-  background-color: transparent;
-  border-bottom-style: solid;
-  border-color: var(--black);
-  border-left-style: none;
-  border-right-style: none;
-  border-top-style: none;
-  height: 28px;
-  overflow: hidden;
-  position: absolute;
-  top: 235px;
-  width: 131px;
-}
-
-.tab-label {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: -0.26px;
-  line-height: 22px;
-  position: absolute;
-  text-align: center;
-  width: 131px;
-}
-
-.rock-qr8e7q {
-  height: 56px;
-  left: 293px;
-  top: 0px;
-  width: 100px;
-}
-
-.group-47777-C61RwL {
-  background-color: transparent;
-  height: 493px;
-  left: 0px;
-  position: absolute;
-  top: 848px;
-  width: 422px;
-}
-
-.rectangle-2661-CXpwDY {
-  background-color: var(--blumine);
-  height: 493px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 420px;
-}
-
-.line-2-CXpwDY {
-  background-color: transparent;
-  height: 1px;
-  left: 0px;
-  position: absolute;
-  top: 401px;
-  width: 393px;
-}
-
-.group-47687-CXpwDY {
-  background-color: transparent;
-  height: 44px;
-  left: 23px;
-  position: absolute;
-  top: 79px;
-  width: 258px;
-}
-
-.lorem-ipsum-dolor-si-QXPe94 {
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: 13.8px;
-  top: 0px;
-  width: 256px;
-}
-
-.group-36771-QXPe94 {
-  background-color: transparent;
-  height: 9px;
-  left: 0px;
-  position: absolute;
-  top: 35px;
-  width: 95px;
-}
-
-.group-194-vLUzMS {
-  background-color: transparent;
-  height: 9px;
-  left: 0px;
-  position: relative;
-  top: 0px;
-  width: 95px;
-}
-
-.google-negative-LNOAOX {
-  background-color: transparent;
-  height: 9px;
-  left: 86px;
-  position: absolute;
-  top: 0px;
-  width: 9px;
-}
-
-.linked-in-negative-LNOAOX {
-  background-color: transparent;
-  height: 9px;
-  left: 64px;
-  position: absolute;
-  top: -0px;
-  width: 9px;
-}
-
-.instagram-negative-LNOAOX {
-  background-color: transparent;
-  height: 9px;
-  left: 43px;
-  position: absolute;
-  top: -0px;
-  width: 8px;
-}
-
-.twitter-negative-LNOAOX {
-  background-color: transparent;
-  height: 9px;
-  left: 22px;
-  position: absolute;
-  top: 0px;
-  width: 9px;
-}
-
-.facebook-negative-LNOAOX {
-  background-color: transparent;
-  height: 9px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 9px;
-}
-
-.logo-cleanify_20241004_201648_0000-3-CXpwDY {
-  background-color: transparent;
-  height: 25px;
-  left: 19px;
-  object-fit: cover;
-  position: absolute;
-  top: 39px;
-  width: 26px;
-}
-
-.cleanify-CXpwDY {
-  background-color: transparent;
-  height: auto;
-  left: 51px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 46px;
-  width: 111px;
-}
-
-.group-16709-CXpwDY {
-  background-color: transparent;
-  height: 195px;
-  left: 25px;
-  position: absolute;
-  top: 149px;
-  width: 94px;
-}
-
-.company-iIxctO {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 0px;
-  width: 90px;
-}
-
-.beranda-layanan-about-us-contact-us-iIxctO {
-  background-color: transparent;
-  height: auto;
-  left: 1px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 32px;
-  width: 81px;
-}
-
-.group-16708-CXpwDY {
-  background-color: transparent;
-  height: 195px;
-  left: 139px;
-  position: absolute;
-  top: 149px;
-  width: 89px;
-}
-
-.support-hUWaSz {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 0px;
-  width: 75px;
-}
-
-.help-center-tweet-us-webians-feedback-hUWaSz {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 32px;
-  width: 85px;
-}
-
-.group-16707-CXpwDY {
-  background-color: transparent;
-  height: 195px;
-  left: 256px;
-  position: absolute;
-  top: 149px;
-  width: 119px;
-}
-
-.links-cynegb {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 0px;
-  width: 48px;
-}
-
-.courses-become-teach-cynegb {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 32px;
-  width: 115px;
-}
-
-.group-36774-CXpwDY {
-  background-color: transparent;
-  height: 64px;
-  left: 23px;
-  position: absolute;
-  top: 303px;
-  width: 138px;
-}
-
-.contact-us-WZXAUy {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 0px;
-  width: auto;
-}
-
-.group-36772-WZXAUy {
-  background-color: transparent;
-  height: 13px;
-  left: 2px;
-  position: absolute;
-  top: 51px;
-  width: 136px;
-}
-
-.cleanifyofcgmailcom-G5jJVo {
-  background-color: transparent;
-  height: auto;
-  left: 23px;
-  letter-spacing: 0.00px;
-  line-height: normal;
-  position: absolute;
-  text-align: left;
-  top: 0px;
-  white-space: nowrap;
-  width: auto;
-}
-
-.vector-G5jJVo {
-  height: 13px;
-  width: 13px;
-}
-
-.vector-XrUWmi {
-  height: 15px;
-  width: 15px;
-}
-
-.lorem-ipsum-dolor-si {
-  background-color: transparent;
-  height: auto;
-  position: absolute;
-  text-align: left;
-}
-
-.rp-100000 {
-  background-color: transparent;
-  height: auto;
-  left: 0px;
-  letter-spacing: 0.12px;
-  line-height: 18.9px;
-  position: absolute;
-  text-align: center;
-  top: 0px;
-  white-space: nowrap;
-  width: auto;
-}
-/* screen - metode-pembayaran */
-
-.metode-pembayaran {
-  background-color: var(--coconut);
-  height: 856px;
-  overflow: hidden;
-  overflow-x: hidden;
-  position: relative;
-  width: 393px;
-}
-
-.metode-pembayaran .gradient-blur-C61RwL {
-  left: 62px;
-  top: 856px;
-}
-
-.metode-pembayaran .vector-2-C61RwL {
-  background-color: transparent;
-  height: 1px;
-  left: -939px;
-  position: absolute;
-  top: 2365px;
-  width: 105px;
-}
-
-.metode-pembayaran .gradient-blur-VMr6Om {
-  left: -88px;
-  top: 765px;
-}
-
-.metode-pembayaran .gradient-blur-mzXdH9 {
-  left: -56px;
-  top: -59px;
-}
-
-.metode-pembayaran .rock-C61RwL {
-  height: 107px;
-  left: -1209px;
-  top: 1864px;
-  width: 114px;
-}
-
-.metode-pembayaran .pilih-metode-pembayaran-C61RwL {
-  background-color: transparent;
-  color: var(--black);
-  font-family: var(--font-family-dm_sans);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  height: auto;
-  left: 25px;
-  letter-spacing: 0.00px;
-  line-height: 18px;
-  position: absolute;
-  text-align: left;
-  top: 87px;
-  white-space: nowrap;
-  width: auto;
-}
-
-.metode-pembayaran .rock-VMr6Om {
-  height: 56px;
-  left: 293px;
-  top: 0px;
-  width: 100px;
-}
-
-.metode-pembayaran .rectangle-2662-C61RwL {
-  background-color: var(--white);
-  border: 0.5px solid;
-  border-color: var(--blue-jeans);
-  box-shadow: 0px 4px 4px #838b9517;
-  height: 64px;
-  left: -1px;
-  position: absolute;
-  top: 0px;
-  width: 396px;
-}
-
-.metode-pembayaran .group-C61RwL {
-  cursor: pointer;
-  height: 26px;
-  left: 24px;
-  top: 17px;
-  width: 26px;
-}
-
-.metode-pembayaran .arrow-left-NOXmfT {
-  background-color: transparent;
-  height: 26px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 26px;
-}
-
-.metode-pembayaran .bca-C61RwL {
-  top: 176px;
-}
-
-.metode-pembayaran .logo-h58vSW {
-  height: 16.83652687072754px;
-  width: 56.9893913269043px;
-}
-
-.metode-pembayaran .fill-1-dEs1mQ {
-  height: 7px;
-  left: 3px;
-  top: 6px;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-6-dEs1mQ {
-  height: 4px;
-  left: 3px;
-  top: 9px;
-}
-
-.metode-pembayaran .fill-8-dEs1mQ {
-  height: 11px;
-  left: 6px;
-  top: 2px;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-10-dEs1mQ {
-  left: 9px;
-  top: 6px;
-}
-
-.metode-pembayaran .fill-12-dEs1mQ {
-  height: 4px;
-  left: 10px;
-  top: 9px;
-}
-
-.metode-pembayaran .fill-14-dEs1mQ {
-  height: 1px;
-  left: 10px;
-  top: 14px;
-  width: 1px;
-}
-
-.metode-pembayaran .fill-16-dEs1mQ {
-  height: 1px;
-  left: 11px;
-  top: 14px;
-  width: 1px;
-}
-
-.metode-pembayaran .fill-18-dEs1mQ {
-  height: 2px;
-  left: 13px;
-  top: 14px;
-  width: 1px;
-}
-
-.metode-pembayaran .fill-20-dEs1mQ {
-  height: 1px;
-  left: 4px;
-  top: 14px;
-  width: 1px;
-}
-
-.metode-pembayaran .fill-22-dEs1mQ {
-  height: 2px;
-  left: 5px;
-  top: 14px;
-  width: 1px;
-}
-
-.metode-pembayaran .fill-24-dEs1mQ {
-  height: 1px;
-  left: 7px;
-  top: 14px;
-  width: 1px;
-}
-
-.metode-pembayaran .fill-26-dEs1mQ {
-  height: 1px;
-  left: 8px;
-  top: 14px;
-  width: 1px;
-}
-
-.metode-pembayaran .fill-28-dEs1mQ {
-  height: 14px;
-  left: 33px;
-  top: 1px;
-  width: 14px;
-}
-
-.metode-pembayaran .fill-30-dEs1mQ {
-  background-color: transparent;
-  height: 14px;
-  left: 43px;
-  position: absolute;
-  top: 1px;
-  width: 14px;
-}
-
-.metode-pembayaran .fill-32-dEs1mQ {
-  background-color: transparent;
-  height: 14px;
-  left: 20px;
-  position: absolute;
-  top: 1px;
-  width: 14px;
-}
-
-.metode-pembayaran .group-dEs1mQ {
-  height: 17px;
-  left: 0px;
-  top: 0px;
-  width: 18px;
-}
-
-.metode-pembayaran .fill-3-lE7CjT {
-  height: 17px;
-  left: 0px;
-  width: 18px;
-}
-
-.metode-pembayaran .bca-VMr6Om {
-  top: 259px;
-}
-
-.metode-pembayaran .frame-b1cDWM {
-  align-items: center;
-  background-color: transparent;
-  display: flex;
-  gap: 10px;
-  height: 36px;
-  justify-content: center;
-  position: relative;
-  width: 36px;
-}
-
-.metode-pembayaran .logo-2z3Ma0 {
-  height: 30.093597412109375px;
-  margin-left: -9.25px;
-  margin-right: -9.25px;
-  width: 54.5091438293457px;
-}
-
-.metode-pembayaran .fill-1-03wzXF {
-  height: 13px;
-  left: 17px;
-  top: 0px;
-  width: 17px;
-}
-
-.metode-pembayaran .group-21-03wzXF {
-  background-color: transparent;
-  height: 13px;
-  left: 0px;
-  position: absolute;
-  top: 17px;
-  width: 55px;
-}
-
-.metode-pembayaran .fill-3-5VchcF {
-  height: 11px;
-  left: 0px;
-  width: 7px;
-}
-
-.metode-pembayaran .fill-5-5VchcF {
-  left: 8px;
-  top: 3px;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-7-5VchcF {
-  height: 7px;
-  left: 15px;
-  top: 3px;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-9-5VchcF {
-  height: 11px;
-  left: 23px;
-  top: 0px;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-11-5VchcF {
-  height: 11px;
-  left: 33px;
-  top: 0px;
-  width: 8px;
-}
-
-.metode-pembayaran .fill-19-5VchcF {
-  background-color: transparent;
-  height: 2px;
-  left: 43px;
-  position: absolute;
-  top: 0px;
-  width: 2px;
-}
-
-.metode-pembayaran .group-5VchcF {
-  height: 10px;
-  left: 42px;
-  top: 3px;
-  width: 3px;
-}
-
-.metode-pembayaran .group-F5nxrA {
-  height: 11px;
-  left: 47px;
-  top: 0px;
-  width: 8px;
-}
-
-.metode-pembayaran .vector-2z3Ma0 {
-  background-color: transparent;
-  height: 3px;
-  left: 12px;
-  position: absolute;
-  top: 30px;
-  width: 15px;
-}
-
-.metode-pembayaran .bri-C61RwL {
-  top: 176px;
-}
-
-.metode-pembayaran .logo-MiPLw8 {
-  height: 14.705744743347168px;
-  width: 61.91016387939453px;
-}
-
-.metode-pembayaran .bri-VMr6Om {
-  top: 259px;
-}
-
-.metode-pembayaran .logogram-8GQlZl {
-  background-color: transparent;
-  height: 21.9605712890625px;
-  position: relative;
-  width: 19.853418350219727px;
-}
-
-.metode-pembayaran .permata-bank-8GQlZl {
-  background-color: transparent;
-  height: 7.947168827056885px;
-  position: relative;
-  width: 59.97634506225586px;
-}
-
-.metode-pembayaran .fill-1-SVbuLD {
-  height: 8px;
-  left: 38px;
-  top: 0px;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-3-SVbuLD {
-  height: 8px;
-  left: 44px;
-  width: 16px;
-}
-
-.metode-pembayaran .fill-5-SVbuLD {
-  left: 0px;
-  top: 0px;
-  width: 5px;
-}
-
-.metode-pembayaran .fill-7-SVbuLD {
-  height: 6px;
-  left: 5px;
-  top: 2px;
-  width: 5px;
-}
-
-.metode-pembayaran .fill-9-SVbuLD {
-  height: 6px;
-  left: 10px;
-  top: 2px;
-  width: 4px;
-}
-
-.metode-pembayaran .fill-11-SVbuLD {
-  height: 6px;
-  left: 15px;
-  top: 2px;
-  width: 9px;
-}
-
-.metode-pembayaran .fill-13-SVbuLD {
-  background-color: transparent;
-  height: 7px;
-  left: 29px;
-  position: absolute;
-  top: 1px;
-  width: 3px;
-}
-
-.metode-pembayaran .fill-15-SVbuLD {
-  background-color: transparent;
-  height: 6px;
-  left: 24px;
-  position: absolute;
-  top: 2px;
-  width: 5px;
-}
-
-.metode-pembayaran .fill-17-SVbuLD {
-  background-color: transparent;
-  height: 6px;
-  left: 32px;
-  position: absolute;
-  top: 2px;
-  width: 5px;
-}
-
-.metode-pembayaran .bni-C61RwL {
-  align-items: center;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px #1e2a3b1a;
-  display: flex;
-  flex-direction: column;
-  height: 67px;
-  justify-content: center;
-  left: 204px;
-  top: 176px;
-  width: 73px;
-}
-
-.metode-pembayaran .logo-xBG1nQ {
-  height: 16.236576080322266px;
-  width: 57.05483627319336px;
-}
-
-.metode-pembayaran .x46-4U0xeH {
-  background-color: transparent;
-  height: 15px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 16px;
-}
-
-.metode-pembayaran .bni-4U0xeH {
-  height: 16px;
-  left: 20px;
-  top: 0px;
-  width: 37px;
-}
-
-.metode-pembayaran .bni-VMr6Om {
-  height: 75px;
-  left: 200px;
-  top: 259px;
-  width: 81px;
-}
-
-.metode-pembayaran .cimb-C61RwL {
-  align-items: center;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px #1e2a3b1a;
-  display: flex;
-  flex-direction: column;
-  height: 67px;
-  justify-content: center;
-  left: 293px;
-  top: 176px;
-  width: 73px;
-}
-
-.metode-pembayaran .logo-cimb-2sgH6N {
-  background-color: transparent;
-  height: 15.796836853027344px;
-  position: relative;
-  width: 57.905052185058594px;
-}
-
-.metode-pembayaran .logogram-8noNus {
-  background-color: transparent;
-  height: 16px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 16px;
-}
-
-.metode-pembayaran .cimb-8noNus {
-  height: 11px;
-  left: 20px;
-  top: 2px;
-  width: 38px;
-}
-
-.metode-pembayaran .cimb-VMr6Om {
-  align-items: center;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px #1e2a3b1a;
-  display: flex;
-  flex-direction: column;
-  height: 67px;
-  justify-content: center;
-  left: 293px;
-  top: 259px;
-  width: 73px;
-}
-
-.metode-pembayaran .logo-r95XTz {
-  height: 29.199356079101562px;
-  width: 49.85348892211914px;
-}
-
-.metode-pembayaran .fill-4-Fe90KM {
-  background-color: transparent;
-  height: 7px;
-  left: 24px;
-  position: absolute;
-  top: 22px;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-6-Fe90KM {
-  height: 7px;
-  left: 32px;
-  top: 22px;
-}
-
-.metode-pembayaran .fill-8-Fe90KM {
-  height: 7px;
-  left: 38px;
-  top: 22px;
-  width: 5px;
-}
-
-.metode-pembayaran .fill-10-Fe90KM {
-  left: 44px;
-  top: 22px;
-}
-
-.metode-pembayaran .fill-12-Fe90KM {
-  height: 7px;
-  left: 0px;
-  top: 22px;
-}
-
-.metode-pembayaran .fill-14-Fe90KM {
-  height: 7px;
-  left: 5px;
-  top: 22px;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-16-Fe90KM {
-  height: 7px;
-  left: 12px;
-  top: 22px;
-  width: 5px;
-}
-
-.metode-pembayaran .fill-18-Fe90KM {
-  height: 7px;
-  left: 18px;
-  top: 22px;
-  width: 5px;
-}
-
-.metode-pembayaran .fill-20-Fe90KM {
-  height: 15px;
-  left: 25px;
-  top: 0px;
-  width: 11px;
-}
-
-.metode-pembayaran .fill-22-Fe90KM {
-  height: 17px;
-  left: 27px;
-  top: 0px;
-  width: 16px;
-}
-
-.metode-pembayaran .fill-24-Fe90KM {
-  height: 15px;
-  left: 14px;
-  top: 0px;
-  width: 11px;
-}
-
-.metode-pembayaran .fill-26-Fe90KM {
-  height: 17px;
-  left: 7px;
-  top: 0px;
-  width: 16px;
-}
-
-.metode-pembayaran .fill-28-Fe90KM {
-  height: 12px;
-  left: 21px;
-  top: 6px;
-  width: 8px;
-}
-
-.metode-pembayaran .bank-transfer-C61RwL {
-  background-color: transparent;
-  height: auto;
-  left: 24px;
-  letter-spacing: 0.00px;
-  line-height: 19.6px;
-  position: absolute;
-  text-align: left;
-  top: 148px;
-  white-space: nowrap;
-  width: 122px;
-}
-
-.metode-pembayaran .e-wallet-C61RwL {
-  box-shadow: 0px 4px 4px #00000040;
-  height: 156px;
-  left: 22px;
-  top: 387px;
-  width: 345px;
-}
-
-.metode-pembayaran .e-wallet-tAgjPn {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  left: 0px;
-  top: 0px;
-  width: 345px;
-}
-
-.metode-pembayaran .dana-8lTJ1I {
-  align-items: center;
-  background-color: transparent;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 70px;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  width: 104px;
-}
-
-.metode-pembayaran .dana-logo-OrwwaV {
-  background-color: transparent;
-  height: 19.95249366760254px;
-  object-fit: cover;
-  position: relative;
-  width: 70px;
-}
-
-.metode-pembayaran .spay-8lTJ1I {
-  align-items: center;
-  background-color: transparent;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 70px;
-  justify-content: center;
-  position: relative;
-  width: 104px;
-}
-
-.metode-pembayaran .spay-logo-s8zWeI {
-  background-color: transparent;
-  height: 16.153846740722656px;
-  object-fit: cover;
-  position: relative;
-  width: 70px;
-}
-
-.metode-pembayaran .gopay-8lTJ1I {
-  align-items: center;
-  background-color: transparent;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 70px;
-  justify-content: center;
-  padding: 10px;
-  position: relative;
-  width: 104px;
-}
-
-.metode-pembayaran .logo-gopay-QLvxaT {
-  background-color: transparent;
-  height: 23.070106506347656px;
-  object-fit: cover;
-  position: relative;
-  width: 70px;
-}
-
-.metode-pembayaran .e-wallet-ctYQGv {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  left: 0px;
-  top: 86px;
-  width: 345px;
-}
-
-.metode-pembayaran .ovo-Bv1We9 {
-  align-items: center;
-  background-color: transparent;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 70px;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  width: 104px;
-}
-
-.metode-pembayaran .ovo-logo-K4JomR {
-  background-color: transparent;
-  height: 28.80000114440918px;
-  object-fit: cover;
-  position: relative;
-  width: 70px;
-}
-
-.metode-pembayaran .isaku-Bv1We9 {
-  background-color: transparent;
-  height: 70px;
-  position: relative;
-  width: 104px;
-}
-
-.metode-pembayaran .linkaja-Bv1We9 {
-  align-items: center;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 70px;
-  justify-content: center;
-  padding: 10px;
-  width: 104px;
-}
-
-.metode-pembayaran .linkaja-ljf3Vd {
-  height: 35.05922317504883px;
-  object-fit: cover;
-  width: 70px;
-}
-
-.metode-pembayaran .e-wallet-VMr6Om {
-  color: var(--black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 500;
-  height: auto;
-  left: 22px;
-  letter-spacing: 0.00px;
-  line-height: 19.6px;
-  text-align: left;
-  top: 359px;
-  white-space: nowrap;
-  width: auto;
-}
-
-.metode-pembayaran .merchant-C61RwL {
-  color: var(--black);
-  font-family: var(--font-family-dm_sans);
-  font-size: var(--font-size-xl);
-  font-style: normal;
-  font-weight: 500;
-  height: auto;
-  letter-spacing: 0.00px;
-  line-height: 19.6px;
-  text-align: left;
-  top: 581px;
-  white-space: nowrap;
-  width: auto;
-}
-
-.metode-pembayaran .merchant-VMr6Om {
-  align-items: center;
-  box-shadow: 0px 4px 4px #00000040;
-  display: flex;
-  justify-content: space-between;
-  top: 609px;
-  width: 345px;
-}
-
-.metode-pembayaran .alfa-SKMyLu {
-  background-color: transparent;
-  height: 70px;
-  position: relative;
-  width: 104px;
-}
-
-.metode-pembayaran .circlek-SKMyLu {
-  background-color: transparent;
-  height: 70px;
-  position: relative;
-  width: 104px;
-}
-
-.metode-pembayaran .indo-SKMyLu {
-  align-items: center;
-  background-color: transparent;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  height: 70px;
-  justify-content: center;
-  padding: 10px;
-  position: relative;
-  width: 104px;
-}
-
-.metode-pembayaran .logo_-indomaret-1-ePsxDS {
-  background-color: transparent;
-  height: 28.01283836364746px;
-  object-fit: cover;
-  position: relative;
-  width: 80px;
-}
-
-.metode-pembayaran .pembayaran-C61RwL {
-  background-color: transparent;
-  color: var(--dodger-blue);
-  font-family: var(--font-family-dm_sans);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  height: auto;
-  left: 149px;
-  letter-spacing: 0.12px;
-  line-height: 18.9px;
-  position: absolute;
-  text-align: center;
-  top: 22px;
-  white-space: nowrap;
-  width: auto;
-}
-
-.metode-pembayaran .group-47804-C61RwL {
-  background-color: transparent;
-  height: 58px;
-  left: 17px;
-  position: absolute;
-  top: 722px;
-  width: 357px;
-}
-
-.metode-pembayaran .bca {
-  align-items: center;
-  background-color: transparent;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px #1e2a3b1a;
-  display: flex;
-  flex-direction: column;
-  height: 67px;
-  justify-content: center;
-  left: 25px;
-  position: absolute;
-  width: 73px;
-}
-
-.metode-pembayaran .bni {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .bri {
-  align-items: center;
-  background-color: transparent;
-  border: 1.5px solid;
-  border-color: var(--dodger-blue);
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px #1e2a3b1a;
-  display: flex;
-  flex-direction: column;
-  height: 67px;
-  justify-content: center;
-  left: 114px;
-  position: absolute;
-  width: 73px;
-}
-
-.metode-pembayaran .cimb {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .e-wallet {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-1 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-10 {
-  background-color: transparent;
-  height: 7px;
-  position: absolute;
-  width: 6px;
-}
-
-.metode-pembayaran .fill-11 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-12 {
-  background-color: transparent;
-  position: absolute;
-  width: 5px;
-}
-
-.metode-pembayaran .fill-14 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-16 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-18 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-20 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-22 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-24 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-26 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-28 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-3 {
-  background-color: transparent;
-  position: absolute;
-  top: 0px;
-}
-
-.metode-pembayaran .fill-5 {
-  background-color: transparent;
-  height: 8px;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-6 {
-  background-color: transparent;
-  position: absolute;
-  width: 5px;
-}
-
-.metode-pembayaran .fill-7 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-8 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .fill-9 {
-  background-color: transparent;
-  position: absolute;
-}
-
-.metode-pembayaran .gradient-blur {
-  background: linear-gradient(180deg, rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%, rgb(77.78301939368248, 172.99998968839645, 247.13238537311554) 20.666655898094177%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 70.66665887832642%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 79.1666567325592%);
-  background-color: transparent;
-  border-radius: 137px;
-  filter: blur(198px);;
-  height: 192px;
-  opacity: 0.56;
-  position: absolute;
-  width: 511px;
-}
-
-.metode-pembayaran .linkaja {
-  background-color: transparent;
-  position: relative;
-}
-
-.metode-pembayaran .logo {
-  background-color: transparent;
-  position: relative;
-}
-
-.metode-pembayaran .merchant {
-  background-color: transparent;
-  left: 19px;
-  position: absolute;
-}
-</style></head><body style="margin: 0;background: #fdfdfd;"><input type="hidden" id="anPageName" name="page" value="metode-pembayaran"><div class="container-center-horizontal"><div class="metode-pembayaran screen " data-id="2:1531"><div class="gradient-blur-C61RwL gradient-blur" data-id="2:1532"></div><img class="vector-2-C61RwL" data-id="2:1534" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-2@2x.png" alt="Vector 2"><div class="gradient-blur-VMr6Om gradient-blur" data-id="2:1535"></div><div class="gradient-blur-mzXdH9 gradient-blur" data-id="2:1536"></div><img class="rock-C61RwL rock" data-id="2:1537" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-2@2x.png" alt="Rock"><div class="pilih-metode-pembayaran-C61RwL" data-id="2:1538">Pilih metode pembayaran</div><img class="rock-VMr6Om rock" data-id="2:1539" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-5.svg" alt="Rock"><div class="rectangle-2662-C61RwL" data-id="2:1540"></div><a href="pembayaran"><div class="group-C61RwL group" data-id="2:1541"><img class="arrow-left-NOXmfT" data-id="2:1542" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/arrow-left-4.svg" alt="arrow-left"></div></a><div class="bca-C61RwL bca" data-id="2:1543"><div class="logo-h58vSW logo" data-id="2:1544"><img class="fill-1-dEs1mQ fill-1" data-id="2:1545" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-1.svg" alt="Fill 1"><img class="fill-6-dEs1mQ fill-6" data-id="2:1546" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-6.svg" alt="Fill 6"><img class="fill-8-dEs1mQ fill-8" data-id="2:1547" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-8.svg" alt="Fill 8"><img class="fill-10-dEs1mQ fill-10" data-id="2:1548" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-10.svg" alt="Fill 10"><img class="fill-12-dEs1mQ fill-12" data-id="2:1549" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-12.svg" alt="Fill 12"><img class="fill-14-dEs1mQ fill-14" data-id="2:1550" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-14.svg" alt="Fill 14"><img class="fill-16-dEs1mQ fill-16" data-id="2:1554" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-16.svg" alt="Fill 16"><img class="fill-18-dEs1mQ fill-18" data-id="2:1555" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-18-1.svg" alt="Fill 18"><img class="fill-20-dEs1mQ fill-20" data-id="2:1558" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-20.svg" alt="Fill 20"><img class="fill-22-dEs1mQ fill-22" data-id="2:1559" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-22-1.svg" alt="Fill 22"><img class="fill-24-dEs1mQ fill-24" data-id="2:1562" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-24.svg" alt="Fill 24"><img class="fill-26-dEs1mQ fill-26" data-id="2:1563" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-26-1.svg" alt="Fill 26"><img class="fill-28-dEs1mQ fill-28" data-id="2:1566" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-28.svg" alt="Fill 28"><img class="fill-30-dEs1mQ" data-id="2:1567" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-30.svg" alt="Fill 30"><img class="fill-32-dEs1mQ" data-id="2:1570" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-32.svg" alt="Fill 32"><div class="group-dEs1mQ group" data-id="2:1574"><img class="fill-3-lE7CjT fill-3" data-id="2:1575" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-3.svg" alt="Fill 3"></div></div></div><div class="bca-VMr6Om bca" data-id="2:1578"><div class="frame-b1cDWM" data-id="2:1579"><div class="logo-2z3Ma0 logo" data-id="2:1580"><img class="fill-1-03wzXF fill-1" data-id="2:1581" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-1-1.svg" alt="Fill 1"><div class="group-21-03wzXF" data-id="2:1585"><img class="fill-3-5VchcF fill-3" data-id="2:1586" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-3-1.svg" alt="Fill 3"><img class="fill-5-5VchcF fill-5" data-id="2:1589" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-5.svg" alt="Fill 5"><img class="fill-7-5VchcF fill-7" data-id="2:1592" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-7.svg" alt="Fill 7"><img class="fill-9-5VchcF fill-9" data-id="2:1593" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-9.svg" alt="Fill 9"><img class="fill-11-5VchcF fill-11" data-id="2:1594" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-11-1.svg" alt="Fill 11"><img class="fill-19-5VchcF" data-id="2:1597" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-19.svg" alt="Fill 19"><img class="group-5VchcF group" data-id="2:1598" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-1@2x.png" alt="group"><img class="group-F5nxrA group" data-id="2:1600" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-2@2x.png" alt="group"></div></div><img class="vector-2z3Ma0" data-id="2:1605" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-31.svg" alt="Vector"></div></div><div class="bri-C61RwL bri" data-id="2:1606"><img class="logo-MiPLw8 logo" data-id="2:1607" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logo@2x.png" alt="logo"></div><div class="bri-VMr6Om bri" data-id="2:1631"><img class="logogram-8GQlZl" data-id="2:1632" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logogram@2x.png" alt="Logogram"><div class="permata-bank-8GQlZl" data-id="2:1645"><img class="fill-1-SVbuLD fill-1" data-id="2:1646" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-1-2.svg" alt="Fill 1"><img class="fill-3-SVbuLD fill-3" data-id="2:1650" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-3-2.svg" alt="Fill 3"><img class="fill-5-SVbuLD fill-5" data-id="2:1653" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-5-1.svg" alt="Fill 5"><img class="fill-7-SVbuLD fill-7" data-id="2:1656" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-7-1.svg" alt="Fill 7"><img class="fill-9-SVbuLD fill-9" data-id="2:1659" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-9-1.svg" alt="Fill 9"><img class="fill-11-SVbuLD fill-11" data-id="2:1660" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-11.svg" alt="Fill 11"><img class="fill-13-SVbuLD" data-id="2:1661" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-13.svg" alt="Fill 13"><img class="fill-15-SVbuLD" data-id="2:1662" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-15.svg" alt="Fill 15"><img class="fill-17-SVbuLD" data-id="2:1665" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-17.svg" alt="Fill 17"></div></div><div class="bni-C61RwL bni" data-id="2:1668"><div class="logo-xBG1nQ logo" data-id="2:1669"><img class="x46-4U0xeH" data-id="2:1670" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/46.svg" alt="46"><img class="bni-4U0xeH bni" data-id="2:1677" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/bni-1.svg" alt="BNI"></div></div><img class="bni-VMr6Om bni" data-id="2:1683" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/bni.svg" alt="bni"><div class="cimb-C61RwL cimb" data-id="2:1712"><div class="logo-cimb-2sgH6N" data-id="2:1713"><img class="logogram-8noNus" data-id="2:1714" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logogram-1@2x.png" alt="Logogram"><img class="cimb-8noNus cimb" data-id="2:1718" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/cimb.svg" alt="CIMB"></div></div><div class="cimb-VMr6Om cimb" data-id="2:1725"><div class="logo-r95XTz logo" data-id="2:1726"><img class="fill-4-Fe90KM" data-id="2:1727" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-4.svg" alt="Fill 4"><img class="fill-6-Fe90KM fill-6" data-id="2:1728" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-6-1.svg" alt="Fill 6"><img class="fill-8-Fe90KM fill-8" data-id="2:1729" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-8-1.svg" alt="Fill 8"><img class="fill-10-Fe90KM fill-10" data-id="2:1730" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-10-1.svg" alt="Fill 10"><img class="fill-12-Fe90KM fill-12" data-id="2:1733" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-12-1.svg" alt="Fill 12"><img class="fill-14-Fe90KM fill-14" data-id="2:1737" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-14-1.svg" alt="Fill 14"><img class="fill-16-Fe90KM fill-16" data-id="2:1740" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-16-1.svg" alt="Fill 16"><img class="fill-18-Fe90KM fill-18" data-id="2:1741" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-18.svg" alt="Fill 18"><img class="fill-20-Fe90KM fill-20" data-id="2:1742" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-20-1.svg" alt="Fill 20"><img class="fill-22-Fe90KM fill-22" data-id="2:1743" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-22.svg" alt="Fill 22"><img class="fill-24-Fe90KM fill-24" data-id="2:1744" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-24-1.svg" alt="Fill 24"><img class="fill-26-Fe90KM fill-26" data-id="2:1745" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-26.svg" alt="Fill 26"><img class="fill-28-Fe90KM fill-28" data-id="2:1746" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-28-1.svg" alt="Fill 28"></div></div><div class="bank-transfer-C61RwL dmsans-medium-black-pearl-14px" data-id="2:1747">BANK TRANSFER</div><div class="e-wallet-C61RwL e-wallet" data-id="2:1748"><div class="e-wallet-tAgjPn e-wallet" data-id="2:1749"><div class="dana-8lTJ1I" data-id="2:1750"><img class="dana-logo-OrwwaV" data-id="2:1751" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/dana-logo.png" alt="dana logo"></div><div class="spay-8lTJ1I" data-id="2:1752"><img class="spay-logo-s8zWeI" data-id="2:1753" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/spay-logo.png" alt="spay logo"></div><div class="gopay-8lTJ1I" data-id="2:1754"><img class="logo-gopay-QLvxaT" data-id="2:1755" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logo-gopay.png" alt="logo gopay"></div></div><div class="e-wallet-ctYQGv e-wallet" data-id="2:1756"><div class="ovo-Bv1We9" data-id="2:1757"><img class="ovo-logo-K4JomR" data-id="2:1758" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/ovo-logo.png" alt="ovo logo"></div><img class="isaku-Bv1We9" data-id="2:1759" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/isaku.svg" alt="isaku"><div class="linkaja-Bv1We9 linkaja" data-id="2:1761"><img class="linkaja-ljf3Vd linkaja" data-id="2:1762" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/linkaja.png" alt="linkaja"></div></div></div><div class="e-wallet-VMr6Om e-wallet" data-id="2:1763">E-WALLET</div><div class="merchant-C61RwL merchant" data-id="2:1764">MERCHANT</div><div class="merchant-VMr6Om merchant" data-id="2:1765"><img class="alfa-SKMyLu" data-id="2:1766" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/alfa.svg" alt="alfa"><img class="circlek-SKMyLu" data-id="2:1779" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/circlek.svg" alt="circlek"><div class="indo-SKMyLu" data-id="2:1792"><img class="logo_-indomaret-1-ePsxDS" data-id="2:1793" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logo-indomaret-1.png" alt="Logo_Indomaret 1"></div></div><div class="pembayaran-C61RwL" data-id="2:1794">Pembayaran</div><img class="group-47804-C61RwL" data-id="2:1795" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-47804-1@2x.png" alt="Group 47804"></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="photo">
+  <script id="anima-load-script" src="load.js"></script>
+  <script id="anima-hotspots-script" src="hotspots.js"></script>
+  <script id="anima-overrides-script" src="overrides.js"></script>
+  <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+    @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,200,600,500,700|Open+Sans:700,600|Lato:500|Manjari:700|Lexend:400,600|Over+the+Rainbow:400");
+
+
+    @font-face {
+      font-family: "Pecita-Book";
+      font-style: normal;
+      font-weight: 400;
+      src: url('https://anima-uploads.s3.amazonaws.com/projects/621a3157392ee0263ac2c7ea/fonts/pecita.otf') format("opentype");
+    }
+
+    /* The following line is used to measure usage of this code. You can remove it if you want. */
+    @import url("https://px.animaapp.com/674f032ec7a9d0c0f6e857a2.674f032fc7a9d0c0f6e857a5.4F8kzxD.hch.png");
+
+
+    .screen textarea:focus,
+    .screen input:focus {
+      outline: none;
+    }
+
+    .screen * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+    }
+
+    .screen div {
+      -webkit-text-size-adjust: none;
+    }
+
+    .component-wrapper a {
+      display: contents;
+      pointer-events: auto;
+      text-decoration: none;
+    }
+
+    .component-wrapper * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .component-wrapper a *,
+    .component-wrapper input,
+    .component-wrapper video,
+    .component-wrapper iframe {
+      pointer-events: auto;
+    }
+
+    .component-wrapper.not-ready,
+    .component-wrapper.not-ready * {
+      visibility: hidden !important;
+    }
+
+    .screen a {
+      display: contents;
+      text-decoration: none;
+    }
+
+    .full-width-a {
+      width: 100%;
+    }
+
+    .full-height-a {
+      height: 100%;
+    }
+
+    .container-center-vertical {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .container-center-vertical>* {
+      flex-shrink: 0;
+      pointer-events: auto;
+    }
+
+    .container-center-horizontal {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      pointer-events: none;
+      width: 100%;
+    }
+
+    .container-center-horizontal>* {
+      flex-shrink: 0;
+      pointer-events: auto;
+    }
+
+    .auto-animated div {
+      --z-index: -1;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .auto-animated input {
+      --z-index: -1;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .auto-animated .container-center-vertical,
+    .auto-animated .container-center-horizontal {
+      opacity: 1;
+    }
+
+    .overlay-base {
+      display: none;
+      height: 100%;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .overlay-base.animate-appear {
+      align-items: center;
+      animation: reveal 0.3s ease-in-out 1 normal forwards;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+    }
+
+    .overlay-base.animate-disappear {
+      animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      display: block;
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .overlay-base.animate-disappear * {
+      pointer-events: none;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .animate-nodelay {
+      animation-delay: 0s;
+    }
+
+    .align-self-flex-start {
+      align-self: flex-start;
+    }
+
+    .align-self-flex-end {
+      align-self: flex-end;
+    }
+
+    .align-self-flex-center {
+      align-self: flex-center;
+    }
+
+    .valign-text-middle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .valign-text-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .listeners-active,
+    .listeners-active * {
+      pointer-events: auto;
+    }
+
+    .hidden,
+    .hidden * {
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .smart-layers-pointers,
+    .smart-layers-pointers * {
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .listeners-active-click,
+    .listeners-active-click * {
+      cursor: pointer;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #000000;
+      --black-pearl: #051625;
+      --blue-jeans: #4dacf724;
+      --blumine: #165781;
+      --blumine-2: #175882;
+      --coconut: #fdfdfd;
+      --cultured-pearl: #f5f5f5;
+      --dodger-blue: #19a5ff;
+      --eerie-black: #1e1e1e;
+      --red-ribbon: #ed0131;
+      --regent-st-blue: #acd6f7;
+      --white: #ffffff;
+
+      --font-size-l: 13px;
+      --font-size-m: 12px;
+      --font-size-s: 11px;
+      --font-size-xl: 14px;
+      --font-size-xs: 10px;
+      --font-size-xxl: 15px;
+      --font-size-xxxl: 16px;
+
+      --font-family-dm_sans: "DM Sans", Helvetica;
+      --font-family-lato: "Lato", Helvetica;
+      --font-family-lexend: "Lexend", Helvetica;
+      --font-family-manjari: "Manjari", Helvetica;
+      --font-family-open_sans: "Open Sans", Helvetica;
+      --font-family-over_the_rainbow: "Over the Rainbow", Helvetica;
+      --font-family-pecita-book: "Pecita-Book", Helvetica;
+    }
+
+    .dmsans-bold-white-12px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .lato-medium-white-11px {
+      color: var(--white);
+      font-family: var(--font-family-lato);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .dmsans-bold-white-14px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-normal-white-14px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-normal-white-10px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-semi-bold-white-10px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .dmsans-medium-black-12px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .opensans-bold-black-pearl-15px {
+      color: var(--black-pearl);
+      font-family: var(--font-family-open_sans);
+      font-size: var(--font-size-xxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-semi-bold-black-13px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-l);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .dmsans-extra-light-white-10px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 200;
+    }
+
+    .dmsans-medium-black-16px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xxxl);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .lato-medium-white-10px {
+      color: var(--white);
+      font-family: var(--font-family-lato);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .manjari-bold-white-13px {
+      color: var(--white);
+      font-family: var(--font-family-manjari);
+      font-size: var(--font-size-l);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .lexend-normal-white-14px {
+      color: var(--white);
+      font-family: var(--font-family-lexend);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-bold-black-12px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-bold-black-14px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-bold-eerie-black-18px {
+      color: var(--eerie-black);
+      font-family: var(--font-family-dm_sans);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-bold-blumine-16px {
+      color: var(--blumine);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xxxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-bold-white-16px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xxxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-normal-eerie-black-11px {
+      color: var(--eerie-black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .opensans-bold-white-15px {
+      font-family: var(--font-family-open_sans);
+      font-size: var(--font-size-xxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .opensans-bold-red-ribbon-15px {
+      color: var(--red-ribbon);
+      font-family: var(--font-family-open_sans);
+      font-size: var(--font-size-xxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-normal-coconut-14px {
+      color: var(--coconut);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-normal-eerie-black-14px {
+      color: var(--eerie-black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-medium-black-pearl-14px {
+      color: var(--black-pearl);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .dmsans-medium-blumine-24px {
+      color: var(--blumine);
+      font-family: var(--font-family-dm_sans);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    :root {}
+
+
+    .group {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .rock {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .hari-ini-C61RwL {
+      background-color: transparent;
+      height: auto;
+      left: 23px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: center;
+      top: 277px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .rectangle-2663-ef0c9D {
+      height: 141px;
+      width: 357px;
+    }
+
+    .group-47780-ef0c9D {
+      height: 115px;
+      top: 13px;
+      width: 106px;
+    }
+
+    .rectangle-2664-SATyeM {
+      height: 115px;
+      position: relative;
+      width: 106px;
+    }
+
+    .group-FZznCY {
+      height: 18px;
+      left: 0px;
+      top: 44px;
+      width: 85px;
+    }
+
+    .tab {
+      background-color: transparent;
+      border-bottom-style: solid;
+      border-color: var(--black);
+      border-left-style: none;
+      border-right-style: none;
+      border-top-style: none;
+      height: 28px;
+      overflow: hidden;
+      position: absolute;
+      top: 235px;
+      width: 131px;
+    }
+
+    .tab-label {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: -0.26px;
+      line-height: 22px;
+      position: absolute;
+      text-align: center;
+      width: 131px;
+    }
+
+    .rock-qr8e7q {
+      height: 56px;
+      left: 293px;
+      top: 0px;
+      width: 100px;
+    }
+
+    .group-47777-C61RwL {
+      background-color: transparent;
+      height: 493px;
+      left: 0px;
+      position: absolute;
+      top: 848px;
+      width: 422px;
+    }
+
+    .rectangle-2661-CXpwDY {
+      background-color: var(--blumine);
+      height: 493px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 420px;
+    }
+
+    .line-2-CXpwDY {
+      background-color: transparent;
+      height: 1px;
+      left: 0px;
+      position: absolute;
+      top: 401px;
+      width: 393px;
+    }
+
+    .group-47687-CXpwDY {
+      background-color: transparent;
+      height: 44px;
+      left: 23px;
+      position: absolute;
+      top: 79px;
+      width: 258px;
+    }
+
+    .lorem-ipsum-dolor-si-QXPe94 {
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: 13.8px;
+      top: 0px;
+      width: 256px;
+    }
+
+    .group-36771-QXPe94 {
+      background-color: transparent;
+      height: 9px;
+      left: 0px;
+      position: absolute;
+      top: 35px;
+      width: 95px;
+    }
+
+    .group-194-vLUzMS {
+      background-color: transparent;
+      height: 9px;
+      left: 0px;
+      position: relative;
+      top: 0px;
+      width: 95px;
+    }
+
+    .google-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 86px;
+      position: absolute;
+      top: 0px;
+      width: 9px;
+    }
+
+    .linked-in-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 64px;
+      position: absolute;
+      top: -0px;
+      width: 9px;
+    }
+
+    .instagram-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 43px;
+      position: absolute;
+      top: -0px;
+      width: 8px;
+    }
+
+    .twitter-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 22px;
+      position: absolute;
+      top: 0px;
+      width: 9px;
+    }
+
+    .facebook-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 9px;
+    }
+
+    .logo-cleanify_20241004_201648_0000-3-CXpwDY {
+      background-color: transparent;
+      height: 25px;
+      left: 19px;
+      object-fit: cover;
+      position: absolute;
+      top: 39px;
+      width: 26px;
+    }
+
+    .cleanify-CXpwDY {
+      background-color: transparent;
+      height: auto;
+      left: 51px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 46px;
+      width: 111px;
+    }
+
+    .group-16709-CXpwDY {
+      background-color: transparent;
+      height: 195px;
+      left: 25px;
+      position: absolute;
+      top: 149px;
+      width: 94px;
+    }
+
+    .company-iIxctO {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      width: 90px;
+    }
+
+    .beranda-layanan-about-us-contact-us-iIxctO {
+      background-color: transparent;
+      height: auto;
+      left: 1px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 32px;
+      width: 81px;
+    }
+
+    .group-16708-CXpwDY {
+      background-color: transparent;
+      height: 195px;
+      left: 139px;
+      position: absolute;
+      top: 149px;
+      width: 89px;
+    }
+
+    .support-hUWaSz {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      width: 75px;
+    }
+
+    .help-center-tweet-us-webians-feedback-hUWaSz {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 32px;
+      width: 85px;
+    }
+
+    .group-16707-CXpwDY {
+      background-color: transparent;
+      height: 195px;
+      left: 256px;
+      position: absolute;
+      top: 149px;
+      width: 119px;
+    }
+
+    .links-cynegb {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      width: 48px;
+    }
+
+    .courses-become-teach-cynegb {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 32px;
+      width: 115px;
+    }
+
+    .group-36774-CXpwDY {
+      background-color: transparent;
+      height: 64px;
+      left: 23px;
+      position: absolute;
+      top: 303px;
+      width: 138px;
+    }
+
+    .contact-us-WZXAUy {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      width: auto;
+    }
+
+    .group-36772-WZXAUy {
+      background-color: transparent;
+      height: 13px;
+      left: 2px;
+      position: absolute;
+      top: 51px;
+      width: 136px;
+    }
+
+    .cleanifyofcgmailcom-G5jJVo {
+      background-color: transparent;
+      height: auto;
+      left: 23px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .vector-G5jJVo {
+      height: 13px;
+      width: 13px;
+    }
+
+    .vector-XrUWmi {
+      height: 15px;
+      width: 15px;
+    }
+
+    .lorem-ipsum-dolor-si {
+      background-color: transparent;
+      height: auto;
+      position: absolute;
+      text-align: left;
+    }
+
+    .rp-100000 {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: center;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    /* screen - metode-pembayaran */
+
+    .metode-pembayaran {
+      background-color: var(--coconut);
+      height: 856px;
+      overflow: hidden;
+      overflow-x: hidden;
+      position: relative;
+      width: 393px;
+    }
+
+    .metode-pembayaran .gradient-blur-C61RwL {
+      left: 62px;
+      top: 856px;
+    }
+
+    .metode-pembayaran .vector-2-C61RwL {
+      background-color: transparent;
+      height: 1px;
+      left: -939px;
+      position: absolute;
+      top: 2365px;
+      width: 105px;
+    }
+
+    .metode-pembayaran .gradient-blur-VMr6Om {
+      left: -88px;
+      top: 765px;
+    }
+
+    .metode-pembayaran .gradient-blur-mzXdH9 {
+      left: -56px;
+      top: -59px;
+    }
+
+    .metode-pembayaran .rock-C61RwL {
+      height: 107px;
+      left: -1209px;
+      top: 1864px;
+      width: 114px;
+    }
+
+    .metode-pembayaran .pilih-metode-pembayaran-C61RwL {
+      background-color: transparent;
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      height: auto;
+      left: 25px;
+      letter-spacing: 0.00px;
+      line-height: 18px;
+      position: absolute;
+      text-align: left;
+      top: 87px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .metode-pembayaran .rock-VMr6Om {
+      height: 56px;
+      left: 293px;
+      top: 0px;
+      width: 100px;
+    }
+
+    .metode-pembayaran .rectangle-2662-C61RwL {
+      background-color: var(--white);
+      border: 0.5px solid;
+      border-color: var(--blue-jeans);
+      box-shadow: 0px 4px 4px #838b9517;
+      height: 64px;
+      left: -1px;
+      position: absolute;
+      top: 0px;
+      width: 396px;
+    }
+
+    .metode-pembayaran .group-C61RwL {
+      cursor: pointer;
+      height: 26px;
+      left: 24px;
+      top: 17px;
+      width: 26px;
+    }
+
+    .metode-pembayaran .arrow-left-NOXmfT {
+      background-color: transparent;
+      height: 26px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 26px;
+    }
+
+    .metode-pembayaran .bca-C61RwL {
+      top: 176px;
+    }
+
+    .metode-pembayaran .logo-h58vSW {
+      height: 16.83652687072754px;
+      width: 56.9893913269043px;
+    }
+
+    .metode-pembayaran .fill-1-dEs1mQ {
+      height: 7px;
+      left: 3px;
+      top: 6px;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-6-dEs1mQ {
+      height: 4px;
+      left: 3px;
+      top: 9px;
+    }
+
+    .metode-pembayaran .fill-8-dEs1mQ {
+      height: 11px;
+      left: 6px;
+      top: 2px;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-10-dEs1mQ {
+      left: 9px;
+      top: 6px;
+    }
+
+    .metode-pembayaran .fill-12-dEs1mQ {
+      height: 4px;
+      left: 10px;
+      top: 9px;
+    }
+
+    .metode-pembayaran .fill-14-dEs1mQ {
+      height: 1px;
+      left: 10px;
+      top: 14px;
+      width: 1px;
+    }
+
+    .metode-pembayaran .fill-16-dEs1mQ {
+      height: 1px;
+      left: 11px;
+      top: 14px;
+      width: 1px;
+    }
+
+    .metode-pembayaran .fill-18-dEs1mQ {
+      height: 2px;
+      left: 13px;
+      top: 14px;
+      width: 1px;
+    }
+
+    .metode-pembayaran .fill-20-dEs1mQ {
+      height: 1px;
+      left: 4px;
+      top: 14px;
+      width: 1px;
+    }
+
+    .metode-pembayaran .fill-22-dEs1mQ {
+      height: 2px;
+      left: 5px;
+      top: 14px;
+      width: 1px;
+    }
+
+    .metode-pembayaran .fill-24-dEs1mQ {
+      height: 1px;
+      left: 7px;
+      top: 14px;
+      width: 1px;
+    }
+
+    .metode-pembayaran .fill-26-dEs1mQ {
+      height: 1px;
+      left: 8px;
+      top: 14px;
+      width: 1px;
+    }
+
+    .metode-pembayaran .fill-28-dEs1mQ {
+      height: 14px;
+      left: 33px;
+      top: 1px;
+      width: 14px;
+    }
+
+    .metode-pembayaran .fill-30-dEs1mQ {
+      background-color: transparent;
+      height: 14px;
+      left: 43px;
+      position: absolute;
+      top: 1px;
+      width: 14px;
+    }
+
+    .metode-pembayaran .fill-32-dEs1mQ {
+      background-color: transparent;
+      height: 14px;
+      left: 20px;
+      position: absolute;
+      top: 1px;
+      width: 14px;
+    }
+
+    .metode-pembayaran .group-dEs1mQ {
+      height: 17px;
+      left: 0px;
+      top: 0px;
+      width: 18px;
+    }
+
+    .metode-pembayaran .fill-3-lE7CjT {
+      height: 17px;
+      left: 0px;
+      width: 18px;
+    }
+
+    .metode-pembayaran .bca-VMr6Om {
+      top: 259px;
+    }
+
+    .metode-pembayaran .frame-b1cDWM {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      gap: 10px;
+      height: 36px;
+      justify-content: center;
+      position: relative;
+      width: 36px;
+    }
+
+    .metode-pembayaran .logo-2z3Ma0 {
+      height: 30.093597412109375px;
+      margin-left: -9.25px;
+      margin-right: -9.25px;
+      width: 54.5091438293457px;
+    }
+
+    .metode-pembayaran .fill-1-03wzXF {
+      height: 13px;
+      left: 17px;
+      top: 0px;
+      width: 17px;
+    }
+
+    .metode-pembayaran .group-21-03wzXF {
+      background-color: transparent;
+      height: 13px;
+      left: 0px;
+      position: absolute;
+      top: 17px;
+      width: 55px;
+    }
+
+    .metode-pembayaran .fill-3-5VchcF {
+      height: 11px;
+      left: 0px;
+      width: 7px;
+    }
+
+    .metode-pembayaran .fill-5-5VchcF {
+      left: 8px;
+      top: 3px;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-7-5VchcF {
+      height: 7px;
+      left: 15px;
+      top: 3px;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-9-5VchcF {
+      height: 11px;
+      left: 23px;
+      top: 0px;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-11-5VchcF {
+      height: 11px;
+      left: 33px;
+      top: 0px;
+      width: 8px;
+    }
+
+    .metode-pembayaran .fill-19-5VchcF {
+      background-color: transparent;
+      height: 2px;
+      left: 43px;
+      position: absolute;
+      top: 0px;
+      width: 2px;
+    }
+
+    .metode-pembayaran .group-5VchcF {
+      height: 10px;
+      left: 42px;
+      top: 3px;
+      width: 3px;
+    }
+
+    .metode-pembayaran .group-F5nxrA {
+      height: 11px;
+      left: 47px;
+      top: 0px;
+      width: 8px;
+    }
+
+    .metode-pembayaran .vector-2z3Ma0 {
+      background-color: transparent;
+      height: 3px;
+      left: 12px;
+      position: absolute;
+      top: 30px;
+      width: 15px;
+    }
+
+    .metode-pembayaran .bri-C61RwL {
+      top: 176px;
+    }
+
+    .metode-pembayaran .logo-MiPLw8 {
+      height: 14.705744743347168px;
+      width: 61.91016387939453px;
+    }
+
+    .metode-pembayaran .bri-VMr6Om {
+      top: 259px;
+    }
+
+    .metode-pembayaran .logogram-8GQlZl {
+      background-color: transparent;
+      height: 21.9605712890625px;
+      position: relative;
+      width: 19.853418350219727px;
+    }
+
+    .metode-pembayaran .permata-bank-8GQlZl {
+      background-color: transparent;
+      height: 7.947168827056885px;
+      position: relative;
+      width: 59.97634506225586px;
+    }
+
+    .metode-pembayaran .fill-1-SVbuLD {
+      height: 8px;
+      left: 38px;
+      top: 0px;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-3-SVbuLD {
+      height: 8px;
+      left: 44px;
+      width: 16px;
+    }
+
+    .metode-pembayaran .fill-5-SVbuLD {
+      left: 0px;
+      top: 0px;
+      width: 5px;
+    }
+
+    .metode-pembayaran .fill-7-SVbuLD {
+      height: 6px;
+      left: 5px;
+      top: 2px;
+      width: 5px;
+    }
+
+    .metode-pembayaran .fill-9-SVbuLD {
+      height: 6px;
+      left: 10px;
+      top: 2px;
+      width: 4px;
+    }
+
+    .metode-pembayaran .fill-11-SVbuLD {
+      height: 6px;
+      left: 15px;
+      top: 2px;
+      width: 9px;
+    }
+
+    .metode-pembayaran .fill-13-SVbuLD {
+      background-color: transparent;
+      height: 7px;
+      left: 29px;
+      position: absolute;
+      top: 1px;
+      width: 3px;
+    }
+
+    .metode-pembayaran .fill-15-SVbuLD {
+      background-color: transparent;
+      height: 6px;
+      left: 24px;
+      position: absolute;
+      top: 2px;
+      width: 5px;
+    }
+
+    .metode-pembayaran .fill-17-SVbuLD {
+      background-color: transparent;
+      height: 6px;
+      left: 32px;
+      position: absolute;
+      top: 2px;
+      width: 5px;
+    }
+
+    .metode-pembayaran .bni-C61RwL {
+      align-items: center;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px #1e2a3b1a;
+      display: flex;
+      flex-direction: column;
+      height: 67px;
+      justify-content: center;
+      left: 204px;
+      top: 176px;
+      width: 73px;
+    }
+
+    .metode-pembayaran .logo-xBG1nQ {
+      height: 16.236576080322266px;
+      width: 57.05483627319336px;
+    }
+
+    .metode-pembayaran .x46-4U0xeH {
+      background-color: transparent;
+      height: 15px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 16px;
+    }
+
+    .metode-pembayaran .bni-4U0xeH {
+      height: 16px;
+      left: 20px;
+      top: 0px;
+      width: 37px;
+    }
+
+    .metode-pembayaran .bni-VMr6Om {
+      height: 75px;
+      left: 200px;
+      top: 259px;
+      width: 81px;
+    }
+
+    .metode-pembayaran .cimb-C61RwL {
+      align-items: center;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px #1e2a3b1a;
+      display: flex;
+      flex-direction: column;
+      height: 67px;
+      justify-content: center;
+      left: 293px;
+      top: 176px;
+      width: 73px;
+    }
+
+    .metode-pembayaran .logo-cimb-2sgH6N {
+      background-color: transparent;
+      height: 15.796836853027344px;
+      position: relative;
+      width: 57.905052185058594px;
+    }
+
+    .metode-pembayaran .logogram-8noNus {
+      background-color: transparent;
+      height: 16px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 16px;
+    }
+
+    .metode-pembayaran .cimb-8noNus {
+      height: 11px;
+      left: 20px;
+      top: 2px;
+      width: 38px;
+    }
+
+    .metode-pembayaran .cimb-VMr6Om {
+      align-items: center;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px #1e2a3b1a;
+      display: flex;
+      flex-direction: column;
+      height: 67px;
+      justify-content: center;
+      left: 293px;
+      top: 259px;
+      width: 73px;
+    }
+
+    .metode-pembayaran .logo-r95XTz {
+      height: 29.199356079101562px;
+      width: 49.85348892211914px;
+    }
+
+    .metode-pembayaran .fill-4-Fe90KM {
+      background-color: transparent;
+      height: 7px;
+      left: 24px;
+      position: absolute;
+      top: 22px;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-6-Fe90KM {
+      height: 7px;
+      left: 32px;
+      top: 22px;
+    }
+
+    .metode-pembayaran .fill-8-Fe90KM {
+      height: 7px;
+      left: 38px;
+      top: 22px;
+      width: 5px;
+    }
+
+    .metode-pembayaran .fill-10-Fe90KM {
+      left: 44px;
+      top: 22px;
+    }
+
+    .metode-pembayaran .fill-12-Fe90KM {
+      height: 7px;
+      left: 0px;
+      top: 22px;
+    }
+
+    .metode-pembayaran .fill-14-Fe90KM {
+      height: 7px;
+      left: 5px;
+      top: 22px;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-16-Fe90KM {
+      height: 7px;
+      left: 12px;
+      top: 22px;
+      width: 5px;
+    }
+
+    .metode-pembayaran .fill-18-Fe90KM {
+      height: 7px;
+      left: 18px;
+      top: 22px;
+      width: 5px;
+    }
+
+    .metode-pembayaran .fill-20-Fe90KM {
+      height: 15px;
+      left: 25px;
+      top: 0px;
+      width: 11px;
+    }
+
+    .metode-pembayaran .fill-22-Fe90KM {
+      height: 17px;
+      left: 27px;
+      top: 0px;
+      width: 16px;
+    }
+
+    .metode-pembayaran .fill-24-Fe90KM {
+      height: 15px;
+      left: 14px;
+      top: 0px;
+      width: 11px;
+    }
+
+    .metode-pembayaran .fill-26-Fe90KM {
+      height: 17px;
+      left: 7px;
+      top: 0px;
+      width: 16px;
+    }
+
+    .metode-pembayaran .fill-28-Fe90KM {
+      height: 12px;
+      left: 21px;
+      top: 6px;
+      width: 8px;
+    }
+
+    .metode-pembayaran .bank-transfer-C61RwL {
+      background-color: transparent;
+      height: auto;
+      left: 24px;
+      letter-spacing: 0.00px;
+      line-height: 19.6px;
+      position: absolute;
+      text-align: left;
+      top: 148px;
+      white-space: nowrap;
+      width: 122px;
+    }
+
+    .metode-pembayaran .e-wallet-C61RwL {
+      box-shadow: 0px 4px 4px #00000040;
+      height: 156px;
+      left: 22px;
+      top: 387px;
+      width: 345px;
+    }
+
+    .metode-pembayaran .e-wallet-tAgjPn {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      left: 0px;
+      top: 0px;
+      width: 345px;
+    }
+
+    .metode-pembayaran .dana-8lTJ1I {
+      align-items: center;
+      background-color: transparent;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 70px;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      width: 104px;
+    }
+
+    .metode-pembayaran .dana-logo-OrwwaV {
+      background-color: transparent;
+      height: 19.95249366760254px;
+      object-fit: cover;
+      position: relative;
+      width: 70px;
+    }
+
+    .metode-pembayaran .spay-8lTJ1I {
+      align-items: center;
+      background-color: transparent;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 70px;
+      justify-content: center;
+      position: relative;
+      width: 104px;
+    }
+
+    .metode-pembayaran .spay-logo-s8zWeI {
+      background-color: transparent;
+      height: 16.153846740722656px;
+      object-fit: cover;
+      position: relative;
+      width: 70px;
+    }
+
+    .metode-pembayaran .gopay-8lTJ1I {
+      align-items: center;
+      background-color: transparent;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 70px;
+      justify-content: center;
+      padding: 10px;
+      position: relative;
+      width: 104px;
+    }
+
+    .metode-pembayaran .logo-gopay-QLvxaT {
+      background-color: transparent;
+      height: 23.070106506347656px;
+      object-fit: cover;
+      position: relative;
+      width: 70px;
+    }
+
+    .metode-pembayaran .e-wallet-ctYQGv {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      left: 0px;
+      top: 86px;
+      width: 345px;
+    }
+
+    .metode-pembayaran .ovo-Bv1We9 {
+      align-items: center;
+      background-color: transparent;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 70px;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      width: 104px;
+    }
+
+    .metode-pembayaran .ovo-logo-K4JomR {
+      background-color: transparent;
+      height: 28.80000114440918px;
+      object-fit: cover;
+      position: relative;
+      width: 70px;
+    }
+
+    .metode-pembayaran .isaku-Bv1We9 {
+      background-color: transparent;
+      height: 70px;
+      position: relative;
+      width: 104px;
+    }
+
+    .metode-pembayaran .linkaja-Bv1We9 {
+      align-items: center;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 70px;
+      justify-content: center;
+      padding: 10px;
+      width: 104px;
+    }
+
+    .metode-pembayaran .linkaja-ljf3Vd {
+      height: 35.05922317504883px;
+      object-fit: cover;
+      width: 70px;
+    }
+
+    .metode-pembayaran .e-wallet-VMr6Om {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 500;
+      height: auto;
+      left: 22px;
+      letter-spacing: 0.00px;
+      line-height: 19.6px;
+      text-align: left;
+      top: 359px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .metode-pembayaran .merchant-C61RwL {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 500;
+      height: auto;
+      letter-spacing: 0.00px;
+      line-height: 19.6px;
+      text-align: left;
+      top: 581px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .metode-pembayaran .merchant-VMr6Om {
+      align-items: center;
+      box-shadow: 0px 4px 4px #00000040;
+      display: flex;
+      justify-content: space-between;
+      top: 609px;
+      width: 345px;
+    }
+
+    .metode-pembayaran .alfa-SKMyLu {
+      background-color: transparent;
+      height: 70px;
+      position: relative;
+      width: 104px;
+    }
+
+    .metode-pembayaran .circlek-SKMyLu {
+      background-color: transparent;
+      height: 70px;
+      position: relative;
+      width: 104px;
+    }
+
+    .metode-pembayaran .indo-SKMyLu {
+      align-items: center;
+      background-color: transparent;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 70px;
+      justify-content: center;
+      padding: 10px;
+      position: relative;
+      width: 104px;
+    }
+
+    .metode-pembayaran .logo_-indomaret-1-ePsxDS {
+      background-color: transparent;
+      height: 28.01283836364746px;
+      object-fit: cover;
+      position: relative;
+      width: 80px;
+    }
+
+    .metode-pembayaran .pembayaran-C61RwL {
+      background-color: transparent;
+      color: var(--dodger-blue);
+      font-family: var(--font-family-dm_sans);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      height: auto;
+      left: 149px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: center;
+      top: 22px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .metode-pembayaran .group-47804-C61RwL {
+      background-color: transparent;
+      height: 58px;
+      left: 17px;
+      position: absolute;
+      top: 722px;
+      width: 357px;
+    }
+
+    .metode-pembayaran .bca {
+      align-items: center;
+      background-color: transparent;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px #1e2a3b1a;
+      display: flex;
+      flex-direction: column;
+      height: 67px;
+      justify-content: center;
+      left: 25px;
+      position: absolute;
+      width: 73px;
+    }
+
+    .metode-pembayaran .bni {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .bri {
+      align-items: center;
+      background-color: transparent;
+      border: 1.5px solid;
+      border-color: var(--dodger-blue);
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px #1e2a3b1a;
+      display: flex;
+      flex-direction: column;
+      height: 67px;
+      justify-content: center;
+      left: 114px;
+      position: absolute;
+      width: 73px;
+    }
+
+    .metode-pembayaran .cimb {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .e-wallet {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-1 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-10 {
+      background-color: transparent;
+      height: 7px;
+      position: absolute;
+      width: 6px;
+    }
+
+    .metode-pembayaran .fill-11 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-12 {
+      background-color: transparent;
+      position: absolute;
+      width: 5px;
+    }
+
+    .metode-pembayaran .fill-14 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-16 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-18 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-20 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-22 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-24 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-26 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-28 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-3 {
+      background-color: transparent;
+      position: absolute;
+      top: 0px;
+    }
+
+    .metode-pembayaran .fill-5 {
+      background-color: transparent;
+      height: 8px;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-6 {
+      background-color: transparent;
+      position: absolute;
+      width: 5px;
+    }
+
+    .metode-pembayaran .fill-7 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-8 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .fill-9 {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .metode-pembayaran .gradient-blur {
+      background: linear-gradient(180deg, rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%, rgb(77.78301939368248, 172.99998968839645, 247.13238537311554) 20.666655898094177%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 70.66665887832642%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 79.1666567325592%);
+      background-color: transparent;
+      border-radius: 137px;
+      filter: blur(198px);
+      ;
+      height: 192px;
+      opacity: 0.56;
+      position: absolute;
+      width: 511px;
+    }
+
+    .metode-pembayaran .linkaja {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .metode-pembayaran .logo {
+      background-color: transparent;
+      position: relative;
+    }
+
+    .metode-pembayaran .merchant {
+      background-color: transparent;
+      left: 19px;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body style="margin: 0;background: #fdfdfd;"><input type="hidden" id="anPageName" name="page" value="metode-pembayaran">
+  <div class="container-center-horizontal">
+    <div class="metode-pembayaran screen " data-id="2:1531">
+      <div class="gradient-blur-C61RwL gradient-blur" data-id="2:1532"></div><img class="vector-2-C61RwL"
+        data-id="2:1534" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-2@2x.png"
+        alt="Vector 2">
+      <div class="gradient-blur-VMr6Om gradient-blur" data-id="2:1535"></div>
+      <div class="gradient-blur-mzXdH9 gradient-blur" data-id="2:1536"></div><img class="rock-C61RwL rock"
+        data-id="2:1537" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-2@2x.png"
+        alt="Rock">
+      <div class="pilih-metode-pembayaran-C61RwL" data-id="2:1538">Pilih metode pembayaran</div><img
+        class="rock-VMr6Om rock" data-id="2:1539"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-5.svg"
+        alt="Rock">
+      <div class="rectangle-2662-C61RwL" data-id="2:1540"></div><a href="pembayaran.html">
+        <div class="group-C61RwL group" data-id="2:1541"><img class="arrow-left-NOXmfT" data-id="2:1542"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/arrow-left-4.svg"
+            alt="arrow-left"></div>
+      </a>
+      <div class="bca-C61RwL bca" data-id="2:1543">
+        <div class="logo-h58vSW logo" data-id="2:1544"><img class="fill-1-dEs1mQ fill-1" data-id="2:1545"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-1.svg"
+            alt="Fill 1"><img class="fill-6-dEs1mQ fill-6" data-id="2:1546"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-6.svg"
+            alt="Fill 6"><img class="fill-8-dEs1mQ fill-8" data-id="2:1547"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-8.svg"
+            alt="Fill 8"><img class="fill-10-dEs1mQ fill-10" data-id="2:1548"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-10.svg"
+            alt="Fill 10"><img class="fill-12-dEs1mQ fill-12" data-id="2:1549"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-12.svg"
+            alt="Fill 12"><img class="fill-14-dEs1mQ fill-14" data-id="2:1550"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-14.svg"
+            alt="Fill 14"><img class="fill-16-dEs1mQ fill-16" data-id="2:1554"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-16.svg"
+            alt="Fill 16"><img class="fill-18-dEs1mQ fill-18" data-id="2:1555"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-18-1.svg"
+            alt="Fill 18"><img class="fill-20-dEs1mQ fill-20" data-id="2:1558"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-20.svg"
+            alt="Fill 20"><img class="fill-22-dEs1mQ fill-22" data-id="2:1559"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-22-1.svg"
+            alt="Fill 22"><img class="fill-24-dEs1mQ fill-24" data-id="2:1562"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-24.svg"
+            alt="Fill 24"><img class="fill-26-dEs1mQ fill-26" data-id="2:1563"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-26-1.svg"
+            alt="Fill 26"><img class="fill-28-dEs1mQ fill-28" data-id="2:1566"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-28.svg"
+            alt="Fill 28"><img class="fill-30-dEs1mQ" data-id="2:1567"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-30.svg"
+            alt="Fill 30"><img class="fill-32-dEs1mQ" data-id="2:1570"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-32.svg"
+            alt="Fill 32">
+          <div class="group-dEs1mQ group" data-id="2:1574"><img class="fill-3-lE7CjT fill-3" data-id="2:1575"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-3.svg"
+              alt="Fill 3"></div>
+        </div>
+      </div>
+      <div class="bca-VMr6Om bca" data-id="2:1578">
+        <div class="frame-b1cDWM" data-id="2:1579">
+          <div class="logo-2z3Ma0 logo" data-id="2:1580"><img class="fill-1-03wzXF fill-1" data-id="2:1581"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-1-1.svg"
+              alt="Fill 1">
+            <div class="group-21-03wzXF" data-id="2:1585"><img class="fill-3-5VchcF fill-3" data-id="2:1586"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-3-1.svg"
+                alt="Fill 3"><img class="fill-5-5VchcF fill-5" data-id="2:1589"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-5.svg"
+                alt="Fill 5"><img class="fill-7-5VchcF fill-7" data-id="2:1592"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-7.svg"
+                alt="Fill 7"><img class="fill-9-5VchcF fill-9" data-id="2:1593"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-9.svg"
+                alt="Fill 9"><img class="fill-11-5VchcF fill-11" data-id="2:1594"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-11-1.svg"
+                alt="Fill 11"><img class="fill-19-5VchcF" data-id="2:1597"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-19.svg"
+                alt="Fill 19"><img class="group-5VchcF group" data-id="2:1598"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-1@2x.png"
+                alt="group"><img class="group-F5nxrA group" data-id="2:1600"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-2@2x.png"
+                alt="group"></div>
+          </div><img class="vector-2z3Ma0" data-id="2:1605"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-31.svg"
+            alt="Vector">
+        </div>
+      </div>
+      <div class="bri-C61RwL bri" data-id="2:1606"><img class="logo-MiPLw8 logo" data-id="2:1607"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logo@2x.png"
+          alt="logo"></div>
+      <div class="bri-VMr6Om bri" data-id="2:1631"><img class="logogram-8GQlZl" data-id="2:1632"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logogram@2x.png"
+          alt="Logogram">
+        <div class="permata-bank-8GQlZl" data-id="2:1645"><img class="fill-1-SVbuLD fill-1" data-id="2:1646"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-1-2.svg"
+            alt="Fill 1"><img class="fill-3-SVbuLD fill-3" data-id="2:1650"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-3-2.svg"
+            alt="Fill 3"><img class="fill-5-SVbuLD fill-5" data-id="2:1653"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-5-1.svg"
+            alt="Fill 5"><img class="fill-7-SVbuLD fill-7" data-id="2:1656"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-7-1.svg"
+            alt="Fill 7"><img class="fill-9-SVbuLD fill-9" data-id="2:1659"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-9-1.svg"
+            alt="Fill 9"><img class="fill-11-SVbuLD fill-11" data-id="2:1660"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-11.svg"
+            alt="Fill 11"><img class="fill-13-SVbuLD" data-id="2:1661"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-13.svg"
+            alt="Fill 13"><img class="fill-15-SVbuLD" data-id="2:1662"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-15.svg"
+            alt="Fill 15"><img class="fill-17-SVbuLD" data-id="2:1665"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-17.svg"
+            alt="Fill 17"></div>
+      </div>
+      <div class="bni-C61RwL bni" data-id="2:1668">
+        <div class="logo-xBG1nQ logo" data-id="2:1669"><img class="x46-4U0xeH" data-id="2:1670"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/46.svg"
+            alt="46"><img class="bni-4U0xeH bni" data-id="2:1677"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/bni-1.svg"
+            alt="BNI"></div>
+      </div><img class="bni-VMr6Om bni" data-id="2:1683"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/bni.svg"
+        alt="bni">
+      <div class="cimb-C61RwL cimb" data-id="2:1712">
+        <div class="logo-cimb-2sgH6N" data-id="2:1713"><img class="logogram-8noNus" data-id="2:1714"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logogram-1@2x.png"
+            alt="Logogram"><img class="cimb-8noNus cimb" data-id="2:1718"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/cimb.svg"
+            alt="CIMB"></div>
+      </div>
+      <div class="cimb-VMr6Om cimb" data-id="2:1725">
+        <div class="logo-r95XTz logo" data-id="2:1726"><img class="fill-4-Fe90KM" data-id="2:1727"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-4.svg"
+            alt="Fill 4"><img class="fill-6-Fe90KM fill-6" data-id="2:1728"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-6-1.svg"
+            alt="Fill 6"><img class="fill-8-Fe90KM fill-8" data-id="2:1729"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-8-1.svg"
+            alt="Fill 8"><img class="fill-10-Fe90KM fill-10" data-id="2:1730"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-10-1.svg"
+            alt="Fill 10"><img class="fill-12-Fe90KM fill-12" data-id="2:1733"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-12-1.svg"
+            alt="Fill 12"><img class="fill-14-Fe90KM fill-14" data-id="2:1737"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-14-1.svg"
+            alt="Fill 14"><img class="fill-16-Fe90KM fill-16" data-id="2:1740"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-16-1.svg"
+            alt="Fill 16"><img class="fill-18-Fe90KM fill-18" data-id="2:1741"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-18.svg"
+            alt="Fill 18"><img class="fill-20-Fe90KM fill-20" data-id="2:1742"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-20-1.svg"
+            alt="Fill 20"><img class="fill-22-Fe90KM fill-22" data-id="2:1743"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-22.svg"
+            alt="Fill 22"><img class="fill-24-Fe90KM fill-24" data-id="2:1744"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-24-1.svg"
+            alt="Fill 24"><img class="fill-26-Fe90KM fill-26" data-id="2:1745"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-26.svg"
+            alt="Fill 26"><img class="fill-28-Fe90KM fill-28" data-id="2:1746"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/fill-28-1.svg"
+            alt="Fill 28"></div>
+      </div>
+      <div class="bank-transfer-C61RwL dmsans-medium-black-pearl-14px" data-id="2:1747">BANK TRANSFER</div>
+      <div class="e-wallet-C61RwL e-wallet" data-id="2:1748">
+        <div class="e-wallet-tAgjPn e-wallet" data-id="2:1749">
+          <div class="dana-8lTJ1I" data-id="2:1750"><img class="dana-logo-OrwwaV" data-id="2:1751"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/dana-logo.png"
+              alt="dana logo"></div>
+          <div class="spay-8lTJ1I" data-id="2:1752"><img class="spay-logo-s8zWeI" data-id="2:1753"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/spay-logo.png"
+              alt="spay logo"></div>
+          <div class="gopay-8lTJ1I" data-id="2:1754"><img class="logo-gopay-QLvxaT" data-id="2:1755"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logo-gopay.png"
+              alt="logo gopay"></div>
+        </div>
+        <div class="e-wallet-ctYQGv e-wallet" data-id="2:1756">
+          <div class="ovo-Bv1We9" data-id="2:1757"><img class="ovo-logo-K4JomR" data-id="2:1758"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/ovo-logo.png"
+              alt="ovo logo"></div><img class="isaku-Bv1We9" data-id="2:1759"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/isaku.svg"
+            alt="isaku">
+          <div class="linkaja-Bv1We9 linkaja" data-id="2:1761"><img class="linkaja-ljf3Vd linkaja" data-id="2:1762"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/linkaja.png"
+              alt="linkaja"></div>
+        </div>
+      </div>
+      <div class="e-wallet-VMr6Om e-wallet" data-id="2:1763">E-WALLET</div>
+      <div class="merchant-C61RwL merchant" data-id="2:1764">MERCHANT</div>
+      <div class="merchant-VMr6Om merchant" data-id="2:1765"><img class="alfa-SKMyLu" data-id="2:1766"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/alfa.svg"
+          alt="alfa"><img class="circlek-SKMyLu" data-id="2:1779"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/circlek.svg"
+          alt="circlek">
+        <div class="indo-SKMyLu" data-id="2:1792"><img class="logo_-indomaret-1-ePsxDS" data-id="2:1793"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/logo-indomaret-1.png"
+            alt="Logo_Indomaret 1"></div>
+      </div>
+      <div class="pembayaran-C61RwL" data-id="2:1794">Pembayaran</div><img class="group-47804-C61RwL" data-id="2:1795"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-47804-1@2x.png"
+        alt="Group 47804">
+    </div>
+  </div>
+  <script src="launchpad-js/launchpad-banner.js" async></script>
+  <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+</body>
+
+</html>

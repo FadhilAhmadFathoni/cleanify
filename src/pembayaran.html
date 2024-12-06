@@ -6,1573 +6,1463 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
 05/12/2024 09:36:21 -->
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="https://animaproject.s3.amazonaws.com/home/favicon.png"
-    />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <script id="anima-load-script" src="load.js"></script>
-    <script id="anima-hotspots-script" src="hotspots.js"></script>
-    <script id="anima-overrides-script" src="overrides.js"></script>
-    <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
-    <style>
-      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-
-      @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,200,600,500,700|Open+Sans:700,600|Lato:500|Manjari:700|Lexend:400,600|Over+the+Rainbow:400");
-
-      @font-face {
-        font-family: "Pecita-Book";
-        font-style: normal;
-        font-weight: 400;
-        src: url("https://anima-uploads.s3.amazonaws.com/projects/621a3157392ee0263ac2c7ea/fonts/pecita.otf")
-          format("opentype");
-      }
-      /* The following line is used to measure usage of this code. You can remove it if you want. */
-      @import url("https://px.animaapp.com/674f032ec7a9d0c0f6e857a2.674f032fc7a9d0c0f6e857a5.4F8kzxD.hch.png");
-
-      .screen textarea:focus,
-      .screen input:focus {
-        outline: none;
-      }
-
-      .screen * {
-        -webkit-font-smoothing: antialiased;
-        box-sizing: border-box;
-      }
-
-      .screen div {
-        -webkit-text-size-adjust: none;
-      }
-
-      .component-wrapper a {
-        display: contents;
-        pointer-events: auto;
-        text-decoration: none;
-      }
-
-      .component-wrapper * {
-        -webkit-font-smoothing: antialiased;
-        box-sizing: border-box;
-        pointer-events: none;
-      }
-
-      .component-wrapper a *,
-      .component-wrapper input,
-      .component-wrapper video,
-      .component-wrapper iframe {
-        pointer-events: auto;
-      }
-
-      .component-wrapper.not-ready,
-      .component-wrapper.not-ready * {
-        visibility: hidden !important;
-      }
-
-      .screen a {
-        display: contents;
-        text-decoration: none;
-      }
-
-      .full-width-a {
-        width: 100%;
-      }
-
-      .full-height-a {
-        height: 100%;
-      }
-
-      .container-center-vertical {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        height: 100%;
-        pointer-events: none;
-      }
-
-      .container-center-vertical > * {
-        flex-shrink: 0;
-        pointer-events: auto;
-      }
-
-      .container-center-horizontal {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        pointer-events: none;
-        width: 100%;
-      }
-
-      .container-center-horizontal > * {
-        flex-shrink: 0;
-        pointer-events: auto;
-      }
-
-      .auto-animated div {
-        --z-index: -1;
-        opacity: 0;
-        position: absolute;
-      }
-
-      .auto-animated input {
-        --z-index: -1;
-        opacity: 0;
-        position: absolute;
-      }
-
-      .auto-animated .container-center-vertical,
-      .auto-animated .container-center-horizontal {
-        opacity: 1;
-      }
-
-      .overlay-base {
-        display: none;
-        height: 100%;
-        opacity: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-      }
-
-      .overlay-base.animate-appear {
-        align-items: center;
-        animation: reveal 0.3s ease-in-out 1 normal forwards;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        opacity: 0;
-      }
-
-      .overlay-base.animate-disappear {
-        animation: reveal 0.3s ease-in-out 1 reverse forwards;
-        display: block;
-        opacity: 1;
-        pointer-events: none;
-      }
-
-      .overlay-base.animate-disappear * {
-        pointer-events: none;
-      }
-
-      @keyframes reveal {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-
-      .animate-nodelay {
-        animation-delay: 0s;
-      }
-
-      .align-self-flex-start {
-        align-self: flex-start;
-      }
-
-      .align-self-flex-end {
-        align-self: flex-end;
-      }
-
-      .align-self-flex-center {
-        align-self: flex-center;
-      }
-
-      .valign-text-middle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .valign-text-bottom {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-
-      input:focus {
-        outline: none;
-      }
-
-      .listeners-active,
-      .listeners-active * {
-        pointer-events: auto;
-      }
-
-      .hidden,
-      .hidden * {
-        pointer-events: none;
-        visibility: hidden;
-      }
-
-      .smart-layers-pointers,
-      .smart-layers-pointers * {
-        pointer-events: auto;
-        visibility: visible;
-      }
-
-      .listeners-active-click,
-      .listeners-active-click * {
-        cursor: pointer;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-      :root {
-        --black: #000000;
-        --black-pearl: #051625;
-        --blue-jeans: #4dacf724;
-        --blumine: #165781;
-        --blumine-2: #175882;
-        --coconut: #fdfdfd;
-        --cultured-pearl: #f5f5f5;
-        --dodger-blue: #19a5ff;
-        --eerie-black: #1e1e1e;
-        --red-ribbon: #ed0131;
-        --regent-st-blue: #acd6f7;
-        --white: #ffffff;
-
-        --font-size-l: 13px;
-        --font-size-m: 12px;
-        --font-size-s: 11px;
-        --font-size-xl: 14px;
-        --font-size-xs: 10px;
-        --font-size-xxl: 15px;
-        --font-size-xxxl: 16px;
-
-        --font-family-dm_sans: "DM Sans", Helvetica;
-        --font-family-lato: "Lato", Helvetica;
-        --font-family-lexend: "Lexend", Helvetica;
-        --font-family-manjari: "Manjari", Helvetica;
-        --font-family-open_sans: "Open Sans", Helvetica;
-        --font-family-over_the_rainbow: "Over the Rainbow", Helvetica;
-        --font-family-pecita-book: "Pecita-Book", Helvetica;
-      }
-      .dmsans-bold-white-12px {
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-m);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .lato-medium-white-11px {
-        color: var(--white);
-        font-family: var(--font-family-lato);
-        font-size: var(--font-size-s);
-        font-style: normal;
-        font-weight: 500;
-      }
-
-      .dmsans-bold-white-14px {
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .dmsans-normal-white-14px {
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 400;
-      }
-
-      .dmsans-normal-white-10px {
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xs);
-        font-style: normal;
-        font-weight: 400;
-      }
-
-      .dmsans-semi-bold-white-10px {
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xs);
-        font-style: normal;
-        font-weight: 600;
-      }
-
-      .dmsans-medium-black-12px {
-        color: var(--black);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-m);
-        font-style: normal;
-        font-weight: 500;
-      }
-
-      .opensans-bold-black-pearl-15px {
-        color: var(--black-pearl);
-        font-family: var(--font-family-open_sans);
-        font-size: var(--font-size-xxl);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .dmsans-semi-bold-black-13px {
-        color: var(--black);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-l);
-        font-style: normal;
-        font-weight: 600;
-      }
-
-      .dmsans-extra-light-white-10px {
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xs);
-        font-style: normal;
-        font-weight: 200;
-      }
-
-      .dmsans-medium-black-16px {
-        color: var(--black);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xxxl);
-        font-style: normal;
-        font-weight: 500;
-      }
-
-      .lato-medium-white-10px {
-        color: var(--white);
-        font-family: var(--font-family-lato);
-        font-size: var(--font-size-xs);
-        font-style: normal;
-        font-weight: 500;
-      }
-
-      .manjari-bold-white-13px {
-        color: var(--white);
-        font-family: var(--font-family-manjari);
-        font-size: var(--font-size-l);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .lexend-normal-white-14px {
-        color: var(--white);
-        font-family: var(--font-family-lexend);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 400;
-      }
-
-      .dmsans-bold-black-12px {
-        color: var(--black);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-m);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .dmsans-bold-black-14px {
-        color: var(--black);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .dmsans-bold-eerie-black-18px {
-        color: var(--eerie-black);
-        font-family: var(--font-family-dm_sans);
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .dmsans-bold-blumine-16px {
-        color: var(--blumine);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xxxl);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .dmsans-bold-white-16px {
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xxxl);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .dmsans-normal-eerie-black-11px {
-        color: var(--eerie-black);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-s);
-        font-style: normal;
-        font-weight: 400;
-      }
-
-      .opensans-bold-white-15px {
-        font-family: var(--font-family-open_sans);
-        font-size: var(--font-size-xxl);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .opensans-bold-red-ribbon-15px {
-        color: var(--red-ribbon);
-        font-family: var(--font-family-open_sans);
-        font-size: var(--font-size-xxl);
-        font-style: normal;
-        font-weight: 700;
-      }
-
-      .dmsans-normal-coconut-14px {
-        color: var(--coconut);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 400;
-      }
-
-      .dmsans-normal-eerie-black-14px {
-        color: var(--eerie-black);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 400;
-      }
-
-      .dmsans-medium-black-pearl-14px {
-        color: var(--black-pearl);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 500;
-      }
-
-      .dmsans-medium-blumine-24px {
-        color: var(--blumine);
-        font-family: var(--font-family-dm_sans);
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 500;
-      }
-
-      :root {
-      }
-
-      .group {
-        background-color: transparent;
-        position: absolute;
-      }
-
-      .rock {
-        background-color: transparent;
-        position: absolute;
-      }
-
-      .hari-ini-C61RwL {
-        background-color: transparent;
-        height: auto;
-        left: 23px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: center;
-        top: 277px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .rectangle-2663-ef0c9D {
-        height: 141px;
-        width: 357px;
-      }
-
-      .group-47780-ef0c9D {
-        height: 115px;
-        top: 13px;
-        width: 106px;
-      }
-
-      .rectangle-2664-SATyeM {
-        height: 115px;
-        position: relative;
-        width: 106px;
-      }
-
-      .group-FZznCY {
-        height: 18px;
-        left: 0px;
-        top: 44px;
-        width: 85px;
-      }
-
-      .tab {
-        background-color: transparent;
-        border-bottom-style: solid;
-        border-color: var(--black);
-        border-left-style: none;
-        border-right-style: none;
-        border-top-style: none;
-        height: 28px;
-        overflow: hidden;
-        position: absolute;
-        top: 235px;
-        width: 131px;
-      }
-
-      .tab-label {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: -0.26px;
-        line-height: 22px;
-        position: absolute;
-        text-align: center;
-        width: 131px;
-      }
-
-      .rock-qr8e7q {
-        height: 56px;
-        left: 293px;
-        top: 0px;
-        width: 100px;
-      }
-
-      .group-47777-C61RwL {
-        background-color: transparent;
-        height: 493px;
-        left: 0px;
-        position: absolute;
-        top: 848px;
-        width: 422px;
-      }
-
-      .rectangle-2661-CXpwDY {
-        background-color: var(--blumine);
-        height: 493px;
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        width: 420px;
-      }
-
-      .line-2-CXpwDY {
-        background-color: transparent;
-        height: 1px;
-        left: 0px;
-        position: absolute;
-        top: 401px;
-        width: 393px;
-      }
-
-      .group-47687-CXpwDY {
-        background-color: transparent;
-        height: 44px;
-        left: 23px;
-        position: absolute;
-        top: 79px;
-        width: 258px;
-      }
-
-      .lorem-ipsum-dolor-si-QXPe94 {
-        left: 0px;
-        letter-spacing: 0px;
-        line-height: 13.8px;
-        top: 0px;
-        width: 256px;
-      }
 
-      .group-36771-QXPe94 {
-        background-color: transparent;
-        height: 9px;
-        left: 0px;
-        position: absolute;
-        top: 35px;
-        width: 95px;
-      }
-
-      .group-194-vLUzMS {
-        background-color: transparent;
-        height: 9px;
-        left: 0px;
-        position: relative;
-        top: 0px;
-        width: 95px;
-      }
-
-      .google-negative-LNOAOX {
-        background-color: transparent;
-        height: 9px;
-        left: 86px;
-        position: absolute;
-        top: 0px;
-        width: 9px;
-      }
-
-      .linked-in-negative-LNOAOX {
-        background-color: transparent;
-        height: 9px;
-        left: 64px;
-        position: absolute;
-        top: -0px;
-        width: 9px;
-      }
-
-      .instagram-negative-LNOAOX {
-        background-color: transparent;
-        height: 9px;
-        left: 43px;
-        position: absolute;
-        top: -0px;
-        width: 8px;
-      }
-
-      .twitter-negative-LNOAOX {
-        background-color: transparent;
-        height: 9px;
-        left: 22px;
-        position: absolute;
-        top: 0px;
-        width: 9px;
-      }
-
-      .facebook-negative-LNOAOX {
-        background-color: transparent;
-        height: 9px;
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        width: 9px;
-      }
-
-      .logo-cleanify_20241004_201648_0000-3-CXpwDY {
-        background-color: transparent;
-        height: 25px;
-        left: 19px;
-        object-fit: cover;
-        position: absolute;
-        top: 39px;
-        width: 26px;
-      }
-
-      .cleanify-CXpwDY {
-        background-color: transparent;
-        height: auto;
-        left: 51px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 46px;
-        width: 111px;
-      }
-
-      .group-16709-CXpwDY {
-        background-color: transparent;
-        height: 195px;
-        left: 25px;
-        position: absolute;
-        top: 149px;
-        width: 94px;
-      }
-
-      .company-iIxctO {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        width: 90px;
-      }
-
-      .beranda-layanan-about-us-contact-us-iIxctO {
-        background-color: transparent;
-        height: auto;
-        left: 1px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 32px;
-        width: 81px;
-      }
-
-      .group-16708-CXpwDY {
-        background-color: transparent;
-        height: 195px;
-        left: 139px;
-        position: absolute;
-        top: 149px;
-        width: 89px;
-      }
-
-      .support-hUWaSz {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        width: 75px;
-      }
-
-      .help-center-tweet-us-webians-feedback-hUWaSz {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 32px;
-        width: 85px;
-      }
-
-      .group-16707-CXpwDY {
-        background-color: transparent;
-        height: 195px;
-        left: 256px;
-        position: absolute;
-        top: 149px;
-        width: 119px;
-      }
-
-      .links-cynegb {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        width: 48px;
-      }
-
-      .courses-become-teach-cynegb {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 32px;
-        width: 115px;
-      }
-
-      .group-36774-CXpwDY {
-        background-color: transparent;
-        height: 64px;
-        left: 23px;
-        position: absolute;
-        top: 303px;
-        width: 138px;
-      }
-
-      .contact-us-WZXAUy {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        width: auto;
-      }
-
-      .group-36772-WZXAUy {
-        background-color: transparent;
-        height: 13px;
-        left: 2px;
-        position: absolute;
-        top: 51px;
-        width: 136px;
-      }
-
-      .cleanifyofcgmailcom-G5jJVo {
-        background-color: transparent;
-        height: auto;
-        left: 23px;
-        letter-spacing: 0px;
-        line-height: normal;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .vector-G5jJVo {
-        height: 13px;
-        width: 13px;
-      }
-
-      .vector-XrUWmi {
-        height: 15px;
-        width: 15px;
-      }
-
-      .lorem-ipsum-dolor-si {
-        background-color: transparent;
-        height: auto;
-        position: absolute;
-        text-align: left;
-      }
-
-      .rp-100000 {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: center;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-      /* screen - pembayaran */
-
-      .pembayaran {
-        background-color: var(--coconut);
-        height: 858px;
-        overflow: hidden;
-        overflow-x: hidden;
-        position: relative;
-        width: 393px;
-      }
-
-      .pembayaran .gradient-blur-C61RwL {
-        background: linear-gradient(
-          180deg,
-          rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%,
-          rgb(77.78301939368248, 172.99998968839645, 247.13238537311554)
-            20.666655898094177%,
-          rgb(70.00000342726707, 248.0000004172325, 245.03333240747452)
-            70.66665887832642%,
-          rgb(70.00000342726707, 248.0000004172325, 245.03333240747452)
-            79.1666567325592%
-        );
-        left: 83px;
-        top: 470px;
-      }
-
-      .pembayaran .vector-2-C61RwL {
-        background-color: transparent;
-        height: 1px;
-        left: -512px;
-        position: absolute;
-        top: 2367px;
-        width: 105px;
-      }
-
-      .pembayaran .gradient-blur-VMr6Om {
-        background: linear-gradient(
-          180deg,
-          rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%,
-          rgb(77.78301939368248, 172.99998968839645, 247.13238537311554)
-            20.666655898094177%,
-          rgb(70.00000342726707, 248.0000004172325, 245.03333240747452)
-            70.66665887832642%,
-          rgb(70.00000342726707, 248.0000004172325, 245.03333240747452)
-            79.1666567325592%
-        );
-        left: -128px;
-        top: 858px;
-      }
-
-      .pembayaran .rock-C61RwL {
-        height: 100px;
-        left: 279px;
-        top: 87px;
-        width: 114px;
-      }
-
-      .pembayaran .rock-VMr6Om {
-        height: 100px;
-        left: 26px;
-        top: 225px;
-        width: 114px;
-      }
-
-      .pembayaran .rock-mzXdH9 {
-        height: 114px;
-        left: 229px;
-        top: 573px;
-        width: 100px;
-      }
-
-      .pembayaran .rock-QxM5SU {
-        height: 56px;
-        left: 293px;
-        top: 0px;
-        width: 100px;
-      }
-
-      .pembayaran .rectangle-2662-C61RwL {
-        background-color: var(--white);
-        border: 0.5px solid;
-        border-color: var(--blue-jeans);
-        box-shadow: 0px 4px 4px #838b9517;
-        height: 64px;
-        left: -1px;
-        position: absolute;
-        top: 0px;
-        width: 396px;
-      }
-
-      .pembayaran .group-C61RwL {
-        cursor: pointer;
-        height: 26px;
-        left: 24px;
-        top: 17px;
-        width: 26px;
-      }
-
-      .pembayaran .arrow-left-NOXmfT {
-        background-color: transparent;
-        height: 26px;
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        width: 26px;
-      }
-
-      .pembayaran .rock-2P4qUJ {
-        height: 100px;
-        left: 0px;
-        top: 727px;
-        width: 100px;
-      }
-
-      .pembayaran .rectangle-2668-C61RwL {
-        background-color: var(--dodger-blue);
-        border-radius: 8px;
-        box-shadow: 0px 4px 4px #00000040;
-        height: 147px;
-        left: 21px;
-        position: absolute;
-        top: 117px;
-        width: 346px;
-      }
-
-      .pembayaran .rectangle-2669-C61RwL {
-        background-color: var(--dodger-blue);
-        border-radius: 8px;
-        box-shadow: 0px 4px 4px #00000040;
-        height: 299px;
-        left: 17px;
-        position: absolute;
-        top: 305px;
-        width: 346px;
-      }
-
-      .pembayaran .rp-75000-C61RwL {
-        background-color: transparent;
-        height: auto;
-        left: 270px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 493px;
-        white-space: nowrap;
-        width: 75px;
-      }
-
-      .pembayaran .rp-77500-C61RwL {
-        background-color: transparent;
-        height: auto;
-        left: 271px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 559px;
-        white-space: nowrap;
-        width: 75px;
-      }
-
-      .pembayaran .rp-2500-C61RwL {
-        background-color: transparent;
-        height: auto;
-        left: 270px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 514px;
-        white-space: nowrap;
-        width: 75px;
-      }
-
-      .pembayaran .group-47804-C61RwL {
-        background-color: transparent;
-        cursor: pointer;
-        height: 58px;
-        left: 16px;
-        position: absolute;
-        top: 724px;
-        width: 357px;
-      }
-
-      .pembayaran .group-47803-C61RwL {
-        background-color: transparent;
-        cursor: pointer;
-        height: 58px;
-        left: 16px;
-        position: absolute;
-        top: 647px;
-        width: 357px;
-      }
-
-      .pembayaran .gradient-blur-mzXdH9 {
-        background: linear-gradient(
-          180deg,
-          rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%,
-          rgb(77.78301939368248, 172.99998968839645, 247.13238537311554)
-            20.666655898094177%,
-          rgb(77.78301939368248, 172.99998968839645, 247.13238537311554)
-            70.66665887832642%,
-          rgb(70.00000342726707, 248.0000004172325, 245.03333240747452)
-            79.1666567325592%
-        );
-        left: -256px;
-        top: 169px;
-      }
-
-      .pembayaran .jess-62-855-2396-730-C61RwL {
-        background-color: transparent;
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xs);
-        font-style: normal;
-        font-weight: 400;
-        height: auto;
-        left: 50px;
-        letter-spacing: 0.12px;
-        line-height: 15px;
-        position: absolute;
-        text-align: left;
-        top: 168px;
-        width: 378px;
-      }
-
-      .pembayaran .span0-mc15XA {
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: 0.01px;
-      }
-
-      .pembayaran .span1-mc15XA {
-        font-style: normal;
-        letter-spacing: 0.01px;
-      }
-
-      .pembayaran .total-C61RwL {
-        background-color: transparent;
-        height: auto;
-        left: 50px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 558px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .group-VMr6Om {
-        height: 19px;
-        left: 143px;
-        top: 383px;
-        width: 100px;
-      }
-
-      .pembayaran .pilhan-layanan-XSCsvl {
-        background-color: transparent;
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 400;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .alamat-C61RwL {
-        background-color: transparent;
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        height: auto;
-        left: 51px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 141px;
-        width: 67px;
-      }
-
-      .pembayaran .group-36979-C61RwL {
-        background-color: transparent;
-        height: 533px;
-        left: 39px;
-        position: absolute;
-        top: 20px;
-        width: 319px;
-      }
-
-      .pembayaran .group-9-yRd8mf {
-        background-color: transparent;
-        height: 95px;
-        left: 6px;
-        position: absolute;
-        top: 335px;
-        width: 87px;
-      }
-
-      .pembayaran .image-placeholder-o5Vv2n {
-        background-color: var(--white);
-        border: 2px solid;
-        border-color: var(--white);
-        border-radius: 8px;
-        height: 95px;
-        left: 6px;
-        overflow: hidden;
-        position: absolute;
-        top: 0px;
-        width: 75px;
-      }
-
-      .pembayaran .line-12-KxgdJA {
-        background-color: transparent;
-        height: 95px;
-        left: 0px;
-        object-fit: cover;
-        position: absolute;
-        top: 0px;
-        width: 75px;
-      }
-
-      .pembayaran .line-13-KxgdJA {
-        background-color: transparent;
-        height: 95px;
-        left: 0px;
-        object-fit: cover;
-        position: absolute;
-        top: 0px;
-        width: 75px;
-      }
-
-      .pembayaran .group-47785-o5Vv2n {
-        background-color: transparent;
-        height: 86px;
-        left: 0px;
-        position: absolute;
-        top: 9px;
-        width: 87px;
-      }
-
-      .pembayaran .group-47783-awVMdK {
-        background-color: transparent;
-        height: 86px;
-        left: 0px;
-        position: relative;
-        top: 0px;
-        width: 87px;
-      }
-
-      .pembayaran .group-47782-CnPdIG {
-        background-color: transparent;
-        height: 86px;
-        left: 0px;
-        position: relative;
-        top: 0px;
-        width: 87px;
-      }
-
-      .pembayaran .rectangle-29-FKPvqP {
-        background-color: transparent;
-        height: 86px;
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        width: 87px;
-      }
-
-      .pembayaran .rectangle-1170-yRd8mf {
-        background-color: var(--white);
-        height: 1px;
-        left: 0px;
-        position: absolute;
-        top: 445px;
-        width: 315px;
-      }
-
-      .pembayaran .rectangle-1178-yRd8mf {
-        background-color: var(--white);
-        height: 1px;
-        left: 0px;
-        position: absolute;
-        top: 532px;
-        width: 315px;
-      }
-
-      .pembayaran .rincian-pesanan-yRd8mf {
-        background-color: transparent;
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        height: auto;
-        left: 11px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 306px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .pembayaran-yRd8mf {
-        background-color: transparent;
-        color: var(--dodger-blue);
-        font-family: var(--font-family-dm_sans);
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        height: auto;
-        left: 108px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: center;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .group-yRd8mf {
-        height: 19px;
-        left: 104px;
-        top: 388px;
-        width: 102px;
-      }
-
-      .pembayaran .durasi-layanan-ElPaHR {
-        background-color: transparent;
-        color: var(--white);
-        font-family: var(--font-family-dm_sans);
-        font-size: var(--font-size-xl);
-        font-style: normal;
-        font-weight: 400;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .group-8oVYrw {
-        height: 19px;
-        left: 11px;
-        top: 452px;
-        width: 144px;
-      }
-
-      .pembayaran .rincian-pembayaran-TdfVRq {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .group-8a4CPq {
-        height: 19px;
-        left: 11px;
-        top: 474px;
-        width: 114px;
-      }
-
-      .pembayaran .subtotal-produk-oCMVxw {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .group-IdOwIH {
-        height: 19px;
-        left: 11px;
-        top: 496px;
-        width: 101px;
-      }
-
-      .pembayaran .biaya-layanan-OAZt6y {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .group-tPbRYY {
-        height: 19px;
-        left: 105px;
-        top: 338px;
-        width: 27px;
-      }
-
-      .pembayaran .ella-jPjZOZ {
-        background-color: transparent;
-        height: auto;
-        left: 0px;
-        letter-spacing: 0.12px;
-        line-height: 18.9px;
-        position: absolute;
-        text-align: left;
-        top: 0px;
-        white-space: nowrap;
-        width: auto;
-      }
-
-      .pembayaran .gradient-blur {
-        background-color: transparent;
-        border-radius: 137px;
-        filter: blur(198px);
-        height: 192px;
-        opacity: 0.56;
-        position: absolute;
-        width: 511px;
-      }
-    </style>
-  </head>
-  <body style="margin: 0; background: #fdfdfd">
-    <input type="hidden" id="anPageName" name="page" value="pembayaran" />
-    <div class="container-center-horizontal">
-      <div class="pembayaran screen" data-id="2:1479">
-        <div class="gradient-blur-C61RwL gradient-blur" data-id="2:1480"></div>
-        <img
-          class="vector-2-C61RwL"
-          data-id="2:1482"
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+  <meta name="og:type" content="website">
+  <meta name="twitter:card" content="photo">
+  <script id="anima-load-script" src="load.js"></script>
+  <script id="anima-hotspots-script" src="hotspots.js"></script>
+  <script id="anima-overrides-script" src="overrides.js"></script>
+  <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+  <style>
+    @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+    @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,200,600,500,700|Open+Sans:700,600|Lato:500|Manjari:700|Lexend:400,600|Over+the+Rainbow:400");
+
+
+    @font-face {
+      font-family: "Pecita-Book";
+      font-style: normal;
+      font-weight: 400;
+      src: url('https://anima-uploads.s3.amazonaws.com/projects/621a3157392ee0263ac2c7ea/fonts/pecita.otf') format("opentype");
+    }
+
+    /* The following line is used to measure usage of this code. You can remove it if you want. */
+    @import url("https://px.animaapp.com/674f032ec7a9d0c0f6e857a2.674f032fc7a9d0c0f6e857a5.4F8kzxD.hch.png");
+
+
+    .screen textarea:focus,
+    .screen input:focus {
+      outline: none;
+    }
+
+    .screen * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+    }
+
+    .screen div {
+      -webkit-text-size-adjust: none;
+    }
+
+    .component-wrapper a {
+      display: contents;
+      pointer-events: auto;
+      text-decoration: none;
+    }
+
+    .component-wrapper * {
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+      pointer-events: none;
+    }
+
+    .component-wrapper a *,
+    .component-wrapper input,
+    .component-wrapper video,
+    .component-wrapper iframe {
+      pointer-events: auto;
+    }
+
+    .component-wrapper.not-ready,
+    .component-wrapper.not-ready * {
+      visibility: hidden !important;
+    }
+
+    .screen a {
+      display: contents;
+      text-decoration: none;
+    }
+
+    .full-width-a {
+      width: 100%;
+    }
+
+    .full-height-a {
+      height: 100%;
+    }
+
+    .container-center-vertical {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .container-center-vertical>* {
+      flex-shrink: 0;
+      pointer-events: auto;
+    }
+
+    .container-center-horizontal {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      pointer-events: none;
+      width: 100%;
+    }
+
+    .container-center-horizontal>* {
+      flex-shrink: 0;
+      pointer-events: auto;
+    }
+
+    .auto-animated div {
+      --z-index: -1;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .auto-animated input {
+      --z-index: -1;
+      opacity: 0;
+      position: absolute;
+    }
+
+    .auto-animated .container-center-vertical,
+    .auto-animated .container-center-horizontal {
+      opacity: 1;
+    }
+
+    .overlay-base {
+      display: none;
+      height: 100%;
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .overlay-base.animate-appear {
+      align-items: center;
+      animation: reveal 0.3s ease-in-out 1 normal forwards;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+    }
+
+    .overlay-base.animate-disappear {
+      animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      display: block;
+      opacity: 1;
+      pointer-events: none;
+    }
+
+    .overlay-base.animate-disappear * {
+      pointer-events: none;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .animate-nodelay {
+      animation-delay: 0s;
+    }
+
+    .align-self-flex-start {
+      align-self: flex-start;
+    }
+
+    .align-self-flex-end {
+      align-self: flex-end;
+    }
+
+    .align-self-flex-center {
+      align-self: flex-center;
+    }
+
+    .valign-text-middle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .valign-text-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .listeners-active,
+    .listeners-active * {
+      pointer-events: auto;
+    }
+
+    .hidden,
+    .hidden * {
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    .smart-layers-pointers,
+    .smart-layers-pointers * {
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .listeners-active-click,
+    .listeners-active-click * {
+      cursor: pointer;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #000000;
+      --black-pearl: #051625;
+      --blue-jeans: #4dacf724;
+      --blumine: #165781;
+      --blumine-2: #175882;
+      --coconut: #fdfdfd;
+      --cultured-pearl: #f5f5f5;
+      --dodger-blue: #19a5ff;
+      --eerie-black: #1e1e1e;
+      --red-ribbon: #ed0131;
+      --regent-st-blue: #acd6f7;
+      --white: #ffffff;
+
+      --font-size-l: 13px;
+      --font-size-m: 12px;
+      --font-size-s: 11px;
+      --font-size-xl: 14px;
+      --font-size-xs: 10px;
+      --font-size-xxl: 15px;
+      --font-size-xxxl: 16px;
+
+      --font-family-dm_sans: "DM Sans", Helvetica;
+      --font-family-lato: "Lato", Helvetica;
+      --font-family-lexend: "Lexend", Helvetica;
+      --font-family-manjari: "Manjari", Helvetica;
+      --font-family-open_sans: "Open Sans", Helvetica;
+      --font-family-over_the_rainbow: "Over the Rainbow", Helvetica;
+      --font-family-pecita-book: "Pecita-Book", Helvetica;
+    }
+
+    .dmsans-bold-white-12px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .lato-medium-white-11px {
+      color: var(--white);
+      font-family: var(--font-family-lato);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .dmsans-bold-white-14px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-normal-white-14px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-normal-white-10px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-semi-bold-white-10px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .dmsans-medium-black-12px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .opensans-bold-black-pearl-15px {
+      color: var(--black-pearl);
+      font-family: var(--font-family-open_sans);
+      font-size: var(--font-size-xxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-semi-bold-black-13px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-l);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .dmsans-extra-light-white-10px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 200;
+    }
+
+    .dmsans-medium-black-16px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xxxl);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .lato-medium-white-10px {
+      color: var(--white);
+      font-family: var(--font-family-lato);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .manjari-bold-white-13px {
+      color: var(--white);
+      font-family: var(--font-family-manjari);
+      font-size: var(--font-size-l);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .lexend-normal-white-14px {
+      color: var(--white);
+      font-family: var(--font-family-lexend);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-bold-black-12px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-m);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-bold-black-14px {
+      color: var(--black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-bold-eerie-black-18px {
+      color: var(--eerie-black);
+      font-family: var(--font-family-dm_sans);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-bold-blumine-16px {
+      color: var(--blumine);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xxxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-bold-white-16px {
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xxxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-normal-eerie-black-11px {
+      color: var(--eerie-black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-s);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .opensans-bold-white-15px {
+      font-family: var(--font-family-open_sans);
+      font-size: var(--font-size-xxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .opensans-bold-red-ribbon-15px {
+      color: var(--red-ribbon);
+      font-family: var(--font-family-open_sans);
+      font-size: var(--font-size-xxl);
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .dmsans-normal-coconut-14px {
+      color: var(--coconut);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-normal-eerie-black-14px {
+      color: var(--eerie-black);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .dmsans-medium-black-pearl-14px {
+      color: var(--black-pearl);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .dmsans-medium-blumine-24px {
+      color: var(--blumine);
+      font-family: var(--font-family-dm_sans);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    :root {}
+
+
+    .group {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .rock {
+      background-color: transparent;
+      position: absolute;
+    }
+
+    .hari-ini-C61RwL {
+      background-color: transparent;
+      height: auto;
+      left: 23px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: center;
+      top: 277px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .rectangle-2663-ef0c9D {
+      height: 141px;
+      width: 357px;
+    }
+
+    .group-47780-ef0c9D {
+      height: 115px;
+      top: 13px;
+      width: 106px;
+    }
+
+    .rectangle-2664-SATyeM {
+      height: 115px;
+      position: relative;
+      width: 106px;
+    }
+
+    .group-FZznCY {
+      height: 18px;
+      left: 0px;
+      top: 44px;
+      width: 85px;
+    }
+
+    .tab {
+      background-color: transparent;
+      border-bottom-style: solid;
+      border-color: var(--black);
+      border-left-style: none;
+      border-right-style: none;
+      border-top-style: none;
+      height: 28px;
+      overflow: hidden;
+      position: absolute;
+      top: 235px;
+      width: 131px;
+    }
+
+    .tab-label {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: -0.26px;
+      line-height: 22px;
+      position: absolute;
+      text-align: center;
+      width: 131px;
+    }
+
+    .rock-qr8e7q {
+      height: 56px;
+      left: 293px;
+      top: 0px;
+      width: 100px;
+    }
+
+    .group-47777-C61RwL {
+      background-color: transparent;
+      height: 493px;
+      left: 0px;
+      position: absolute;
+      top: 848px;
+      width: 422px;
+    }
+
+    .rectangle-2661-CXpwDY {
+      background-color: var(--blumine);
+      height: 493px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 420px;
+    }
+
+    .line-2-CXpwDY {
+      background-color: transparent;
+      height: 1px;
+      left: 0px;
+      position: absolute;
+      top: 401px;
+      width: 393px;
+    }
+
+    .group-47687-CXpwDY {
+      background-color: transparent;
+      height: 44px;
+      left: 23px;
+      position: absolute;
+      top: 79px;
+      width: 258px;
+    }
+
+    .lorem-ipsum-dolor-si-QXPe94 {
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: 13.8px;
+      top: 0px;
+      width: 256px;
+    }
+
+    .group-36771-QXPe94 {
+      background-color: transparent;
+      height: 9px;
+      left: 0px;
+      position: absolute;
+      top: 35px;
+      width: 95px;
+    }
+
+    .group-194-vLUzMS {
+      background-color: transparent;
+      height: 9px;
+      left: 0px;
+      position: relative;
+      top: 0px;
+      width: 95px;
+    }
+
+    .google-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 86px;
+      position: absolute;
+      top: 0px;
+      width: 9px;
+    }
+
+    .linked-in-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 64px;
+      position: absolute;
+      top: -0px;
+      width: 9px;
+    }
+
+    .instagram-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 43px;
+      position: absolute;
+      top: -0px;
+      width: 8px;
+    }
+
+    .twitter-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 22px;
+      position: absolute;
+      top: 0px;
+      width: 9px;
+    }
+
+    .facebook-negative-LNOAOX {
+      background-color: transparent;
+      height: 9px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 9px;
+    }
+
+    .logo-cleanify_20241004_201648_0000-3-CXpwDY {
+      background-color: transparent;
+      height: 25px;
+      left: 19px;
+      object-fit: cover;
+      position: absolute;
+      top: 39px;
+      width: 26px;
+    }
+
+    .cleanify-CXpwDY {
+      background-color: transparent;
+      height: auto;
+      left: 51px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 46px;
+      width: 111px;
+    }
+
+    .group-16709-CXpwDY {
+      background-color: transparent;
+      height: 195px;
+      left: 25px;
+      position: absolute;
+      top: 149px;
+      width: 94px;
+    }
+
+    .company-iIxctO {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      width: 90px;
+    }
+
+    .beranda-layanan-about-us-contact-us-iIxctO {
+      background-color: transparent;
+      height: auto;
+      left: 1px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 32px;
+      width: 81px;
+    }
+
+    .group-16708-CXpwDY {
+      background-color: transparent;
+      height: 195px;
+      left: 139px;
+      position: absolute;
+      top: 149px;
+      width: 89px;
+    }
+
+    .support-hUWaSz {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      width: 75px;
+    }
+
+    .help-center-tweet-us-webians-feedback-hUWaSz {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 32px;
+      width: 85px;
+    }
+
+    .group-16707-CXpwDY {
+      background-color: transparent;
+      height: 195px;
+      left: 256px;
+      position: absolute;
+      top: 149px;
+      width: 119px;
+    }
+
+    .links-cynegb {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      width: 48px;
+    }
+
+    .courses-become-teach-cynegb {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 32px;
+      width: 115px;
+    }
+
+    .group-36774-CXpwDY {
+      background-color: transparent;
+      height: 64px;
+      left: 23px;
+      position: absolute;
+      top: 303px;
+      width: 138px;
+    }
+
+    .contact-us-WZXAUy {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      width: auto;
+    }
+
+    .group-36772-WZXAUy {
+      background-color: transparent;
+      height: 13px;
+      left: 2px;
+      position: absolute;
+      top: 51px;
+      width: 136px;
+    }
+
+    .cleanifyofcgmailcom-G5jJVo {
+      background-color: transparent;
+      height: auto;
+      left: 23px;
+      letter-spacing: 0.00px;
+      line-height: normal;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .vector-G5jJVo {
+      height: 13px;
+      width: 13px;
+    }
+
+    .vector-XrUWmi {
+      height: 15px;
+      width: 15px;
+    }
+
+    .lorem-ipsum-dolor-si {
+      background-color: transparent;
+      height: auto;
+      position: absolute;
+      text-align: left;
+    }
+
+    .rp-100000 {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: center;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    /* screen - pembayaran */
+
+    .pembayaran {
+      background-color: var(--coconut);
+      height: 858px;
+      overflow: hidden;
+      overflow-x: hidden;
+      position: relative;
+      width: 393px;
+    }
+
+    .pembayaran .gradient-blur-C61RwL {
+      background: linear-gradient(180deg, rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%, rgb(77.78301939368248, 172.99998968839645, 247.13238537311554) 20.666655898094177%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 70.66665887832642%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 79.1666567325592%);
+      left: 83px;
+      top: 470px;
+    }
+
+    .pembayaran .vector-2-C61RwL {
+      background-color: transparent;
+      height: 1px;
+      left: -512px;
+      position: absolute;
+      top: 2367px;
+      width: 105px;
+    }
+
+    .pembayaran .gradient-blur-VMr6Om {
+      background: linear-gradient(180deg, rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%, rgb(77.78301939368248, 172.99998968839645, 247.13238537311554) 20.666655898094177%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 70.66665887832642%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 79.1666567325592%);
+      left: -128px;
+      top: 858px;
+    }
+
+    .pembayaran .rock-C61RwL {
+      height: 100px;
+      left: 279px;
+      top: 87px;
+      width: 114px;
+    }
+
+    .pembayaran .rock-VMr6Om {
+      height: 100px;
+      left: 26px;
+      top: 225px;
+      width: 114px;
+    }
+
+    .pembayaran .rock-mzXdH9 {
+      height: 114px;
+      left: 229px;
+      top: 573px;
+      width: 100px;
+    }
+
+    .pembayaran .rock-QxM5SU {
+      height: 56px;
+      left: 293px;
+      top: 0px;
+      width: 100px;
+    }
+
+    .pembayaran .rectangle-2662-C61RwL {
+      background-color: var(--white);
+      border: 0.5px solid;
+      border-color: var(--blue-jeans);
+      box-shadow: 0px 4px 4px #838b9517;
+      height: 64px;
+      left: -1px;
+      position: absolute;
+      top: 0px;
+      width: 396px;
+    }
+
+    .pembayaran .group-C61RwL {
+      cursor: pointer;
+      height: 26px;
+      left: 24px;
+      top: 17px;
+      width: 26px;
+    }
+
+    .pembayaran .arrow-left-NOXmfT {
+      background-color: transparent;
+      height: 26px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 26px;
+    }
+
+    .pembayaran .rock-2P4qUJ {
+      height: 100px;
+      left: 0px;
+      top: 727px;
+      width: 100px;
+    }
+
+    .pembayaran .rectangle-2668-C61RwL {
+      background-color: var(--dodger-blue);
+      border-radius: 8px;
+      box-shadow: 0px 4px 4px #00000040;
+      height: 147px;
+      left: 21px;
+      position: absolute;
+      top: 117px;
+      width: 346px;
+    }
+
+    .pembayaran .rectangle-2669-C61RwL {
+      background-color: var(--dodger-blue);
+      border-radius: 8px;
+      box-shadow: 0px 4px 4px #00000040;
+      height: 299px;
+      left: 17px;
+      position: absolute;
+      top: 305px;
+      width: 346px;
+    }
+
+    .pembayaran .rp-75000-C61RwL {
+      background-color: transparent;
+      height: auto;
+      left: 270px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 493px;
+      white-space: nowrap;
+      width: 75px;
+    }
+
+    .pembayaran .rp-77500-C61RwL {
+      background-color: transparent;
+      height: auto;
+      left: 271px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 559px;
+      white-space: nowrap;
+      width: 75px;
+    }
+
+    .pembayaran .rp-2500-C61RwL {
+      background-color: transparent;
+      height: auto;
+      left: 270px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 514px;
+      white-space: nowrap;
+      width: 75px;
+    }
+
+    .pembayaran .group-47804-C61RwL {
+      background-color: transparent;
+      cursor: pointer;
+      height: 58px;
+      left: 16px;
+      position: absolute;
+      top: 724px;
+      width: 357px;
+    }
+
+    .pembayaran .group-47803-C61RwL {
+      background-color: transparent;
+      cursor: pointer;
+      height: 58px;
+      left: 16px;
+      position: absolute;
+      top: 647px;
+      width: 357px;
+    }
+
+    .pembayaran .gradient-blur-mzXdH9 {
+      background: linear-gradient(180deg, rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%, rgb(77.78301939368248, 172.99998968839645, 247.13238537311554) 20.666655898094177%, rgb(77.78301939368248, 172.99998968839645, 247.13238537311554) 70.66665887832642%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 79.1666567325592%);
+      left: -256px;
+      top: 169px;
+    }
+
+    .pembayaran .jess-62-855-2396-730-C61RwL {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xs);
+      font-style: normal;
+      font-weight: 400;
+      height: auto;
+      left: 50px;
+      letter-spacing: 0.12px;
+      line-height: 15px;
+      position: absolute;
+      text-align: left;
+      top: 168px;
+      width: 378px;
+    }
+
+    .pembayaran .span0-mc15XA {
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 0.01px;
+    }
+
+    .pembayaran .span1-mc15XA {
+      font-style: normal;
+      letter-spacing: 0.01px;
+    }
+
+    .pembayaran .total-C61RwL {
+      background-color: transparent;
+      height: auto;
+      left: 50px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 558px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .group-VMr6Om {
+      height: 19px;
+      left: 143px;
+      top: 383px;
+      width: 100px;
+    }
+
+    .pembayaran .pilhan-layanan-XSCsvl {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .alamat-C61RwL {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      height: auto;
+      left: 51px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 141px;
+      width: 67px;
+    }
+
+    .pembayaran .group-36979-C61RwL {
+      background-color: transparent;
+      height: 533px;
+      left: 39px;
+      position: absolute;
+      top: 20px;
+      width: 319px;
+    }
+
+    .pembayaran .group-9-yRd8mf {
+      background-color: transparent;
+      height: 95px;
+      left: 6px;
+      position: absolute;
+      top: 335px;
+      width: 87px;
+    }
+
+    .pembayaran .image-placeholder-o5Vv2n {
+      background-color: var(--white);
+      border: 2px solid;
+      border-color: var(--white);
+      border-radius: 8px;
+      height: 95px;
+      left: 6px;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      width: 75px;
+    }
+
+    .pembayaran .line-12-KxgdJA {
+      background-color: transparent;
+      height: 95px;
+      left: 0px;
+      object-fit: cover;
+      position: absolute;
+      top: 0px;
+      width: 75px;
+    }
+
+    .pembayaran .line-13-KxgdJA {
+      background-color: transparent;
+      height: 95px;
+      left: 0px;
+      object-fit: cover;
+      position: absolute;
+      top: 0px;
+      width: 75px;
+    }
+
+    .pembayaran .group-47785-o5Vv2n {
+      background-color: transparent;
+      height: 86px;
+      left: 0px;
+      position: absolute;
+      top: 9px;
+      width: 87px;
+    }
+
+    .pembayaran .group-47783-awVMdK {
+      background-color: transparent;
+      height: 86px;
+      left: 0px;
+      position: relative;
+      top: 0px;
+      width: 87px;
+    }
+
+    .pembayaran .group-47782-CnPdIG {
+      background-color: transparent;
+      height: 86px;
+      left: 0px;
+      position: relative;
+      top: 0px;
+      width: 87px;
+    }
+
+    .pembayaran .rectangle-29-FKPvqP {
+      background-color: transparent;
+      height: 86px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 87px;
+    }
+
+    .pembayaran .rectangle-1170-yRd8mf {
+      background-color: var(--white);
+      height: 1px;
+      left: 0px;
+      position: absolute;
+      top: 445px;
+      width: 315px;
+    }
+
+    .pembayaran .rectangle-1178-yRd8mf {
+      background-color: var(--white);
+      height: 1px;
+      left: 0px;
+      position: absolute;
+      top: 532px;
+      width: 315px;
+    }
+
+    .pembayaran .rincian-pesanan-yRd8mf {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      height: auto;
+      left: 11px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 306px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .pembayaran-yRd8mf {
+      background-color: transparent;
+      color: var(--dodger-blue);
+      font-family: var(--font-family-dm_sans);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      height: auto;
+      left: 108px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: center;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .group-yRd8mf {
+      height: 19px;
+      left: 104px;
+      top: 388px;
+      width: 102px;
+    }
+
+    .pembayaran .durasi-layanan-ElPaHR {
+      background-color: transparent;
+      color: var(--white);
+      font-family: var(--font-family-dm_sans);
+      font-size: var(--font-size-xl);
+      font-style: normal;
+      font-weight: 400;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .group-8oVYrw {
+      height: 19px;
+      left: 11px;
+      top: 452px;
+      width: 144px;
+    }
+
+    .pembayaran .rincian-pembayaran-TdfVRq {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .group-8a4CPq {
+      height: 19px;
+      left: 11px;
+      top: 474px;
+      width: 114px;
+    }
+
+    .pembayaran .subtotal-produk-oCMVxw {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .group-IdOwIH {
+      height: 19px;
+      left: 11px;
+      top: 496px;
+      width: 101px;
+    }
+
+    .pembayaran .biaya-layanan-OAZt6y {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .group-tPbRYY {
+      height: 19px;
+      left: 105px;
+      top: 338px;
+      width: 27px;
+    }
+
+    .pembayaran .ella-jPjZOZ {
+      background-color: transparent;
+      height: auto;
+      left: 0px;
+      letter-spacing: 0.12px;
+      line-height: 18.9px;
+      position: absolute;
+      text-align: left;
+      top: 0px;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    .pembayaran .gradient-blur {
+      background-color: transparent;
+      border-radius: 137px;
+      filter: blur(198px);
+      ;
+      height: 192px;
+      opacity: 0.56;
+      position: absolute;
+      width: 511px;
+    }
+  </style>
+</head>
+
+<body style="margin: 0;background: #fdfdfd;"><input type="hidden" id="anPageName" name="page" value="pembayaran">
+  <div class="container-center-horizontal">
+    <div class="pembayaran screen " data-id="2:1479">
+      <div class="gradient-blur-C61RwL gradient-blur" data-id="2:1480"></div><img class="vector-2-C61RwL"
+        data-id="2:1482" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-2@2x.png"
+        alt="Vector 2">
+      <div class="gradient-blur-VMr6Om gradient-blur" data-id="2:1483"></div><img class="rock-C61RwL rock"
+        data-id="2:1484" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-4.svg"
+        alt="Rock"><img class="rock-VMr6Om rock" data-id="2:1485"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-4.svg"
+        alt="Rock"><img class="rock-mzXdH9 rock" data-id="2:1486"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-36.svg"
+        alt="Rock"><img class="rock-QxM5SU rock" data-id="2:1487"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-5.svg"
+        alt="Rock">
+      <div class="rectangle-2662-C61RwL" data-id="2:1488"></div><a href="detail_jasa.html">
+        <div class="group-C61RwL group" data-id="2:1489"><img class="arrow-left-NOXmfT" data-id="2:1490"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/arrow-left-4.svg"
+            alt="arrow-left"></div>
+      </a><img class="rock-2P4qUJ rock" data-id="2:1491"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-38.svg"
+        alt="Rock">
+      <div class="rectangle-2668-C61RwL" data-id="2:1492"></div>
+      <div class="rectangle-2669-C61RwL" data-id="2:1493"></div>
+      <div class="rp-75000-C61RwL dmsans-bold-white-14px" data-id="2:1494">Rp. 75.000</div>
+      <div class="rp-77500-C61RwL dmsans-bold-white-14px" data-id="2:1495">Rp. 77.500</div>
+      <div class="rp-2500-C61RwL dmsans-bold-white-14px" data-id="2:1496">Rp. 2.500</div><a
+        href="HalamanProfile_Pesanan.html"><img class="group-47804-C61RwL" data-id="2:1497"
           src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-2@2x.png"
-          alt="Vector 2"
-        />
-        <div class="gradient-blur-VMr6Om gradient-blur" data-id="2:1483"></div>
-        <img
-          class="rock-C61RwL rock"
-          data-id="2:1484"
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-47804@2x.png"
+          alt="Group 47804"></a><a href="metode_pembayaran.html"><img class="group-47803-C61RwL" data-id="2:1500"
           src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-4.svg"
-          alt="Rock"
-        /><img
-          class="rock-VMr6Om rock"
-          data-id="2:1485"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-4.svg"
-          alt="Rock"
-        /><img
-          class="rock-mzXdH9 rock"
-          data-id="2:1486"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-36.svg"
-          alt="Rock"
-        /><img
-          class="rock-QxM5SU rock"
-          data-id="2:1487"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-5.svg"
-          alt="Rock"
-        />
-        <div class="rectangle-2662-C61RwL" data-id="2:1488"></div>
-        <a href="detail-jasa"
-          ><div class="group-C61RwL group" data-id="2:1489">
-            <img
-              class="arrow-left-NOXmfT"
-              data-id="2:1490"
+          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-47803@2x.png"
+          alt="Group 47803"></a>
+      <div class="gradient-blur-mzXdH9 gradient-blur" data-id="2:1504"></div>
+      <p class="jess-62-855-2396-730-C61RwL" data-id="2:1505"><span class="span0-mc15XA">Jess | (+62)
+          855-2396-7303<br></span><span class="span1-mc15XA">Desa Mekarsari No.04 RT.05/RW07, Kecamatan<br>Sumedang
+          Selatan, Jawa Barat.<br>MEKARSARI, KAB. SUMEDANG, JAWA BARAT, ID 54836</span></p>
+      <div class="total-C61RwL dmsans-bold-white-14px" data-id="2:1506">Total</div>
+      <div class="group-VMr6Om group" data-id="2:1507">
+        <div class="pilhan-layanan-XSCsvl" data-id="2:1508">Pilhan Layanan</div>
+      </div>
+      <div class="alamat-C61RwL" data-id="2:1509">Alamat</div>
+      <div class="group-36979-C61RwL" data-id="2:1510">
+        <div class="group-9-yRd8mf" data-id="2:1511">
+          <div class="image-placeholder-o5Vv2n" data-id="2:1512"><img class="line-12-KxgdJA" data-id="I2:1512;1418:1693"
               src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/arrow-left-4.svg"
-              alt="arrow-left"
-            /></div></a
-        ><img
-          class="rock-2P4qUJ rock"
-          data-id="2:1491"
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-          anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rock-38.svg"
-          alt="Rock"
-        />
-        <div class="rectangle-2668-C61RwL" data-id="2:1492"></div>
-        <div class="rectangle-2669-C61RwL" data-id="2:1493"></div>
-        <div class="rp-75000-C61RwL dmsans-bold-white-14px" data-id="2:1494">
-          Rp. 75.000
-        </div>
-        <div class="rp-77500-C61RwL dmsans-bold-white-14px" data-id="2:1495">
-          Rp. 77.500
-        </div>
-        <div class="rp-2500-C61RwL dmsans-bold-white-14px" data-id="2:1496">
-          Rp. 2.500
-        </div>
-        <a href="halaman-profile-pesanan-1"
-          ><img
-            class="group-47804-C61RwL"
-            data-id="2:1497"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-47804@2x.png"
-            alt="Group 47804" /></a
-        ><a href="metode_pembayaran.html"
-          ><img
-            class="group-47803-C61RwL"
-            data-id="2:1500"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/group-47803@2x.png"
-            alt="Group 47803"
-        /></a>
-        <div class="gradient-blur-mzXdH9 gradient-blur" data-id="2:1504"></div>
-        <p class="jess-62-855-2396-730-C61RwL" data-id="2:1505">
-          <span class="span0-mc15XA">Jess | (+62) 855-2396-7303<br /></span
-          ><span class="span1-mc15XA"
-            >Desa Mekarsari No.04 RT.05/RW07, Kecamatan<br />Sumedang Selatan,
-            Jawa Barat.<br />MEKARSARI, KAB. SUMEDANG, JAWA BARAT, ID
-            54836</span
-          >
-        </p>
-        <div class="total-C61RwL dmsans-bold-white-14px" data-id="2:1506">
-          Total
-        </div>
-        <div class="group-VMr6Om group" data-id="2:1507">
-          <div class="pilhan-layanan-XSCsvl" data-id="2:1508">
-            Pilhan Layanan
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/line-12-2.svg"
+              alt="Line 12"><img class="line-13-KxgdJA" data-id="I2:1512;1418:1694"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/line-13-2.svg"
+              alt="Line 13"></div>
+          <div class="group-47785-o5Vv2n" data-id="2:1513">
+            <div class="group-47783-awVMdK" data-id="2:1514">
+              <div class="group-47782-CnPdIG" data-id="2:1515"><img class="rectangle-29-FKPvqP" data-id="2:1516"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rectangle-29@2x.png"
+                  alt="Rectangle 29"></div>
+            </div>
           </div>
         </div>
-        <div class="alamat-C61RwL" data-id="2:1509">Alamat</div>
-        <div class="group-36979-C61RwL" data-id="2:1510">
-          <div class="group-9-yRd8mf" data-id="2:1511">
-            <div class="image-placeholder-o5Vv2n" data-id="2:1512">
-              <img
-                class="line-12-KxgdJA"
-                data-id="I2:1512;1418:1693"
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/line-12-2.svg"
-                alt="Line 12"
-              /><img
-                class="line-13-KxgdJA"
-                data-id="I2:1512;1418:1694"
-                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/line-13-2.svg"
-                alt="Line 13"
-              />
-            </div>
-            <div class="group-47785-o5Vv2n" data-id="2:1513">
-              <div class="group-47783-awVMdK" data-id="2:1514">
-                <div class="group-47782-CnPdIG" data-id="2:1515">
-                  <img
-                    class="rectangle-29-FKPvqP"
-                    data-id="2:1516"
-                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                    anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/rectangle-29@2x.png"
-                    alt="Rectangle 29"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="rectangle-1170-yRd8mf" data-id="2:1517"></div>
-          <div class="rectangle-1178-yRd8mf" data-id="2:1518"></div>
-          <div class="rincian-pesanan-yRd8mf" data-id="2:1519">
-            Rincian Pesanan
-          </div>
-          <div class="pembayaran-yRd8mf" data-id="2:1520">Pembayaran</div>
-          <div class="group-yRd8mf group" data-id="2:1521">
-            <div class="durasi-layanan-ElPaHR" data-id="2:1522">
-              Durasi Layanan
-            </div>
-          </div>
-          <div class="group-8oVYrw group" data-id="2:1523">
-            <div
-              class="rincian-pembayaran-TdfVRq dmsans-bold-white-14px"
-              data-id="2:1524"
-            >
-              Rincian Pembayaran
-            </div>
-          </div>
-          <div class="group-8a4CPq group" data-id="2:1525">
-            <div
-              class="subtotal-produk-oCMVxw dmsans-bold-white-14px"
-              data-id="2:1526"
-            >
-              Subtotal Produk
-            </div>
-          </div>
-          <div class="group-IdOwIH group" data-id="2:1527">
-            <div
-              class="biaya-layanan-OAZt6y dmsans-bold-white-14px"
-              data-id="2:1528"
-            >
-              Biaya Layanan
-            </div>
-          </div>
-          <div class="group-tPbRYY group" data-id="2:1529">
-            <div class="ella-jPjZOZ dmsans-bold-white-14px" data-id="2:1530">
-              Ella
-            </div>
-          </div>
+        <div class="rectangle-1170-yRd8mf" data-id="2:1517"></div>
+        <div class="rectangle-1178-yRd8mf" data-id="2:1518"></div>
+        <div class="rincian-pesanan-yRd8mf" data-id="2:1519">Rincian Pesanan</div>
+        <div class="pembayaran-yRd8mf" data-id="2:1520">Pembayaran</div>
+        <div class="group-yRd8mf group" data-id="2:1521">
+          <div class="durasi-layanan-ElPaHR" data-id="2:1522">Durasi Layanan</div>
+        </div>
+        <div class="group-8oVYrw group" data-id="2:1523">
+          <div class="rincian-pembayaran-TdfVRq dmsans-bold-white-14px" data-id="2:1524">Rincian Pembayaran</div>
+        </div>
+        <div class="group-8a4CPq group" data-id="2:1525">
+          <div class="subtotal-produk-oCMVxw dmsans-bold-white-14px" data-id="2:1526">Subtotal Produk</div>
+        </div>
+        <div class="group-IdOwIH group" data-id="2:1527">
+          <div class="biaya-layanan-OAZt6y dmsans-bold-white-14px" data-id="2:1528">Biaya Layanan</div>
+        </div>
+        <div class="group-tPbRYY group" data-id="2:1529">
+          <div class="ella-jPjZOZ dmsans-bold-white-14px" data-id="2:1530">Ella</div>
         </div>
       </div>
     </div>
-    <script src="launchpad-js/launchpad-banner.js" async></script>
-    <script
-      defer
-      src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"
-    ></script>
-  </body>
+  </div>
+  <script src="launchpad-js/launchpad-banner.js" async></script>
+  <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+</body>
+
 </html>
