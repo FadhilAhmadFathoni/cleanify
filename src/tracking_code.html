@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+    <!-- This code was generated using AnimaApp.com. This code is a high-fidelity prototype. Get developer-friendly
+        React or HTML/CSS code for this project at: https: //projects.animaapp.com?utm_source=hosted-code 28/12/2024
+        13:48:00 -->
+        <html>
+
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+            <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+            <meta name="og:type" content="website">
+            <meta name="twitter:card" content="photo">
+            <script id="anima-load-script" src="load.js"></script>
+            <script id="anima-hotspots-script" src="hotspots.js"></script>
+            <script id="anima-overrides-script" src="overrides.js"></script>
+            <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+
+            <style>
+                @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+                @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,200,600,500,700|Open+Sans:400,700,600|Cabin:400|Lato:500|Manjari:700|Lexend:400,600|Over+the+Rainbow:400");
+
+
+                @font-face {
+                    font-family: "Pecita-Book";
+                    font-style: normal;
+                    font-weight: 400;
+                    src: url('https://anima-uploads.s3.amazonaws.com/projects/621a3157392ee0263ac2c7ea/fonts/pecita.otf') format("opentype");
+                }
+
+                /* The following line is used to measure usage of this code. You can remove it if you want. */
+                @import url("https://px.animaapp.com/674f032ec7a9d0c0f6e857a2.674f032fc7a9d0c0f6e857a5.4F8kzxD.hch.png");
+
+
+                .screen textarea:focus,
+                .screen input:focus {
+                    outline: none;
+                }
+
+                .screen * {
+                    -webkit-font-smoothing: antialiased;
+                    box-sizing: border-box;
+                }
+
+                .screen div {
+                    -webkit-text-size-adjust: none;
+                }
+
+                .component-wrapper a {
+                    display: contents;
+                    pointer-events: auto;
+                    text-decoration: none;
+                }
+
+                .component-wrapper * {
+                    -webkit-font-smoothing: antialiased;
+                    box-sizing: border-box;
+                    pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe {
+                    pointer-events: auto;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                    visibility: hidden !important;
+                }
+
+                .screen a {
+                    display: contents;
+                    text-decoration: none;
+                }
+
+                .full-width-a {
+                    width: 100%;
+                }
+
+                .full-height-a {
+                    height: 100%;
+                }
+
+                .container-center-vertical {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    height: 100%;
+                    pointer-events: none;
+                }
+
+                .container-center-vertical>* {
+                    flex-shrink: 0;
+                    pointer-events: auto;
+                }
+
+                .container-center-horizontal {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    pointer-events: none;
+                    width: 100%;
+                }
+
+                .container-center-horizontal>* {
+                    flex-shrink: 0;
+                    pointer-events: auto;
+                }
+
+                .auto-animated div {
+                    --z-index: -1;
+                    opacity: 0;
+                    position: absolute;
+                }
+
+                .auto-animated input {
+                    --z-index: -1;
+                    opacity: 0;
+                    position: absolute;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                    opacity: 1;
+                }
+
+                .overlay-base {
+                    display: none;
+                    height: 100%;
+                    opacity: 0;
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                }
+
+                .overlay-base.animate-appear {
+                    align-items: center;
+                    animation: reveal 0.3s ease-in-out 1 normal forwards;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    opacity: 0;
+                }
+
+                .overlay-base.animate-disappear {
+                    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                    display: block;
+                    opacity: 1;
+                    pointer-events: none;
+                }
+
+                .overlay-base.animate-disappear * {
+                    pointer-events: none;
+                }
+
+                @keyframes reveal {
+                    from {
+                        opacity: 0
+                    }
+
+                    to {
+                        opacity: 1
+                    }
+                }
+
+                .animate-nodelay {
+                    animation-delay: 0s;
+                }
+
+                .align-self-flex-start {
+                    align-self: flex-start;
+                }
+
+                .align-self-flex-end {
+                    align-self: flex-end;
+                }
+
+                .align-self-flex-center {
+                    align-self: flex-center;
+                }
+
+                .valign-text-middle {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .valign-text-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+
+                .listeners-active,
+                .listeners-active * {
+                    pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                    pointer-events: none;
+                    visibility: hidden;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                    pointer-events: auto;
+                    visibility: visible;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                    cursor: pointer;
+                }
+
+                * {
+                    box-sizing: border-box;
+                }
+
+                :root {
+                    --black: #000000;
+                    --black-pearl: #051625;
+                    --blue-jeans: #4dacf724;
+                    --blumine: #165781;
+                    --blumine-2: #175882;
+                    --coconut: #fdfdfd;
+                    --cultured-pearl: #f5f5f5;
+                    --dodger-blue: #19a5ff;
+                    --eerie-black: #1e1e1e;
+                    --nobel: #b0b0b0;
+                    --red-ribbon: #ed0131;
+                    --regent-st-blue: #acd6f7;
+                    --white: #ffffff;
+
+                    --font-size-l: 13px;
+                    --font-size-m: 12px;
+                    --font-size-s: 11px;
+                    --font-size-xl: 14px;
+                    --font-size-xs: 10px;
+                    --font-size-xxl: 15px;
+                    --font-size-xxxl: 16px;
+
+                    --font-family-cabin: "Cabin", Helvetica;
+                    --font-family-dm_sans: "DM Sans", Helvetica;
+                    --font-family-lato: "Lato", Helvetica;
+                    --font-family-lexend: "Lexend", Helvetica;
+                    --font-family-manjari: "Manjari", Helvetica;
+                    --font-family-open_sans: "Open Sans", Helvetica;
+                    --font-family-over_the_rainbow: "Over the Rainbow", Helvetica;
+                    --font-family-pecita-book: "Pecita-Book", Helvetica;
+                }
+
+                .dmsans-bold-white-12px {
+                    color: var(--white);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-m);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-bold-white-14px {
+                    color: var(--white);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xl);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .lato-medium-white-11px {
+                    color: var(--white);
+                    font-family: var(--font-family-lato);
+                    font-size: var(--font-size-s);
+                    font-style: normal;
+                    font-weight: 500;
+                }
+
+                .dmsans-normal-white-14px {
+                    color: var(--white);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xl);
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                .dmsans-normal-white-10px {
+                    color: var(--white);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xs);
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                .dmsans-semi-bold-white-10px {
+                    color: var(--white);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xs);
+                    font-style: normal;
+                    font-weight: 600;
+                }
+
+                .dmsans-medium-black-12px {
+                    color: var(--black);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-m);
+                    font-style: normal;
+                    font-weight: 500;
+                }
+
+                .dmsans-semi-bold-black-13px {
+                    color: var(--black);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-l);
+                    font-style: normal;
+                    font-weight: 600;
+                }
+
+                .dmsans-extra-light-white-10px {
+                    color: var(--white);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xs);
+                    font-style: normal;
+                    font-weight: 200;
+                }
+
+                .opensans-bold-black-pearl-15px {
+                    color: var(--black-pearl);
+                    font-family: var(--font-family-open_sans);
+                    font-size: var(--font-size-xxl);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-bold-white-16px {
+                    color: var(--white);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xxxl);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-medium-black-16px {
+                    color: var(--black);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xxxl);
+                    font-style: normal;
+                    font-weight: 500;
+                }
+
+                .lato-medium-white-10px {
+                    color: var(--white);
+                    font-family: var(--font-family-lato);
+                    font-size: var(--font-size-xs);
+                    font-style: normal;
+                    font-weight: 500;
+                }
+
+                .manjari-bold-white-13px {
+                    color: var(--white);
+                    font-family: var(--font-family-manjari);
+                    font-size: var(--font-size-l);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .lexend-normal-white-14px {
+                    color: var(--white);
+                    font-family: var(--font-family-lexend);
+                    font-size: var(--font-size-xl);
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                .dmsans-bold-black-12px {
+                    color: var(--black);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-m);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-bold-eerie-black-18px {
+                    color: var(--eerie-black);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-normal-coconut-14px {
+                    color: var(--coconut);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xl);
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                .dmsans-normal-eerie-black-14px {
+                    color: var(--eerie-black);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xl);
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                .dmsans-normal-eerie-black-11px {
+                    color: var(--eerie-black);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-s);
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                .opensans-bold-white-15px {
+                    font-family: var(--font-family-open_sans);
+                    font-size: var(--font-size-xxl);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .opensans-bold-red-ribbon-15px {
+                    color: var(--red-ribbon);
+                    font-family: var(--font-family-open_sans);
+                    font-size: var(--font-size-xxl);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-bold-black-14px {
+                    color: var(--black);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xl);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-bold-blumine-16px {
+                    color: var(--blumine);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xxxl);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-medium-black-pearl-14px {
+                    color: var(--black-pearl);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: var(--font-size-xl);
+                    font-style: normal;
+                    font-weight: 500;
+                }
+
+                .cabin-normal-nobel-12px {
+                    color: var(--nobel);
+                    font-family: var(--font-family-cabin);
+                    font-size: var(--font-size-m);
+                    font-style: normal;
+                    font-weight: 400;
+                }
+
+                .opensans-bold-black-12px {
+                    color: var(--black);
+                    font-family: var(--font-family-open_sans);
+                    font-size: var(--font-size-m);
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .dmsans-medium-blumine-24px {
+                    color: var(--blumine);
+                    font-family: var(--font-family-dm_sans);
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                }
+
+                :root {}
+
+
+                .group {
+                    background-color: transparent;
+                    position: absolute;
+                }
+
+                .rock {
+                    background-color: transparent;
+                    position: absolute;
+                }
+
+                .hari-ini-C61RwL {
+                    background-color: transparent;
+                    height: auto;
+                    left: 23px;
+                    letter-spacing: 0.12px;
+                    line-height: 18.9px;
+                    position: absolute;
+                    text-align: center;
+                    top: 277px;
+                    white-space: nowrap;
+                    width: auto;
+                }
+
+                .rectangle-2663-ef0c9D {
+                    height: 141px;
+                    width: 357px;
+                }
+
+                .group-47780-ef0c9D {
+                    height: 115px;
+                    top: 13px;
+                    width: 106px;
+                }
+
+                .rectangle-2664-SATyeM {
+                    height: 115px;
+                    position: relative;
+                    width: 106px;
+                }
+
+                .group-FZznCY {
+                    height: 18px;
+                    left: 0px;
+                    top: 44px;
+                    width: 85px;
+                }
+
+                .tab {
+                    background-color: transparent;
+                    border-bottom-style: solid;
+                    border-color: var(--black);
+                    border-left-style: none;
+                    border-right-style: none;
+                    border-top-style: none;
+                    height: 28px;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 235px;
+                    width: 131px;
+                }
+
+                .tab-label {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: -0.26px;
+                    line-height: 22px;
+                    position: absolute;
+                    text-align: center;
+                    width: 131px;
+                }
+
+                .rock-qr8e7q {
+                    height: 56px;
+                    left: 293px;
+                    top: 0px;
+                    width: 100px;
+                }
+
+                .group-47777-C61RwL {
+                    background-color: transparent;
+                    height: 493px;
+                    left: 0px;
+                    position: absolute;
+                    top: 848px;
+                    width: 422px;
+                }
+
+                .rectangle-2661-CXpwDY {
+                    background-color: var(--blumine);
+                    height: 493px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 420px;
+                }
+
+                .line-2-CXpwDY {
+                    background-color: transparent;
+                    height: 1px;
+                    left: 0px;
+                    position: absolute;
+                    top: 401px;
+                    width: 393px;
+                }
+
+                .group-47687-CXpwDY {
+                    background-color: transparent;
+                    height: 44px;
+                    left: 23px;
+                    position: absolute;
+                    top: 79px;
+                    width: 258px;
+                }
+
+                .lorem-ipsum-dolor-si-QXPe94 {
+                    left: 0px;
+                    letter-spacing: 0.00px;
+                    line-height: 13.8px;
+                    top: 0px;
+                    width: 256px;
+                }
+
+                .group-36771-QXPe94 {
+                    background-color: transparent;
+                    height: 9px;
+                    left: 0px;
+                    position: absolute;
+                    top: 35px;
+                    width: 95px;
+                }
+
+                .group-194-vLUzMS {
+                    background-color: transparent;
+                    height: 9px;
+                    left: 0px;
+                    position: relative;
+                    top: 0px;
+                    width: 95px;
+                }
+
+                .google-negative-LNOAOX {
+                    background-color: transparent;
+                    height: 9px;
+                    left: 86px;
+                    position: absolute;
+                    top: 0px;
+                    width: 9px;
+                }
+
+                .linked-in-negative-LNOAOX {
+                    background-color: transparent;
+                    height: 9px;
+                    left: 64px;
+                    position: absolute;
+                    top: -0px;
+                    width: 9px;
+                }
+
+                .instagram-negative-LNOAOX {
+                    background-color: transparent;
+                    height: 9px;
+                    left: 43px;
+                    position: absolute;
+                    top: -0px;
+                    width: 8px;
+                }
+
+                .twitter-negative-LNOAOX {
+                    background-color: transparent;
+                    height: 9px;
+                    left: 22px;
+                    position: absolute;
+                    top: 0px;
+                    width: 9px;
+                }
+
+                .facebook-negative-LNOAOX {
+                    background-color: transparent;
+                    height: 9px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 9px;
+                }
+
+                .logo-cleanify_20241004_201648_0000-3-CXpwDY {
+                    background-color: transparent;
+                    height: 25px;
+                    left: 19px;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 39px;
+                    width: 26px;
+                }
+
+                .cleanify-CXpwDY {
+                    background-color: transparent;
+                    height: auto;
+                    left: 51px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 46px;
+                    width: 111px;
+                }
+
+                .group-16709-CXpwDY {
+                    background-color: transparent;
+                    height: 195px;
+                    left: 25px;
+                    position: absolute;
+                    top: 149px;
+                    width: 94px;
+                }
+
+                .company-iIxctO {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 0px;
+                    width: 90px;
+                }
+
+                .beranda-layanan-about-us-contact-us-iIxctO {
+                    background-color: transparent;
+                    height: auto;
+                    left: 1px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 32px;
+                    width: 81px;
+                }
+
+                .group-16708-CXpwDY {
+                    background-color: transparent;
+                    height: 195px;
+                    left: 139px;
+                    position: absolute;
+                    top: 149px;
+                    width: 89px;
+                }
+
+                .support-hUWaSz {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 0px;
+                    width: 75px;
+                }
+
+                .help-center-tweet-us-webians-feedback-hUWaSz {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 32px;
+                    width: 85px;
+                }
+
+                .group-16707-CXpwDY {
+                    background-color: transparent;
+                    height: 195px;
+                    left: 256px;
+                    position: absolute;
+                    top: 149px;
+                    width: 119px;
+                }
+
+                .links-cynegb {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 0px;
+                    width: 48px;
+                }
+
+                .courses-become-teach-cynegb {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 32px;
+                    width: 115px;
+                }
+
+                .group-36774-CXpwDY {
+                    background-color: transparent;
+                    height: 64px;
+                    left: 23px;
+                    position: absolute;
+                    top: 303px;
+                    width: 138px;
+                }
+
+                .contact-us-WZXAUy {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 0px;
+                    width: auto;
+                }
+
+                .group-36772-WZXAUy {
+                    background-color: transparent;
+                    height: 13px;
+                    left: 2px;
+                    position: absolute;
+                    top: 51px;
+                    width: 136px;
+                }
+
+                .cleanifyofcgmailcom-G5jJVo {
+                    background-color: transparent;
+                    height: auto;
+                    left: 23px;
+                    letter-spacing: 0.00px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 0px;
+                    white-space: nowrap;
+                    width: auto;
+                }
+
+                .vector-G5jJVo {
+                    height: 13px;
+                    width: 13px;
+                }
+
+                .vector-XrUWmi {
+                    height: 15px;
+                    width: 15px;
+                }
+
+                .lorem-ipsum-dolor-si {
+                    background-color: transparent;
+                    height: auto;
+                    position: absolute;
+                    text-align: left;
+                }
+
+                .rp-100000 {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.12px;
+                    line-height: 18.9px;
+                    position: absolute;
+                    text-align: center;
+                    top: 0px;
+                    white-space: nowrap;
+                    width: auto;
+                }
+
+                /* screen - order-tracking */
+
+                .order-tracking {
+                    background-color: var(--coconut);
+                    height: 858px;
+                    overflow: hidden;
+                    overflow-x: hidden;
+                    position: relative;
+                    width: 393px;
+                }
+
+                .order-tracking .gradient-blur-C61RwL {
+                    left: -16px;
+                    top: 86px;
+                }
+
+                .order-tracking .gradient-blur-VMr6Om {
+                    left: -61px;
+                    top: 452px;
+                }
+
+                .order-tracking .vector-2-C61RwL {
+                    background-color: transparent;
+                    height: 1px;
+                    left: 224px;
+                    position: absolute;
+                    top: -662px;
+                    width: 105px;
+                }
+
+                .order-tracking .gradient-blur-mzXdH9 {
+                    left: -128px;
+                    top: 858px;
+                }
+
+                .order-tracking .rock-C61RwL {
+                    background-color: transparent;
+                    height: 87px;
+                    left: 302px;
+                    position: absolute;
+                    top: 661px;
+                    width: 81px;
+                }
+
+                .order-tracking .chat-C61RwL {
+                    background-color: transparent;
+                    height: 15px;
+                    left: 317px;
+                    letter-spacing: 0.40px;
+                    line-height: 20px;
+                    position: absolute;
+                    text-align: center;
+                    top: 589px;
+                    white-space: nowrap;
+                    width: 29px;
+                }
+
+                .order-tracking .group-47831-C61RwL {
+                    background-color: transparent;
+                    height: 460px;
+                    left: -202px;
+                    position: absolute;
+                    top: 0px;
+                    width: 607px;
+                }
+
+                .order-tracking .maps-OjVxVU {
+                    background-color: transparent;
+                    height: 460px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 607px;
+                }
+
+                .order-tracking .mapsicle-map-duqUZA {
+                    background-color: transparent;
+                    height: 460px;
+                    left: 202px;
+                    position: absolute;
+                    top: 0px;
+                    width: 393px;
+                }
+
+                .order-tracking .vector-7-duqUZA {
+                    background-color: transparent;
+                    height: 333px;
+                    left: 273px;
+                    position: absolute;
+                    top: 44px;
+                    width: 270px;
+                }
+
+                .order-tracking .vector-6-duqUZA {
+                    background-color: transparent;
+                    height: 325px;
+                    left: 275px;
+                    position: absolute;
+                    top: 48px;
+                    width: 267px;
+                }
+
+                .order-tracking .vuesaxlinearlocation-duqUZA {
+                    height: 18px;
+                    left: 261px;
+                    top: 31px;
+                    width: 16px;
+                }
+
+                .order-tracking .ellipse-44-vDDj4Y {
+                    background-color: #e8f9ee99;
+                    border-radius: 19px;
+                    height: 38px;
+                    width: 38px;
+                }
+
+                .order-tracking .ellipse-45-vDDj4Y {
+                    background-color: #0ebc93;
+                    border-radius: 7px;
+                    height: 14px;
+                    left: 12px;
+                    position: absolute;
+                    top: 12px;
+                    width: 14px;
+                }
+
+                .order-tracking .group-278-duqUZA {
+                    background-color: transparent;
+                    height: 10px;
+                    left: 277px;
+                    position: absolute;
+                    top: 26px;
+                    width: 38px;
+                }
+
+                .order-tracking .rectangle-310-fWRt8K {
+                    height: 10px;
+                    width: 32px;
+                }
+
+                .order-tracking .anggrek-fWRt8K {
+                    background-color: transparent;
+                    color: var(--black);
+                    font-family: var(--font-family-open_sans);
+                    font-size: 5px;
+                    font-style: normal;
+                    font-weight: 400;
+                    height: auto;
+                    left: 10px;
+                    letter-spacing: 0.05px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 2px;
+                    width: 26px;
+                }
+
+                .order-tracking .group-279-duqUZA {
+                    background-color: transparent;
+                    height: 13px;
+                    left: 522px;
+                    position: absolute;
+                    top: 381px;
+                    width: 45px;
+                }
+
+                .order-tracking .rectangle-310-1xl5PC {
+                    height: 13px;
+                    width: 43px;
+                }
+
+                .order-tracking .group-272-1xl5PC {
+                    height: 6px;
+                    left: 3px;
+                    top: 3px;
+                    width: 7px;
+                }
+
+                .order-tracking .group-268-HWiXMs {
+                    background-color: transparent;
+                    height: 6px;
+                    left: 0px;
+                    position: relative;
+                    top: 0px;
+                    width: 7px;
+                }
+
+                .order-tracking .ellipse-44-pnyTyj {
+                    background-color: #e5e5fe;
+                    border-radius: 3.28px/3.22px;
+                    height: 6px;
+                    width: 7px;
+                }
+
+                .order-tracking .vuesaxboldlocation-pnyTyj {
+                    height: 4px;
+                    left: 1px;
+                    top: 1px;
+                    width: 4px;
+                }
+
+                .order-tracking .karapyak-1xl5PC {
+                    background-color: transparent;
+                    color: var(--black);
+                    font-family: var(--font-family-open_sans);
+                    font-size: 5px;
+                    font-style: normal;
+                    font-weight: 400;
+                    height: auto;
+                    left: 13px;
+                    letter-spacing: 0.05px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 3px;
+                    width: 24px;
+                }
+
+                .order-tracking .group-268-duqUZA {
+                    background-color: transparent;
+                    height: 18px;
+                    left: 535px;
+                    position: absolute;
+                    top: 356px;
+                    width: 16px;
+                }
+
+                .order-tracking .ellipse-44-1J7jjV {
+                    background-color: #e5e5feb2;
+                    border-radius: 8.01px/9.23px;
+                    height: 18px;
+                    width: 16px;
+                }
+
+                .order-tracking .vuesaxboldlocation-1J7jjV {
+                    height: 12px;
+                    left: 3px;
+                    top: 3px;
+                    width: 10px;
+                }
+
+                .order-tracking .group-277-duqUZA {
+                    background-color: transparent;
+                    height: 30px;
+                    left: 407px;
+                    position: absolute;
+                    top: 236px;
+                    transform: rotate(73.71deg);
+                    width: 34px;
+                }
+
+                .order-tracking .ellipse-48-hzU3fj {
+                    background-color: #19a5ff30;
+                    border-radius: 16.96px/15.15px;
+                    height: 30px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 34px;
+                }
+
+                .order-tracking .ellipse-49-hzU3fj {
+                    background-color: #4dacf7;
+                    border-radius: 12.72px/11.36px;
+                    height: 23px;
+                    left: 4px;
+                    position: absolute;
+                    top: 4px;
+                    width: 25px;
+                }
+
+                .order-tracking .vector-hzU3fj {
+                    left: 12px;
+                    top: 6px;
+                    transform: rotate(-73.71deg);
+                }
+
+                .order-tracking .ellipse-51-OjVxVU {
+                    background-color: #e8f9eea8;
+                    border-radius: 3.26px/3.33px;
+                    height: 7px;
+                    left: 279px;
+                    position: absolute;
+                    top: 28px;
+                    width: 7px;
+                }
+
+                .order-tracking .ellipse-50-OjVxVU {
+                    background-color: #0ca49d;
+                    border-radius: 1.4px/1.43px;
+                    height: 3px;
+                    left: 281px;
+                    position: absolute;
+                    top: 29px;
+                    width: 3px;
+                }
+
+                .order-tracking .rectangle-2679-C61RwL {
+                    left: 345px;
+                }
+
+                .order-tracking .rectangle-2680-C61RwL {
+                    background-color: var(--white);
+                    border-radius: 5px;
+                    box-shadow: 0px 2px 4px #0000001f;
+                    height: 29px;
+                    left: 346px;
+                    position: absolute;
+                    top: 57px;
+                    width: 29px;
+                }
+
+                .order-tracking .rectangle-2681-C61RwL {
+                    background-color: var(--white);
+                    border-radius: 5px;
+                    box-shadow: 0px 2px 4px #0000001f;
+                    height: 62px;
+                    left: 346px;
+                    position: absolute;
+                    top: 95px;
+                    width: 29px;
+                }
+
+                .order-tracking .rectangle-2677-C61RwL {
+                    background-color: var(--white);
+                    border-radius: 50px;
+                    height: 434px;
+                    left: 0px;
+                    position: absolute;
+                    top: 427px;
+                    width: 396px;
+                }
+
+                .order-tracking .line-28-C61RwL {
+                    background-color: transparent;
+                    height: 23px;
+                    left: 47px;
+                    position: absolute;
+                    top: 673px;
+                    width: 2px;
+                }
+
+                .order-tracking .line-29-C61RwL {
+                    background-color: transparent;
+                    height: 23px;
+                    left: 48px;
+                    position: absolute;
+                    top: 606px;
+                    width: 2px;
+                }
+
+                .order-tracking .group-273-C61RwL {
+                    background-color: transparent;
+                    height: 38px;
+                    left: 30px;
+                    position: absolute;
+                    top: 564px;
+                    width: 188px;
+                }
+
+                .order-tracking .estimated-time-2-minutes-EsSb0s {
+                    background-color: transparent;
+                    height: auto;
+                    left: 53px;
+                    letter-spacing: 0.12px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 22px;
+                    width: auto;
+                }
+
+                .order-tracking .vuesaxlinearlocation-EsSb0s {
+                    height: 38px;
+                    left: 0px;
+                    top: 0px;
+                    width: 38px;
+                }
+
+                .order-tracking .ellipse-44-30fsxh {
+                    background-color: #e8f9ee;
+                    border-radius: 19px;
+                    height: 38px;
+                    width: 38px;
+                }
+
+                .order-tracking .ellipse-45-30fsxh {
+                    background-color: #0ebc93;
+                    border-radius: 7px;
+                    height: 14px;
+                    left: 12px;
+                    position: absolute;
+                    top: 12px;
+                    width: 14px;
+                }
+
+                .order-tracking .group-272-C61RwL {
+                    height: 38px;
+                    left: 29px;
+                    top: 699px;
+                    width: 179px;
+                }
+
+                .order-tracking .addres-house-karapyak-VBylhg {
+                    background-color: transparent;
+                    height: auto;
+                    left: 53px;
+                    letter-spacing: 0.12px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 22px;
+                    width: auto;
+                }
+
+                .order-tracking .group-268-VBylhg {
+                    background-color: transparent;
+                    height: 38px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 38px;
+                }
+
+                .order-tracking .ellipse-44-h5nF8u {
+                    background-color: #e5f3fe;
+                    border-radius: 19px;
+                    height: 38px;
+                    width: 38px;
+                }
+
+                .order-tracking .vuesaxboldlocation-h5nF8u {
+                    height: 24px;
+                    left: 7px;
+                    top: 7px;
+                    width: 24px;
+                }
+
+                .order-tracking .group-47832-C61RwL {
+                    background-color: transparent;
+                    height: 38px;
+                    left: 30px;
+                    position: absolute;
+                    top: 633px;
+                    width: 194px;
+                }
+
+                .order-tracking .estimated-time-10-minutes-VRXFFy {
+                    background-color: transparent;
+                    height: auto;
+                    left: 53px;
+                    letter-spacing: 0.12px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 21px;
+                    width: auto;
+                }
+
+                .order-tracking .group-268-VRXFFy {
+                    background-color: transparent;
+                    height: 38px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 38px;
+                }
+
+                .order-tracking .ellipse-44-3hrTCf {
+                    background-color: #19a5ff3d;
+                    border-radius: 19px;
+                    height: 38px;
+                    width: 38px;
+                }
+
+                .order-tracking .ellipse-45-3hrTCf {
+                    background-color: var(--dodger-blue);
+                    border-radius: 13px/13.5px;
+                    height: 27px;
+                    left: 6px;
+                    position: absolute;
+                    top: 5px;
+                    width: 26px;
+                }
+
+                .order-tracking .vector-3hrTCf {
+                    left: 8px;
+                    top: 14px;
+                }
+
+                .order-tracking .rectangle-2676-C61RwL {
+                    background-color: var(--dodger-blue);
+                    border-radius: 30px;
+                    height: 100px;
+                    left: 0px;
+                    position: absolute;
+                    top: 782px;
+                    width: 396px;
+                }
+
+                .order-tracking .group-C61RwL {
+                    height: 18px;
+                    left: 287px;
+                    top: 813px;
+                    width: 85px;
+                }
+
+                .order-tracking .rp-103500-NOXmfT {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.12px;
+                    line-height: 18.9px;
+                    position: absolute;
+                    text-align: center;
+                    top: 0px;
+                    white-space: nowrap;
+                    width: 83px;
+                }
+
+                .order-tracking .rectangle-2678-C61RwL {
+                    background-color: var(--dodger-blue);
+                    border-radius: 20px;
+                    height: 74px;
+                    left: 27px;
+                    position: absolute;
+                    top: 459px;
+                    width: 339px;
+                }
+
+                .order-tracking .group-47804-C61RwL {
+                    background-color: transparent;
+                    height: 36px;
+                    left: 120px;
+                    position: absolute;
+                    top: 477px;
+                    width: 151px;
+                }
+
+                .order-tracking .group-tVzfZW {
+                    height: 16px;
+                    left: 0px;
+                    top: 0px;
+                    width: 153px;
+                }
+
+                .order-tracking .nama-penyedia-jasa-mlJTjR {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.12px;
+                    line-height: 18.9px;
+                    position: absolute;
+                    text-align: left;
+                    top: 0px;
+                    white-space: nowrap;
+                    width: 151px;
+                }
+
+                .order-tracking .group-7Xzf4o {
+                    height: 16px;
+                    left: 0px;
+                    top: 20px;
+                    width: 153px;
+                }
+
+                .order-tracking .kategori-house-cleaning-tYUxPo {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.12px;
+                    line-height: 18.9px;
+                    position: absolute;
+                    text-align: left;
+                    top: 0px;
+                    white-space: nowrap;
+                    width: 151px;
+                }
+
+                .order-tracking .group-47780-C61RwL {
+                    background-color: transparent;
+                    height: 56px;
+                    left: 50px;
+                    position: absolute;
+                    top: 468px;
+                    width: 54px;
+                }
+
+                .order-tracking .rectangle-2664-2Gfbpf {
+                    background-color: var(--cultured-pearl);
+                    border-radius: 3px;
+                    height: 56px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 54px;
+                }
+
+                .order-tracking .rectangle-35-2Gfbpf {
+                    background-color: transparent;
+                    height: 51px;
+                    left: 3px;
+                    position: absolute;
+                    top: 5px;
+                    width: 51px;
+                }
+
+                .order-tracking .rectangle-2679-VMr6Om {
+                    left: 15px;
+                }
+
+                .order-tracking .chevron-left-C61RwL {
+                    background-color: transparent;
+                    cursor: pointer;
+                    height: 24px;
+                    left: 17px;
+                    position: absolute;
+                    top: 22px;
+                    width: 24px;
+                }
+
+                .order-tracking .search-01-C61RwL {
+                    background-color: transparent;
+                    height: 19px;
+                    left: 350px;
+                    position: absolute;
+                    top: 24px;
+                    width: 19px;
+                }
+
+                .order-tracking .compass-C61RwL {
+                    background-color: transparent;
+                    height: 22px;
+                    left: 350px;
+                    position: absolute;
+                    top: 61px;
+                    width: 22px;
+                }
+
+                .order-tracking .icon-minus-C61RwL {
+                    background-color: transparent;
+                    height: 2px;
+                    left: 355px;
+                    position: absolute;
+                    top: 141px;
+                    width: 12px;
+                }
+
+                .order-tracking .rectangle-1-tqQikN {
+                    background-color: transparent;
+                    height: 2px;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                    width: 12px;
+                }
+
+                .order-tracking .plus-01-C61RwL {
+                    background-color: transparent;
+                    height: 21px;
+                    left: 350px;
+                    position: absolute;
+                    top: 101px;
+                    width: 21px;
+                }
+
+                .order-tracking .line-14-C61RwL {
+                    background-color: transparent;
+                    height: 1px;
+                    left: 350px;
+                    position: absolute;
+                    top: 128px;
+                    width: 21px;
+                }
+
+                .order-tracking .group-VMr6Om {
+                    height: 22px;
+                    left: 89px;
+                    top: 811px;
+                    width: 192px;
+                }
+
+                .order-tracking .house-cleaning-XSCsvl {
+                    background-color: transparent;
+                    height: auto;
+                    left: 0px;
+                    letter-spacing: 0.12px;
+                    line-height: 20px;
+                    position: absolute;
+                    text-align: left;
+                    top: 0px;
+                    white-space: nowrap;
+                    width: 190px;
+                }
+
+                .order-tracking .group-38-C61RwL {
+                    background-color: transparent;
+                    height: 34px;
+                    left: 30px;
+                    position: absolute;
+                    top: 800px;
+                    width: 40px;
+                }
+
+                .order-tracking .call-C61RwL {
+                    background-color: transparent;
+                    height: 26px;
+                    left: 281px;
+                    position: absolute;
+                    top: 485px;
+                    width: 27px;
+                }
+
+                .order-tracking .vuesaxlinearcall-uBKP6Q {
+                    left: 5px;
+                    position: relative;
+                    top: 5px;
+                }
+
+                .order-tracking .vuesaxlinearcall-0QfKgJ {
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                }
+
+                .order-tracking .message-C61RwL {
+                    background-color: transparent;
+                    cursor: pointer;
+                    height: 26px;
+                    left: 312px;
+                    position: absolute;
+                    top: 485px;
+                    width: 27px;
+                }
+
+                .order-tracking .vuesaxlinearmessage-text-xSaWke {
+                    left: 5px;
+                    position: relative;
+                    top: 5px;
+                }
+
+                .order-tracking .vuesaxlinearmessage-text-kvGsKP {
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                }
+
+                .order-tracking .ellipse-46-kvGsKP {
+                    background-color: #ff0000;
+                    border-radius: 6px;
+                    height: 12px;
+                    left: 15px;
+                    position: absolute;
+                    top: -3px;
+                    width: 12px;
+                }
+
+                .order-tracking .prepare-C61RwL {
+                    background-color: transparent;
+                    height: auto;
+                    left: 83px;
+                    letter-spacing: 0.12px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 567px;
+                    width: auto;
+                }
+
+                .order-tracking .on-the-way-C61RwL {
+                    background-color: transparent;
+                    height: auto;
+                    left: 82px;
+                    letter-spacing: 0.12px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 634px;
+                    width: auto;
+                }
+
+                .order-tracking .deliverd-C61RwL {
+                    background-color: transparent;
+                    height: auto;
+                    left: 82px;
+                    letter-spacing: 0.12px;
+                    line-height: normal;
+                    position: absolute;
+                    text-align: left;
+                    top: 701px;
+                    width: auto;
+                }
+
+                .order-tracking .ellipse-44 {
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                }
+
+                .order-tracking .gradient-blur {
+                    background: linear-gradient(180deg, rgb(81.00000277161598, 142.00000673532486, 248.0000004172325) 0%, rgb(77.78301939368248, 172.99998968839645, 247.13238537311554) 20.666655898094177%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 70.66665887832642%, rgb(70.00000342726707, 248.0000004172325, 245.03333240747452) 79.1666567325592%);
+                    background-color: transparent;
+                    border-radius: 137px;
+                    filter: blur(198px);
+                    ;
+                    height: 192px;
+                    opacity: 0.56;
+                    position: absolute;
+                    width: 511px;
+                }
+
+                .order-tracking .group-272 {
+                    background-color: transparent;
+                    position: absolute;
+                }
+
+                .order-tracking .rectangle-2679 {
+                    background-color: var(--white);
+                    border-radius: 5px;
+                    box-shadow: 0px 2px 4px #0000001f;
+                    height: 29px;
+                    position: absolute;
+                    top: 19px;
+                    width: 29px;
+                }
+
+                .order-tracking .rectangle-310 {
+                    background-color: var(--white);
+                    border-radius: 12px;
+                    box-shadow: 0px 20px 50px #dbe0f880;
+                    left: 0px;
+                    position: absolute;
+                    top: 0px;
+                }
+
+                .order-tracking .vector {
+                    background-color: transparent;
+                    height: 23px;
+                    position: absolute;
+                    width: 23px;
+                }
+
+                .order-tracking .vuesaxboldlocation {
+                    background-color: transparent;
+                    position: absolute;
+                }
+
+                .order-tracking .vuesaxlinearcall {
+                    background-color: transparent;
+                    height: 16px;
+                    width: 17px;
+                }
+
+                .order-tracking .vuesaxlinearlocation {
+                    background-color: transparent;
+                    position: absolute;
+                }
+
+                .order-tracking .vuesaxlinearmessage-text {
+                    background-color: transparent;
+                    height: 16px;
+                    width: 17px;
+                }
+            </style>
+        </head>
+
+        <body style="margin: 0;background: #fdfdfd;"><input type="hidden" id="anPageName" name="page"
+                value="order-tracking">
+            <div class="container-center-horizontal">
+                <div class="order-tracking screen " data-id="216:498">
+                    <div class="gradient-blur-C61RwL gradient-blur" data-id="216:499"></div>
+                    <div class="gradient-blur-VMr6Om gradient-blur" data-id="216:501"></div><img class="vector-2-C61RwL"
+                        data-id="216:503"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/674f035e1f550e27cd18fdde/img/vector-2@2x.png"
+                        alt="Vector 2">
+                    <div class="gradient-blur-mzXdH9 gradient-blur" data-id="216:504"></div><img class="rock-C61RwL"
+                        data-id="216:505"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/rock-2.svg"
+                        alt="Rock">
+                    <div class="chat-C61RwL valign-text-middle dmsans-semi-bold-white-10px" data-id="216:588">Chat</div>
+                    <div class="group-47831-C61RwL" data-id="231:630">
+                        <div class="maps-OjVxVU" data-id="231:543"><img class="mapsicle-map-duqUZA" data-id="231:544"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/mapsicle-map.png"
+                                alt="Mapsicle Map"><img class="vector-7-duqUZA" data-id="231:545"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vector-7.svg"
+                                alt="Vector 7"><img class="vector-6-duqUZA" data-id="231:546"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vector-6.svg"
+                                alt="Vector 6">
+                            <div class="vuesaxlinearlocation-duqUZA vuesaxlinearlocation" data-id="231:547">
+                                <div class="ellipse-44-vDDj4Y ellipse-44" data-id="I231:547;801:193"></div>
+                                <div class="ellipse-45-vDDj4Y" data-id="I231:547;801:194"></div>
+                            </div>
+                            <div class="group-278-duqUZA" data-id="231:548">
+                                <div class="rectangle-310-fWRt8K rectangle-310" data-id="231:549"></div>
+                                <div class="anggrek-fWRt8K" data-id="231:590">Anggrek</div>
+                            </div>
+                            <div class="group-279-duqUZA" data-id="231:554">
+                                <div class="rectangle-310-1xl5PC rectangle-310" data-id="231:555"></div>
+                                <div class="group-272-1xl5PC group-272" data-id="231:556">
+                                    <div class="group-268-HWiXMs" data-id="231:559">
+                                        <div class="ellipse-44-pnyTyj ellipse-44" data-id="231:560"></div><img
+                                            class="vuesaxboldlocation-pnyTyj vuesaxboldlocation" data-id="231:561"
+                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vuesax-bold-location.svg"
+                                            alt="vuesax/bold/location">
+                                    </div>
+                                </div>
+                                <div class="karapyak-1xl5PC" data-id="231:591">Karapyak</div>
+                            </div>
+                            <div class="group-268-duqUZA" data-id="231:562">
+                                <div class="ellipse-44-1J7jjV ellipse-44" data-id="231:563"></div><img
+                                    class="vuesaxboldlocation-1J7jjV vuesaxboldlocation" data-id="231:564"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                    anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vuesax-bold-location-1.svg"
+                                    alt="vuesax/bold/location">
+                            </div>
+                            <div class="group-277-duqUZA" data-id="231:565">
+                                <div class="ellipse-48-hzU3fj" data-id="231:566"></div>
+                                <div class="ellipse-49-hzU3fj" data-id="231:567"></div><img class="vector-hzU3fj vector"
+                                    data-id="231:568"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                    anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vector-1.svg"
+                                    alt="Vector">
+                            </div>
+                        </div>
+                        <div class="ellipse-51-OjVxVU" data-id="231:589"></div>
+                        <div class="ellipse-50-OjVxVU" data-id="231:588"></div>
+                    </div>
+                    <div class="rectangle-2679-C61RwL rectangle-2679" data-id="232:662"></div>
+                    <div class="rectangle-2680-C61RwL" data-id="232:664"></div>
+                    <div class="rectangle-2681-C61RwL" data-id="232:665"></div>
+                    <div class="rectangle-2677-C61RwL" data-id="230:533"></div><img class="line-28-C61RwL"
+                        data-id="232:711"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/line-28.svg"
+                        alt="Line 28"><img class="line-29-C61RwL" data-id="232:737"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/line-28.svg"
+                        alt="Line 29">
+                    <div class="group-273-C61RwL" data-id="232:712">
+                        <div class="estimated-time-2-minutes-EsSb0s cabin-normal-nobel-12px" data-id="232:714">Estimated
+                            time 2 minutes</div>
+                        <div class="vuesaxlinearlocation-EsSb0s vuesaxlinearlocation" data-id="232:715">
+                            <div class="ellipse-44-30fsxh ellipse-44" data-id="232:716"></div>
+                            <div class="ellipse-45-30fsxh" data-id="232:717"></div>
+                        </div>
+                    </div>
+                    <div class="group-272-C61RwL group-272" data-id="232:718">
+                        <div class="addres-house-karapyak-VBylhg cabin-normal-nobel-12px" data-id="232:720">Addres
+                            House,
+                            Karapyak</div>
+                        <div class="group-268-VBylhg" data-id="232:721">
+                            <div class="ellipse-44-h5nF8u ellipse-44" data-id="232:722"></div><img
+                                class="vuesaxboldlocation-h5nF8u vuesaxboldlocation" data-id="232:723"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vuesax-bold-location-2.svg"
+                                alt="vuesax/bold/location">
+                        </div>
+                    </div>
+                    <div class="group-47832-C61RwL" data-id="232:738">
+                        <div class="estimated-time-10-minutes-VRXFFy cabin-normal-nobel-12px" data-id="232:740">
+                            Estimated time 10 minutes</div>
+                        <div class="group-268-VRXFFy" data-id="232:741">
+                            <div class="ellipse-44-3hrTCf ellipse-44" data-id="232:742"></div>
+                            <div class="ellipse-45-3hrTCf" data-id="232:748"></div><img class="vector-3hrTCf vector"
+                                data-id="232:749"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vector-3.svg"
+                                alt="Vector">
+                        </div>
+                    </div>
+                    <div class="rectangle-2676-C61RwL" data-id="230:532"></div>
+                    <div class="group-C61RwL group" data-id="232:679">
+                        <div class="rp-103500-NOXmfT dmsans-bold-white-14px" data-id="232:680">Rp 103.500</div>
+                    </div>
+                    <div class="rectangle-2678-C61RwL" data-id="231:620"></div>
+                    <div class="group-47804-C61RwL" data-id="231:621">
+                        <div class="group-tVzfZW group" data-id="231:622">
+                            <div class="nama-penyedia-jasa-mlJTjR dmsans-bold-white-12px" data-id="231:623">Nama
+                                Penyedia Jasa</div>
+                        </div>
+                        <div class="group-7Xzf4o group" data-id="231:624">
+                            <div class="kategori-house-cleaning-tYUxPo dmsans-normal-white-10px" data-id="231:625">
+                                Kategori : House Cleaning</div>
+                        </div>
+                    </div>
+                    <div class="group-47780-C61RwL" data-id="231:626">
+                        <div class="rectangle-2664-2Gfbpf" data-id="231:627"></div><img class="rectangle-35-2Gfbpf"
+                            data-id="231:628"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/rectangle-35@2x.png"
+                            alt="Rectangle 35">
+                    </div>
+                    <div class="rectangle-2679-VMr6Om rectangle-2679" data-id="232:659"></div><a
+                        href="HalamanProfile_Pesanan.html"><img class="chevron-left-C61RwL" data-id="231:648"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/chevron-left.svg"
+                            alt="Chevron Left"></a><img class="search-01-C61RwL" data-id="231:638"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/search-01.svg"
+                        alt="Search 01"><img class="compass-C61RwL" data-id="231:633"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/compass.svg"
+                        alt="Compass">
+                    <div class="icon-minus-C61RwL" data-id="232:655"><img class="rectangle-1-tqQikN" data-id="232:657"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                            anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/rectangle-1.svg"
+                            alt="Rectangle 1"></div><img class="plus-01-C61RwL" data-id="231:643"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/plus-01.svg"
+                        alt="Plus 01"><img class="line-14-C61RwL" data-id="232:666"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/line-14.svg"
+                        alt="Line 14">
+                    <div class="group-VMr6Om group" data-id="232:669">
+                        <div class="house-cleaning-XSCsvl dmsans-bold-white-16px" data-id="232:670">House Cleaning</div>
+                    </div><img class="group-38-C61RwL" data-id="232:671"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                        anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/group-38@2x.png"
+                        alt="Group 38">
+                    <div class="call-C61RwL" data-id="232:692">
+                        <div class="vuesaxlinearcall-uBKP6Q vuesaxlinearcall" data-id="232:694"><img
+                                class="vuesaxlinearcall-0QfKgJ vuesaxlinearcall" data-id="232:695"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vuesax-linear-call.svg"
+                                alt="vuesax/linear/call"></div>
+                    </div><a href="chat">
+                        <div class="message-C61RwL" data-id="232:700">
+                            <div class="vuesaxlinearmessage-text-xSaWke vuesaxlinearmessage-text" data-id="232:702"><img
+                                    class="vuesaxlinearmessage-text-kvGsKP vuesaxlinearmessage-text" data-id="232:703"
+                                    src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                    anima-src="https://cdn.animaapp.com/projects/674f0330c7a9d0c0f6e857a7/releases/6770018de6efb7ef00e498bf/img/vuesax-linear-message-text.svg"
+                                    alt="vuesax/linear/message-text">
+                                <div class="ellipse-46-kvGsKP" data-id="232:709"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="prepare-C61RwL opensans-bold-black-12px" data-id="232:751">Prepare</div>
+                    <div class="on-the-way-C61RwL opensans-bold-black-12px" data-id="232:752">On The Way</div>
+                    <div class="deliverd-C61RwL opensans-bold-black-12px" data-id="232:754">Deliverd</div>
+                </div>
+            </div>
+            <script src="launchpad-js/launchpad-banner.js" async></script>
+            <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+        </body>
+
+        </html>

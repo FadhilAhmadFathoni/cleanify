@@ -1,0 +1,487 @@
+.user-list,
+.user-list * {
+  box-sizing: border-box;
+}
+.user-list {
+  background: #ffffff;
+  height: 844px;
+  position: relative;
+  overflow-y: auto;
+}
+.gradient-blur {
+  background: linear-gradient(
+    90deg,
+    rgba(81, 142, 248, 1) 0%,
+    rgba(78, 173, 247, 1) 20.666655898094177%,
+    rgba(70, 248, 245, 1) 70.66665887832642%,
+    rgba(70, 248, 245, 1) 79.1666567325592%
+  );
+  border-radius: 137px;
+  opacity: 0.56;
+  width: 511px;
+  height: 192px;
+  position: absolute;
+  left: 145px;
+  top: 58px;
+  filter: blur(99px);
+}
+.gradient-blur2 {
+  background: linear-gradient(
+    90deg,
+    rgba(81, 142, 248, 1) 0%,
+    rgba(78, 173, 247, 1) 20.666655898094177%,
+    rgba(70, 248, 245, 1) 70.66665887832642%,
+    rgba(70, 248, 245, 1) 79.1666567325592%
+  );
+  border-radius: 137px;
+  opacity: 0.56;
+  width: 511px;
+  height: 192px;
+  position: absolute;
+  left: -52px;
+  top: 598px;
+  filter: blur(99px);
+}
+.frame-42 {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 20px;
+  top: 157px;
+}
+.component-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 350px;
+  height: 72px;
+  position: relative;
+}
+.cart {
+  flex-shrink: 0;
+  width: 349px;
+  height: 72px;
+  position: relative;
+}
+.rectangle-17 {
+  background: var(--light-blue, #e8f5f3);
+  border-radius: 10px;
+  width: 100.29%;
+  height: 100%;
+  position: absolute;
+  right: -0.14%;
+  left: -0.14%;
+  bottom: 0%;
+  top: 0%;
+}
+.user-circle {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.frame-33 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 70.57%;
+  height: 59.72%;
+  position: absolute;
+  right: 3.14%;
+  left: 26.29%;
+  bottom: 19.44%;
+  top: 20.83%;
+}
+.frame-34 {
+  display: flex;
+  flex-direction: row;
+  row-gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-shrink: 0;
+  width: 247px;
+  position: relative;
+}
+.user-1 {
+  color: #19a5ff;
+  text-align: left;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-size: 15px;
+  line-height: 100%;
+  font-weight: 700;
+  position: relative;
+  width: 66px;
+  height: 13px;
+}
+.frame-31 {
+  flex-shrink: 0;
+  width: 64px;
+  height: 25px;
+  position: relative;
+}
+.frame-32 {
+  display: flex;
+  flex-direction: row;
+  gap: 19px;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.frame-30 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.edit {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.jorem-ipsum-dolor-consectetur {
+  color: var(--grey, #858585);
+  text-align: left;
+  font-family: "OpenSans-Regular", sans-serif;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  position: relative;
+  width: 183px;
+}
+.cart2 {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 350px;
+  height: 72px;
+  position: relative;
+}
+.user-circle2 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit2 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame2 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle3 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit3 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame3 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle4 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit4 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame4 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle5 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit5 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame5 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle6 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit6 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame6 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle7 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit7 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame7 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle8 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit8 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame8 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle9 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit9 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame9 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle10 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit10 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame10 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.user-circle11 {
+  flex-shrink: 0;
+  width: 14.25%;
+  height: 66.9%;
+  position: absolute;
+  right: 84.57%;
+  left: 1.18%;
+  bottom: 15.05%;
+  top: 18.06%;
+  overflow: visible;
+}
+.edit11 {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.frame11 {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  overflow: visible;
+}
+.welcome-back-to-your-panel {
+  color: #969696;
+  text-align: left;
+  font-family: "Inter-Medium", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.005em;
+  font-weight: 500;
+  position: absolute;
+  left: 19px;
+  top: 66px;
+}
+.hi-admin {
+  color: #010e16;
+  text-align: left;
+  font-family: "Inter-Bold", sans-serif;
+  font-size: 19.3904972076416px;
+  font-weight: 700;
+  position: absolute;
+  left: 19px;
+  top: 35px;
+}
+.frame-41 {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 75px;
+  position: sticky;
+  left: 295px;
+  top: 755px;
+}
+.plus {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  overflow: visible;
+}

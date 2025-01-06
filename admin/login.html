@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .login-container h2 {
+            text-align: center;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4da3ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #3a8ecc;
+        }
+        .google-login {
+            width: 100%;
+            padding: 10px;
+            background-color: #db4437;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .google-login:hover {
+            background-color: #c1351d;
+        }
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #4da3ff;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        .toast.error {
+            background-color: #e74c3c;
+        }
+        .toast.success {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <input type="email" id="email" class="input-field" placeholder="Email" />
+    <input type="password" id="password" class="input-field" placeholder="Password" />
+    <button id="loginButton" class="login-button">Login</button>
+    <button class="google-login ellipse-4">Login with Google</button>
+</div>
+
+<!-- Firebase SDK -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+    
+    const firebaseConfig = {
+        apiKey: "AIzaSyBTw6gc6SbmZCcc2wTI3sK24SCx0OFrdgI",
+        authDomain: "cocok-f9c04.firebaseapp.com",
+        databaseURL: "https://cocok-f9c04-default-rtdb.firebaseio.com",
+        projectId: "cocok-f9c04",
+        storageBucket: "cocok-f9c04.firebasestorage.app",
+        messagingSenderId: "89712979326",
+        appId: "1:89712979326:web:b7f9072b49f926e7b9172f",
+        measurementId: "G-MLE01YFPZ9",
+    };
+
+    // Inisialisasi Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Login menggunakan email dan password
+    document.getElementById("loginButton").addEventListener("click", () => {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        // Validasi input kosong
+        if (!email || !password) {
+            showToast("Please fill in all fields!", "error");
+            return;
+        }
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                showToast("Login successful! Redirecting in 3 seconds...", "success");
+                setTimeout(() => {
+                    window.location.href = "home_page.html"; // Pindah halaman setelah 3 detik
+                }, 3000);
+            })
+            .catch((error) => {
+                showToast(error.message, "error");
+            });
+    });
+
+    // Login menggunakan Google
+    document.querySelector(".ellipse-4").addEventListener("click", () => {
+        const provider = new GoogleAuthProvider();
+
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // User logged in
+                const user = result.user;
+                console.log("User info:", user);
+
+                // Redirect ke home_page.html
+                showToast(`Welcome, ${user.displayName}! Redirecting...`, "success");
+                setTimeout(() => {
+                    window.location.href = "menu.html"; // Ganti dengan halaman yang sesuai
+                }, 3000);
+            })
+            .catch((error) => {
+                // Handle errors
+                console.error("Error during login:", error);
+                showToast(error.message, "error");
+            });
+    });
+
+    // Fungsi untuk menampilkan toast notifikasi
+    function showToast(message, type) {
+        const toast = document.createElement("div");
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.opacity = "0"; // Animasi menghilang
+            setTimeout(() => {
+                toast.remove(); // Menghapus elemen dari DOM
+            }, 500);
+        }, 3000); // Durasi tampil 3 detik
+    }
+</script>
+
+</body>
+</html>

@@ -1217,7 +1217,11 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
         position: absolute;
         top: 739px;
         width: 52px;
+        transition: background-color 0.3s ease;
       }
+      .ellipse-4-C61RwL:hover {
+  background-color: #2a65d6; /* Warna saat hover */
+}
 
       .login .vector-C61RwL {
         height: 14px;
@@ -1665,7 +1669,74 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
         position: absolute;
         width: 511px;
       }
+      .rectangle-41-WoxXoT:hover {
+  border-color: #28a745; /* Warna border saat hover */
+}
+.rectangle-41-WoxXoT:focus {
+  border-color: #28a745; /* Warna border saat input fokus */
+}
+.rectangle-42-08MKeD:hover {
+  border-color: #28a745; /* Warna border saat hover */
+}
 
+.rectangle-42-08MKeD:focus {
+  border-color: #218838; /* Warna border saat input fokus */
+}
+#loginButton {
+  display: inline-flex; /* Agar konten di dalam tombol tetap sejajar */
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* Atur sesuai kebutuhan */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#loginButton:hover {
+  background-color: #f0f0f0; /* Warna latar saat hover */
+}
+
+.rectangle-4-vZLNF6 {
+  width: 100%;
+  height: 100%;
+}
+.google-negative-yuzIH5 {
+  cursor: pointer;
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.log-in-vZLNF6 {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+      .toast {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        z-index: 1000;
+      }
+    
+      .toast.success {
+        background-color: #4caf50;
+      }
+    
+      .toast.error {
+        background-color: #f44336;
+      }
+    
       .login .vector {
         background-color: transparent;
         position: absolute;
@@ -1709,13 +1780,21 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
               Email
             </div>
             <div class="group-1069-iq6PKA" data-id="2:1808">
+              <div class="rectangle-41-WoxXoT" data-id="2:1810"></div>
               <div
                 class="creativeitemgmailcom-WoxXoT lato-medium-black-15px"
                 data-id="2:1809"
               >
-                creativeitem@gmail.com
+              
+              <input
+              id="email"
+                type="text"
+                class="rectangle-41-WoxXoT"
+                placeholder="Your email"
+                style="width: 100%; height: 100%; border: none; outline: none; padding: 10px; box-sizing: border-box; background-color: transparent;"
+              />
               </div>
-              <div class="rectangle-41-WoxXoT" data-id="2:1810"></div>
+              
             </div>
           </div>
           <div class="group-1071-XOtGsq" data-id="2:1811">
@@ -1734,25 +1813,39 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
                 alt="Vector"
               />
               <div class="group-1068-5mRodn" data-id="2:1815">
+                <div class="rectangle-42-08MKeD" data-id="2:1817"></div>
                 <div
                   class="min-8-character-08MKeD lato-medium-black-15px"
                   data-id="2:1816"
                 >
-                  Min 8 character
+                <input
+                id="password"
+                  type="text"
+                  class="rectangle-42-08MKeD"
+                  placeholder="Min 8 character"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    background-color: transparent;
+                    outline: none;
+                  "
+                />
                 </div>
-                <div class="rectangle-42-08MKeD" data-id="2:1817"></div>
+                
               </div>
             </div>
           </div>
           <div class="group-248-XOtGsq" data-id="2:1818">
             <h1 class="title-KJ8e07" data-id="2:1819">Log in</h1>
           </div>
-          <a href="home_page.html"
-            ><div class="group-48-XOtGsq" data-id="2:1820">
-              <div class="rectangle-4-vZLNF6" data-id="2:1821"></div>
-              <div class="log-in-vZLNF6" data-id="2:1822">Log in</div>
-            </div></a
-          >
+          <button id="loginButton" class="group-48-XOtGsq" data-id="2:1820">
+            <div class="rectangle-4-vZLNF6" data-id="2:1821"></div>
+            <div class="log-in-vZLNF6" data-id="2:1822">Log in</div>
+          </button>
+          
           <div class="group-1067-XOtGsq" data-id="2:1823">
             <div class="remember-me-tH46Uw" data-id="2:1824">Remember me</div>
             <div class="group-1066-tH46Uw" data-id="2:1825">
@@ -2010,6 +2103,93 @@ Get developer-friendly React or HTML/CSS code for this project at: https://proje
         </div>
       </div>
     </div>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+      import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+    
+      const firebaseConfig = {
+        apiKey: "AIzaSyBTw6gc6SbmZCcc2wTI3sK24SCx0OFrdgI",
+        authDomain: "cocok-f9c04.firebaseapp.com",
+        databaseURL: "https://cocok-f9c04-default-rtdb.firebaseio.com",
+        projectId: "cocok-f9c04",
+        storageBucket: "cocok-f9c04.firebasestorage.app",
+        messagingSenderId: "89712979326",
+        appId: "1:89712979326:web:b7f9072b49f926e7b9172f",
+        measurementId: "G-MLE01YFPZ9",
+      };
+    
+      // Inisialisasi Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+    
+      // Login menggunakan email dan password
+      document.getElementById("loginButton").addEventListener("click", () => {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+    
+        // Validasi input kosong
+        if (!email || !password) {
+          showToast("Please fill in all fields!", "error");
+          return;
+        }
+    
+        signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            showToast("Login successful! Redirecting in 3 seconds...", "success");
+            setTimeout(() => {
+              window.location.href = "home_page.html"; // Pindah halaman setelah 3 detik
+            }, 3000);
+          })
+          .catch((error) => {
+            showToast(error.message, "error");
+          });
+      });
+    
+      // Login menggunakan Google
+      document.querySelector(".ellipse-4-C61RwL").addEventListener("click", () => {
+        const provider = new GoogleAuthProvider();
+    
+        signInWithPopup(auth, provider)
+          .then((result) => {
+            // User logged in
+            const user = result.user;
+            console.log("User info:", user);
+    
+            // Redirect ke home_page.html
+            showToast(`Welcome, ${user.displayName}! Redirecting...`, "success");
+            setTimeout(() => {
+              window.location.href = "home_page.html";
+            }, 3000);
+          })
+          .catch((error) => {
+            // Handle errors
+            console.error("Error during login:", error);
+            showToast(error.message, "error");
+          });
+      });
+    
+      // Fungsi untuk menampilkan toast notifikasi
+      function showToast(message, type) {
+        const toast = document.createElement("div");
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+    
+        setTimeout(() => {
+          toast.style.opacity = "0"; // Animasi menghilang
+          setTimeout(() => {
+            toast.remove(); // Menghapus elemen dari DOM
+          }, 500);
+        }, 3000); // Durasi tampil 3 detik
+      }
+    </script>
+    
+
+
+    </script>
+    
+    
+    
     <script src="launchpad-js/launchpad-banner.js" async></script>
     <script
       defer
